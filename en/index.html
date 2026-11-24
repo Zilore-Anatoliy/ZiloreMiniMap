@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
+  <meta name="referrer" content="no-referrer">
+
+  <title>ZiloreMiniMap — Tactical Minimap, Offline Navigator &amp; Squad Radar for SCUM</title>
+  <meta name="description" content="ZiloreMiniMap v0.0.1 — Modern tactical minimap, offline road navigator, squad radar, server clock and survival companion for SCUM on Windows 10/11 (.NET 10 LTS, 100% EAC-Safe, SHA-256 signed).">
+  <meta name="theme-color" content="#0B1322" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
+
+  <link rel="canonical" href="https://minimap.zilore.app/en/">
+  <link rel="alternate" hreflang="ru" href="https://minimap.zilore.app/">
+  <link rel="alternate" hreflang="en" href="https://minimap.zilore.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://minimap.zilore.app/">
+
+  <!-- Icons & Manifest -->
+  <link rel="icon" href="/img/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / Discord / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ZiloreMiniMap">
+  <meta property="og:title" content="ZiloreMiniMap — Tactical Minimap &amp; Offline Navigator for SCUM">
+  <meta property="og:description" content="60–144+ Hz Fluent UI, offline road routing, live squad radar, server clock, climate model &amp; 100% EAC-Safe. Cryptographically signed for Windows 10/11.">
+  <meta property="og:url" content="https://minimap.zilore.app/en/">
+  <meta property="og:image" content="https://minimap.zilore.app/img/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZiloreMiniMap — Tactical Minimap for SCUM">
+  <meta name="twitter:description" content="Windows 10/11 Fluent UI, .NET 10 LTS, 100% EAC-Safe, SHA-256 + CMS .p7s signed.">
+  <meta name="twitter:image" content="https://minimap.zilore.app/img/og-preview.png">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body itemscope itemtype="https://schema.org/SoftwareApplication">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <meta itemprop="name" content="ZiloreMiniMap">
+  <meta itemprop="softwareVersion" content="0.0.1">
+  <meta itemprop="operatingSystem" content="Windows 10, Windows 11 (x64)">
+  <meta itemprop="applicationCategory" content="GameApplication">
+  <meta itemprop="url" content="https://minimap.zilore.app/en/">
+
+  <!-- Sticky Translucent Fluent Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="ZiloreMiniMap — Home">
+        <picture>
+          <source srcset="/img/icon-day.webp" type="image/webp" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-day.png" type="image/png" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-night.webp" type="image/webp">
+          <img class="brand-icon" src="/img/icon-night.png" alt="ZiloreMiniMap Logo" width="34" height="34">
+        </picture>
+        <span>ZiloreMiniMap</span>
+        <span class="version-tag">v0.0.1</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-panel" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Language switcher">
+            <a href="/" hreflang="ru" lang="ru">RU</a>
+            <span class="is-active" aria-current="page">EN</span>
+          </div>
+          <a class="btn btn-primary btn-sm" href="#download">Download</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>100% EAC-Safe · Windows 10/11 x64 · .NET 10 LTS</span>
+          </div>
+          <h1 class="hero-title">
+            Tactical Minimap &amp; <span class="text-gradient">Offline Navigator</span> for SCUM
+          </h1>
+          <p class="hero-lead">
+            A silky 60–144+ Hz Windows 11 Fluent overlay with offline island road routing, danger-zone avoidance, real-time squad radar, server clock calibration, climate awareness, and adaptive Day/Night icons — with zero game memory reading and zero DLL injection.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap-Setup-v0.0.1.exe" target="_blank" rel="noopener noreferrer external">
+              Download Installer v0.0.1
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest" target="_blank" rel="noopener noreferrer external">
+              All GitHub Releases
+            </a>
+          </div>
+          <ul class="hero-trust">
+            <li><span class="check-mark" aria-hidden="true">✓</span> SHA-256 + TSA Signed</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Self-Contained .NET 10</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Free Core Suite</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <img src="/img/tactical-preview.svg" alt="ZiloreMiniMap tactical map and circular radar HUD preview for SCUM" width="640" height="460" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics Strip -->
+    <section class="metrics" aria-label="Key highlights">
+      <div class="container metrics-grid">
+        <div class="metric-card">
+          <span class="metric-value">60–144+ Hz</span>
+          <span class="metric-label">Zero-GC rendering pipeline &amp; GPU acceleration for 2K / 4K displays</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">100% EAC-Safe</span>
+          <span class="metric-label">Zero game memory reads, zero DLL injection or DirectX hooks</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">SHA-256 + .p7s</span>
+          <span class="metric-label">Cryptographic signatures on Setup, EXE binaries, and ZIP archives</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">Day / Night</span>
+          <span class="metric-label">4 Fluent themes &amp; HD/4K icons auto-synced with Windows</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Features · v0.0.1</span>
+          <h2 class="section-title">Everything you need to navigate the island</h2>
+          <p class="section-desc">
+            Engineered for responsiveness and visual clarity — zero clutter on screen and zero FPS drag in SCUM.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">🧭</div>
+            <h3 class="card-title">Minimap (HUD) &amp; Tactical Map</h3>
+            <p class="card-text">Switch seamlessly between a circular compass radar or square minimap with customizable size, position, and opacity.</p>
+            <ul class="card-list">
+              <li>Speed-adaptive auto-zoom (on foot / driving / flying)</li>
+              <li>Optional GPU hardware acceleration (DirectTerrain) for 2K / 4K</li>
+              <li>Distance &amp; bearing ruler, sector grid, movement trail, death markers</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">🛣️</div>
+            <h3 class="card-title">Offline Road Routing &amp; Aviation</h3>
+            <p class="card-text">Instant offline pathfinding across SCUM's road network with automatic avoidance of marked danger zones.</p>
+            <ul class="card-list">
+              <li>Multi-stop routes (up to 16 stops) with 1-click stop optimization</li>
+              <li>Share routes with teammates via compact <code>ZLR-ROUTE</code> codes</li>
+              <li>Aviation mode (&gt; 110 km/h), custom runways &amp; offline voice guidance</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">👥</div>
+            <h3 class="card-title">Live Squad Radar</h3>
+            <p class="card-text">Coordinate with friends in real time using private invite-code relay groups or direct encrypted P2P links.</p>
+            <ul class="card-list">
+              <li>Live connection quality indicator: online / delayed / offline</li>
+              <li>Shared GPS targets, death markers, routes &amp; fading tactical pings</li>
+              <li>Squad leader badge, follow mode &amp; per-player visibility filters</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">🕒</div>
+            <h3 class="card-title">SCUM Server Clock, Climate &amp; AI</h3>
+            <p class="card-text">Calibrate in-game time for any server and monitor island climate conditions directly on the HUD.</p>
+            <ul class="card-list">
+              <li>Cycle presets (1x, 3.84x Official, 4x, 6x, 8x, or custom speed)</li>
+              <li>Coordinate &amp; altitude temperature model, hypothermia risk &amp; sky scan</li>
+              <li>Passive survival tracker (health, energy, water) &amp; dynamic ETA</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">🎨</div>
+            <h3 class="card-title">Windows 11 Fluent UI &amp; Backup</h3>
+            <p class="card-text">Native-feeling Windows 11 glass interface built for razor-sharp readability across all DPI scales.</p>
+            <ul class="card-list">
+              <li>4 instant live themes (System, Dark, OLED, Light) — zero restarts</li>
+              <li>Adaptive HD/4K Day/Night icons in tray, taskbar &amp; title bars</li>
+              <li>1-click Desktop ZIP profile backup/restore &amp; built-in auto-updater</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">🧩</div>
+            <h3 class="card-title">Custom Zones &amp; Admin Suite</h3>
+            <p class="card-text">Manage server PvP/PvE zones effortlessly plus an optional password-protected suite for server admins.</p>
+            <ul class="card-list">
+              <li>Import zones from <code>.tsv</code> or screenshots, quick layers <kbd>Alt+1–5</kbd></li>
+              <li>Smart POI clustering &amp; instant map search</li>
+              <li>Admin commands console, player lookup &amp; visual <code>Spawn Cart</code></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Hub -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Official Downloads</span>
+          <h2 class="section-title">Download ZiloreMiniMap v0.0.1</h2>
+          <p class="section-desc">
+            All official binaries are hosted exclusively on our GitHub Releases page. No separate .NET installation is required.
+          </p>
+        </div>
+
+        <div class="download-grid">
+          <div class="card card-highlight">
+            <div class="download-header">
+              <picture>
+                <source srcset="/img/icon-setup.webp" type="image/webp">
+                <img class="download-app-icon" src="/img/icon-setup.png" alt="ZiloreMiniMap Windows Installer" width="58" height="58" loading="lazy">
+              </picture>
+              <div>
+                <span class="pill-badge">Recommended</span>
+                <h3 class="card-title">Windows Installer (Setup)</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Installs cleanly per-user without requiring administrator privileges. Upgrading over an older version preserves all your waypoints, routes, zones, and settings.
+            </p>
+            <div class="download-actions">
+              <a class="btn btn-primary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap-Setup-v0.0.1.exe" target="_blank" rel="noopener noreferrer external">
+                Download ZiloreMiniMap-Setup-v0.0.1.exe
+              </a>
+              <span class="download-meta">Windows 10/11 x64 · .NET 10 LTS Self-Contained · SHA-256 + TSA Signed</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="download-header">
+              <picture>
+                <source srcset="/img/icon-app.webp" type="image/webp">
+                <img class="download-app-icon" src="/img/icon-app.png" alt="ZiloreMiniMap Portable ZIP" width="58" height="58" loading="lazy">
+              </picture>
+              <div>
+                <span class="pill-badge pill-badge-neutral">Portable</span>
+                <h3 class="card-title">Portable Archive (ZIP)</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Zero installation required: extract into any folder and run <code>ZiloreMiniMap.exe</code>. Ships with signed binaries inside and a detached <code>.p7s</code> signature.
+            </p>
+            <div class="download-actions">
+              <a class="btn btn-secondary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap.zip" target="_blank" rel="noopener noreferrer external">
+                Download ZiloreMiniMap.zip
+              </a>
+              <span class="download-meta">Built-in auto-updater ready · Inner Authenticode + CMS .p7s</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct GitHub Files & Docs Bar -->
+        <div class="github-files-bar">
+          <h3 class="github-files-title">Direct GitHub Release Files &amp; Documentation</h3>
+          <div class="file-pills">
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest" target="_blank" rel="noopener noreferrer external">GitHub Releases</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/SHA256SUMS.txt" target="_blank" rel="noopener noreferrer external">SHA256SUMS.txt</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap.zip.p7s" target="_blank" rel="noopener noreferrer external">ZiloreMiniMap.zip.p7s</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreCodeSigning.cer" target="_blank" rel="noopener noreferrer external">ZiloreCodeSigning.cer</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/update.txt" target="_blank" rel="noopener noreferrer external">update.txt</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">CHANGELOG.md</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-EN.md" target="_blank" rel="noopener noreferrer external">User Guide (EN)</a>
+          </div>
+        </div>
+
+        <!-- 1-Minute Setup Steps -->
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">1</span>
+            <h3>Use Borderless Mode in SCUM</h3>
+            <p>In SCUM open <em>Settings → Video</em> and select <strong>Windowed Fullscreen (Borderless)</strong> so the overlay draws cleanly over the game.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">2</span>
+            <h3>Verify Copy Location Key</h3>
+            <p>Check <strong>Copy Location</strong> (<kbd>Num /</kbd>) in SCUM <em>Controls</em>. Tenkeyless keyboards can bind any alternative key in the Setup Wizard.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">3</span>
+            <h3>Press M for Tactical Map</h3>
+            <p>Start <strong>ZiloreMiniMap</strong> — your position updates automatically. Press <kbd>M</kbd> anytime to open the full tactical map.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Anti-Fraud Section -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Trust &amp; Verification</span>
+          <h2 class="section-title">EAC Security &amp; Anti-Fraud Protection</h2>
+          <p class="section-desc">
+            Always verify the official domain and cryptographic signature. This website uses zero JavaScript, zero third-party CDNs, zero trackers, and zero credential forms.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          <div class="card">
+            <h3 class="card-title">🛡️ Why ZiloreMiniMap is 100% EAC-Safe</h3>
+            <p class="card-text">
+              Designed strictly as an external passive companion with zero interaction with the SCUM process or game files:
+            </p>
+            <ul class="card-list">
+              <li>Zero memory reading/writing APIs (<code>ReadProcessMemory</code>, <code>WriteProcessMemory</code>) or debug hooks.</li>
+              <li>Zero DLL injection and zero DirectX / Vulkan rendering hooks.</li>
+              <li>Reads coordinates strictly through SCUM's built-in <strong>Copy Location</strong> hotkey.</li>
+              <li>Every build passes 17 automated pre-release security and quality gates.</li>
+            </ul>
+            <div class="btn-stack">
+              <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">
+                Full Security Policy (SECURITY.md)
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-highlight">
+            <h3 class="card-title">🔐 Verify Official Builds (Anti-Fraud)</h3>
+            <div class="alert-box">
+              <strong>Warning:</strong> Download ZiloreMiniMap <strong>only</strong> from <code>minimap.zilore.app</code> and our official GitHub <code>github.com/Zilore-Anatoliy/ZiloreMiniMap</code>. Never trust re-uploads on third-party sites.
+            </div>
+            <div class="cert-box">
+              <strong>Official Code Signing Certificate:</strong><br>
+              Subject: CN=Zilore Code Signing, O=Zilore, C=BY<br>
+              SHA-1 Thumbprint: 4472F4A6AA98A20262C9D33E93E6CFBFCF25BE80
+            </div>
+            <p class="card-text">Verify SHA-256 in Windows PowerShell and match against <code>SHA256SUMS.txt</code>:</p>
+            <pre class="code-block"><code>Get-FileHash .\ZiloreMiniMap-Setup-v0.0.1.exe -Algorithm SHA256</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Quick Answers</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Fast fixes for common questions. Read the full list in our <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/FAQ.md" target="_blank" rel="noopener noreferrer external">GitHub FAQ</a>.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Can ZiloreMiniMap trigger an Easy Anti-Cheat (EAC) ban?</summary>
+            <div class="faq-body">
+              <p>No. ZiloreMiniMap operates purely as an external window overlay without reading game memory, modifying game files, or injecting DLLs. Coordinates come strictly from SCUM's built-in Copy Location action.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why is the minimap not visible over SCUM?</summary>
+            <div class="faq-body">
+              <p>Open SCUM <strong>Settings → Video</strong> and switch Display Mode from Fullscreen to <strong>Windowed Fullscreen (Borderless)</strong>. Exclusive fullscreen prevents Windows from displaying external overlays.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Windows SmartScreen warned me about Setup — is it safe?</summary>
+            <div class="faq-body">
+              <p>Yes, provided you downloaded it from our official GitHub and verified its signature/SHA-256 against <code>SHA256SUMS.txt</code>. SmartScreen flags newly released software signed by independent developers until download reputation grows. Click "More info" → "Run anyway".</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I get the smoothest performance on a 2K / 4K 144Hz monitor?</summary>
+            <div class="faq-body">
+              <p>Open <strong>Settings → Appearance</strong>, enable <strong>Hardware-accelerated M map (GPU)</strong>, and restart the app to switch the tactical map to direct GPU rendering.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will updates keep my waypoints, routes, and custom zones?</summary>
+            <div class="faq-body">
+              <p>Yes. All user data is stored safely in your Windows user profile and preserved across updates. You can also export/restore a complete ZIP backup anytime under <strong>About → Support</strong>.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is free vs. what uses an optional POI / Zilore AI key?</summary>
+            <div class="faq-body">
+              <p>The entire core suite (minimap HUD, tactical map, road routing, squad radar, server clock, climate, aviation, zones, voice guidance, profile backup, and all 4 themes) is <strong>100% free</strong>. Extended POI database filters and Zilore AI unlock via offline access keys (1–24 hours or 30/90/180/365 days) for voluntary project supporters.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community, Support & Donations -->
+    <section class="section section-alt" id="support">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Community &amp; Help</span>
+          <h2 class="section-title">Support, Feedback &amp; Donations</h2>
+          <p class="section-desc">
+            Official contact channels, the SCUM GRAND community, and voluntary support links.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <div class="card">
+            <div class="feature-icon" aria-hidden="true">💬</div>
+            <h3 class="card-title">Discord — SCUM GRAND</h3>
+            <p class="card-text">
+              Join SCUM players, receive release announcements, share <code>ZLR-ROUTE</code> codes, and get live setup help.
+            </p>
+            <div class="btn-stack">
+              <a class="btn btn-discord btn-full" href="https://discord.gg/xbWXKahvS" target="_blank" rel="noopener noreferrer external">
+                Join Discord Community
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon" aria-hidden="true">🛠️</div>
+            <h3 class="card-title">Feedback &amp; Bug Reports</h3>
+            <p class="card-text">
+              Open <em>About → Export Log</em> inside the app to create a privacy-safe diagnostic ZIP (zero personal keys) and attach it to your email or GitHub Issue.
+            </p>
+            <div class="btn-stack">
+              <a class="btn btn-secondary btn-full" href="mailto:support@zilore.app">
+                Email: support@zilore.app
+              </a>
+              <a class="btn btn-secondary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/issues/new/choose" target="_blank" rel="noopener noreferrer external">
+                Open a GitHub Issue
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-highlight">
+            <div class="feature-icon" aria-hidden="true">🧡</div>
+            <h3 class="card-title">Support the Project</h3>
+            <p class="card-text">
+              Voluntary support funds ongoing development, certificates, and updates. Supporters can receive offline access keys for extended POI filters and Zilore AI.
+            </p>
+            <div class="btn-stack">
+              <a class="btn btn-boosty btn-full" href="https://boosty.to/minimap.zilore.app/purchase/4184863?ssource=DIRECT&amp;share=subscription_link" target="_blank" rel="noopener noreferrer external">
+                ⚡ Boosty (Membership)
+              </a>
+              <a class="btn btn-secondary btn-full" href="https://yoomoney.ru/to/410013990138306" target="_blank" rel="noopener noreferrer external">
+                ♥ YooMoney (Donate)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top">
+            <picture>
+              <source srcset="/img/icon-day.webp" type="image/webp" media="(prefers-color-scheme: light)">
+              <source srcset="/img/icon-day.png" type="image/png" media="(prefers-color-scheme: light)">
+              <source srcset="/img/icon-night.webp" type="image/webp">
+              <img class="brand-icon" src="/img/icon-night.png" alt="ZiloreMiniMap" width="32" height="32" loading="lazy">
+            </picture>
+            <span>ZiloreMiniMap</span>
+          </a>
+          <p class="card-text">
+            Made with love in the Republic of Belarus for SCUM players and the SCUM GRAND community.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download v0.0.1</a></li>
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases" target="_blank" rel="noopener noreferrer external">Release History</a></li>
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">Changelog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Documentation</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-EN.md" target="_blank" rel="noopener noreferrer external">User Guide (EN)</a></li>
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/FAQ.md" target="_blank" rel="noopener noreferrer external">Full FAQ</a></li>
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">Security Policy</a></li>
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SUPPORT.md" target="_blank" rel="noopener noreferrer external">Support Guide</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap" target="_blank" rel="noopener noreferrer external">GitHub Repository</a></li>
+            <li><a href="https://discord.gg/xbWXKahvS" target="_blank" rel="noopener noreferrer external">Discord (SCUM GRAND)</a></li>
+            <li><a href="mailto:support@zilore.app">support@zilore.app</a></li>
+            <li><a href="/" hreflang="ru" lang="ru">Русская версия</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025–2026 Zilore · Official domain: minimap.zilore.app</span>
+        <span>Zero-JS Static Security · No trackers, no cookies</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

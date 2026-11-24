@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
+  <meta name="referrer" content="no-referrer">
+  <title>404 — Страница не найдена | ZiloreMiniMap</title>
+  <link rel="icon" href="/img/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <picture>
+          <source srcset="/img/icon-day.webp" type="image/webp" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-night.webp" type="image/webp">
+          <img class="brand-icon" src="/img/icon-night.png" alt="ZiloreMiniMap" width="34" height="34">
+        </picture>
+        <span>ZiloreMiniMap</span>
+      </a>
+      <div class="lang-switch">
+        <a href="/" hreflang="ru">RU</a>
+        <a href="/en/" hreflang="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container error-page">
+    <section class="card card-highlight error-card">
+      <p class="error-code text-gradient">404</p>
+      <h1 class="section-title">Страница не найдена / Page Not Found</h1>
+      <p class="card-text">
+        Похоже, указанный адрес устарел или введён с ошибкой. Вернитесь на официальную главную страницу <strong>minimap.zilore.app</strong> или откройте раздел релизов GitHub.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/">На главную (RU)</a>
+        <a class="btn btn-secondary" href="/en/">Home (EN)</a>
+        <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest" target="_blank" rel="noopener noreferrer external">GitHub Releases</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

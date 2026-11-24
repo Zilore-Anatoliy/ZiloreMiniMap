@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460" role="img" aria-label="ZiloreMiniMap Tactical HUD &amp; Map Interface Preview">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09101C"/>
+      <stop offset="55%" stop-color="#0D192B"/>
+      <stop offset="100%" stop-color="#132A46"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131E2E" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#0B121D" stop-opacity="0.96"/>
+    </linearGradient>
+    <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#0284C7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#09101C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweepGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.28"/>
+    </linearGradient>
+    <linearGradient id="routeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <clipPath id="windowClip">
+      <rect x="12" y="12" width="616" height="436" rx="20"/>
+    </clipPath>
+    <clipPath id="radarClip">
+      <circle cx="468" cy="242" r="118"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer Fluent Window Shell -->
+  <rect x="12" y="12" width="616" height="436" rx="20" fill="url(#bgGrad)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <g clip-path="url(#windowClip)">
+    <!-- Subtle Sector Grid -->
+    <g stroke="#38BDF8" stroke-opacity="0.07" stroke-width="1">
+      <line x1="90" y1="56" x2="90" y2="448"/>
+      <line x1="170" y1="56" x2="170" y2="448"/>
+      <line x1="250" y1="56" x2="250" y2="448"/>
+      <line x1="330" y1="56" x2="330" y2="448"/>
+      <line x1="410" y1="56" x2="410" y2="448"/>
+      <line x1="490" y1="56" x2="490" y2="448"/>
+      <line x1="570" y1="56" x2="570" y2="448"/>
+      <line x1="12" y1="130" x2="628" y2="130"/>
+      <line x1="12" y1="210" x2="628" y2="210"/>
+      <line x1="12" y1="290" x2="628" y2="290"/>
+      <line x1="12" y1="370" x2="628" y2="370"/>
+    </g>
+
+    <!-- Organic Topographic Contours -->
+    <g fill="none" stroke="#38BDF8" stroke-opacity="0.11" stroke-width="1.2">
+      <path d="M -10 340 C 70 290, 150 320, 235 250 C 310 185, 360 110, 490 95"/>
+      <path d="M -10 390 C 90 340, 180 355, 265 280 C 340 215, 405 155, 560 130"/>
+      <path d="M 40 455 C 145 390, 230 385, 315 315 C 390 250, 475 215, 635 190"/>
+      <path d="M 18 175 C 95 155, 165 185, 240 135 C 295 98, 355 75, 420 58"/>
+    </g>
+
+    <!-- Danger Zone Polygon (Avoided by Road Router) -->
+    <polygon points="182,194 246,184 264,234 214,254 174,228" fill="#EF4444" fill-opacity="0.14" stroke="#F87171" stroke-opacity="0.65" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="195" y="222" fill="#FCA5A5" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">PVP ZONE</text>
+
+    <!-- Offline Road Route Avoiding Danger Zone -->
+    <path d="M 78 352 Q 126 305, 156 268 T 160 170 Q 178 140, 232 132 T 318 146" fill="none" stroke="#38BDF8" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 78 352 Q 126 305, 156 268 T 160 170 Q 178 140, 232 132 T 318 146" fill="none" stroke="url(#routeGrad)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Route Waypoint Nodes -->
+    <circle cx="78" cy="352" r="6" fill="#0B1017" stroke="#38BDF8" stroke-width="2.5"/>
+    <circle cx="160" cy="170" r="5" fill="#0B1017" stroke="#22D3EE" stroke-width="2"/>
+    <circle cx="318" cy="146" r="7" fill="#22D3EE" stroke="#0B1017" stroke-width="2"/>
+    <rect x="258" y="106" width="114" height="24" rx="7" fill="#0B1017" fill-opacity="0.88" stroke="#22D3EE" stroke-opacity="0.55" stroke-width="1"/>
+    <text x="270" y="122" fill="#E0F2FE" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">B3 Bunker · 1.4 km</text>
+
+    <!-- Squad Mate Marker -->
+    <circle cx="122" cy="242" r="5.5" fill="#22C55E" stroke="#0B1017" stroke-width="2"/>
+    <rect x="132" y="231" width="66" height="21" rx="6" fill="#0B1017" fill-opacity="0.86" stroke="#22C55E" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="140" y="245" fill="#DCFCE7" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">Alex · 310m</text>
+
+    <!-- Sector Watermark Labels -->
+    <text x="32" y="96" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">C2</text>
+    <text x="262" y="96" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">B3</text>
+    <text x="32" y="340" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">C1</text>
+
+    <!-- Fluent Window Title Bar -->
+    <rect x="12" y="12" width="616" height="44" fill="#0B121E" fill-opacity="0.92"/>
+    <line x1="12" y1="56" x2="628" y2="56" stroke="#29374A" stroke-width="1"/>
+    <rect x="28" y="23" width="22" height="22" rx="6" fill="#132944" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="44,29 33,34 38,36 40,41" fill="#38BDF8"/>
+    <text x="60" y="39" fill="#F1F5F9" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="600">ZiloreMiniMap — Tactical Map (M)</text>
+    <rect x="286" y="23" width="68" height="22" rx="11" fill="#0EA5E9" fill-opacity="0.16" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="301" y="38" fill="#7DD3FC" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">v0.0.1</text>
+
+    <!-- Window Chrome Controls -->
+    <g fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+      <text x="536" y="38">—</text>
+      <text x="566" y="38">□</text>
+      <text x="596" y="38" fill="#F87171">✕</text>
+    </g>
+
+    <!-- Floating Circular Minimap HUD Card (Right Side) -->
+    <circle cx="468" cy="242" r="128" fill="#080F1A" fill-opacity="0.92" stroke="#38BDF8" stroke-opacity="0.55" stroke-width="2"/>
+    <circle cx="468" cy="242" r="118" fill="url(#radarGlow)"/>
+
+    <g clip-path="url(#radarClip)">
+      <!-- Radar Range Rings & Crosshair -->
+      <circle cx="468" cy="242" r="82" fill="none" stroke="#38BDF8" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="468" cy="242" r="44" fill="none" stroke="#38BDF8" stroke-opacity="0.18" stroke-width="1"/>
+      <line x1="350" y1="242" x2="586" y2="242" stroke="#38BDF8" stroke-opacity="0.10" stroke-width="1"/>
+      <line x1="468" y1="124" x2="468" y2="360" stroke="#38BDF8" stroke-opacity="0.10" stroke-width="1"/>
+      <!-- Directional View Cone -->
+      <path d="M 468 242 L 424 134 A 118 118 0 0 1 542 152 Z" fill="url(#sweepGrad)"/>
+      <!-- Mini Route Line inside HUD -->
+      <path d="M 468 242 Q 492 212, 514 188 T 548 158" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Squad Dot inside HUD -->
+      <circle cx="418" cy="204" r="4.5" fill="#22C55E" stroke="#080F1A" stroke-width="1.5"/>
+      <!-- POI Dots inside HUD -->
+      <circle cx="516" cy="274" r="4.5" fill="#F59E0B" stroke="#080F1A" stroke-width="1.5"/>
+      <circle cx="432" cy="292" r="4.5" fill="#38BDF8" stroke="#080F1A" stroke-width="1.5"/>
+    </g>
+
+    <!-- Compass Cardinals -->
+    <g font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+      <rect x="457" y="122" width="22" height="16" rx="4" fill="#0B1017" fill-opacity="0.9"/>
+      <text x="468" y="134" fill="#FB7185">N</text>
+      <text x="468" y="354" fill="#CBD5E1">S</text>
+      <text x="360" y="246" fill="#CBD5E1">W</text>
+      <text x="576" y="246" fill="#CBD5E1">E</text>
+    </g>
+
+    <!-- Player Tactical Chevron at Radar Center -->
+    <polygon points="481,226 452,238 465,244 471,257" fill="#F8FAFC" stroke="#080F1A" stroke-width="1.5"/>
+    <polygon points="481,226 465,244 471,257" fill="#38BDF8"/>
+
+    <!-- Top-Right HUD Telemetry Pill (SCUM Clock + Weather + Squad) -->
+    <rect x="336" y="72" width="272" height="36" rx="12" fill="url(#cardGrad)" stroke="#29374A" stroke-width="1"/>
+    <text x="352" y="95" fill="#38BDF8" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">☀ 14:32 · 18°C</text>
+    <text x="466" y="95" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">|  23:05</text>
+    <circle cx="546" cy="90" r="4" fill="#22C55E"/>
+    <text x="556" y="95" fill="#DCFCE7" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Squad 3</text>
+
+    <!-- Bottom Status Strip (Zero-GC Perf + AI Survival + Controls) -->
+    <rect x="28" y="392" width="584" height="40" rx="12" fill="url(#cardGrad)" stroke="#29374A" stroke-width="1"/>
+    <circle cx="48" cy="412" r="4.5" fill="#22C55E"/>
+    <text x="60" y="416" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Sector C2 · Road ETA 01:42 · 64 km/h</text>
+    <rect x="348" y="402" width="96" height="20" rx="6" fill="#22C55E" fill-opacity="0.14" stroke="#22C55E" stroke-opacity="0.4"/>
+    <text x="360" y="416" fill="#86EFAC" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">100% EAC-Safe</text>
+    <rect x="454" y="402" width="144" height="20" rx="6" fill="#38BDF8" fill-opacity="0.14" stroke="#38BDF8" stroke-opacity="0.4"/>
+    <text x="466" y="416" fill="#7DD3FC" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">144 Hz · Zero-GC HUD</text>
+  </g>
+</svg>
