@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 Discord-сообщество SCUM GRAND / Discord Community"
+    url: https://discord.gg/xbWXKahvS
+    about: "Быстрая помощь от игроков, новости и обсуждение ZiloreMiniMap / Live community help & updates"
+  - name: "❓ Частые вопросы / FAQ"
+    url: https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/FAQ.md
+    about: "Ответы на популярные вопросы по настройке SCUM, SmartScreen и профилям / Quick answers to common questions"
+  - name: "🧡 Поддержка проекта / Boosty"
+    url: https://boosty.to/minimap.zilore.app/purchase/4184863?ssource=DIRECT&share=subscription_link
+    about: "Добровольная поддержка разработки и получение ключей доступа / Voluntary project support"

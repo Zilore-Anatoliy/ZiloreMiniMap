@@ -1,0 +1,39 @@
+name: "✨ Предложение идеи / Feature Request"
+description: "Предложить новую функцию или улучшение / Suggest a new feature or improvement"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Поделитесь вашей идеей для **ZiloreMiniMap** (на русском или английском).
+        Share your idea to make **ZiloreMiniMap** even better!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Какую задачу это решает? / What problem does it solve?"
+      placeholder: "Например: во время рейда в отряде не хватает..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Как вы представляете решение? / Proposed Solution"
+      placeholder: "Опишите желаемое поведение, кнопку или настройку..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Раздел программы / Area"
+      options:
+        - "Миникарта (HUD) / Minimap"
+        - "Тактическая карта и маршруты / Tactical Map & Routes"
+        - "Отряд / Squad Radar"
+        - "Часы, климат и погода / Clock & Weather"
+        - "Zilore AI и выживание / AI & Survival"
+        - "Внешний вид и UI / Themes & Fluent UI"
+        - "Другое / Other"

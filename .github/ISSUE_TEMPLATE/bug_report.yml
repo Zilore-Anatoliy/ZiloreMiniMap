@@ -1,0 +1,71 @@
+name: "🐞 Отчёт об ошибке / Bug Report"
+description: "Сообщить о баге, вылете или некорректной работе / Report a bug or crash"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за помощь в улучшении **ZiloreMiniMap**! Пожалуйста, заполните поля ниже (можно на русском или английском).
+        Thank you for helping improve **ZiloreMiniMap**! Please fill out the details below.
+
+  - type: input
+    id: version
+    attributes:
+      label: "Версия ZiloreMiniMap / App Version"
+      description: "Указана в «О программе» (например: v0.0.1 build 12345) / Found in About"
+      placeholder: "v0.0.1 build (12345)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "Версия Windows / Windows Version"
+      options:
+        - "Windows 11 x64"
+        - "Windows 10 x64"
+        - "Другое / Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: display_mode
+    attributes:
+      label: "Режим экрана в SCUM / SCUM Display Mode"
+      options:
+        - "Окно без рамки (Borderless / Windowed Fullscreen)"
+        - "Оконный (Windowed)"
+        - "Полный экран (Exclusive Fullscreen)"
+        - "Не запускал игру / SCUM not running"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Описание проблемы / Problem Description"
+      description: "Что именно пошло не так и что вы ожидали увидеть? / What happened vs. what you expected?"
+      placeholder: "Опишите проблему простыми словами..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Шаги для воспроизведения / Steps to Reproduce"
+      placeholder: |
+        1. Открыл карту (M)...
+        2. Нажал на...
+        3. Появилась ошибка...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: diagnostics
+    attributes:
+      label: "Диагностический архив / Diagnostic Log"
+      description: "Откройте в программе «О программе → Выгрузить лог» и перетащите ZIP сюда (он не содержит личных ключей)."
+      options:
+        - label: "Я прикрепил(а) ZiloreMiniMap-Diagnostics-*.zip или скриншот / I attached the diagnostic ZIP or screenshot"
+        - label: "Я проверил(а) раздел FAQ (docs/FAQ.md) / I checked docs/FAQ.md"
