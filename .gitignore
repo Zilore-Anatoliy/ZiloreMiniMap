@@ -1,0 +1,39 @@
+# ============================================================================
+# ZiloreMiniMap — Enterprise .gitignore (.NET 10 / Windows / Signing / Secrets)
+# ============================================================================
+
+# --- CRITICAL: Private keys, Code Signing certificates & Secrets (NEVER COMMIT!) ---
+secrets/
+*.pfx
+*.p12
+*.key
+*.dpapi
+*.snk
+cert-password.txt
+cert-thumbprint.txt
+
+# --- Build outputs & .NET caches ---
+bin/
+obj/
+release/
+logs/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+.idea/
+
+# --- Temporary, backup & OS files ---
+*.tmp
+*.bak
+*.log
+*.zip
+*.p7s
+Thumbs.db
+Desktop.ini
+.DS_Store
+__pycache__/
+*.pyc
