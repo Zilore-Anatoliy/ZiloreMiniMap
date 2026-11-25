@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.2-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.2" /></a>
+  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.3-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.3" /></a>
   <a href="https://minimap.zilore.app"><img src="https://img.shields.io/badge/Website-minimap.zilore.app-2DD4BF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
   <a href="https://discord.gg/xbWXKahvS"><img src="https://img.shields.io/badge/Discord-SCUM%20GRAND-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://boosty.to/minimap.zilore.app/purchase/4184863?ssource=DIRECT&share=subscription_link"><img src="https://img.shields.io/badge/Boosty-Подписка-F15F2C?style=for-the-badge&logo=boosty&logoColor=white" alt="Boosty" /></a>
@@ -84,16 +84,16 @@
 ---
 
 <!-- AUTO-RELEASE-INFO:START -->
-## 📦 Актуальный релиз: v0.0.2 (build 24530)
+## 📦 Актуальный релиз: v0.0.3 (build 52803)
 
-* **Дата сборки:** `2026-11-25 17:11`
-* **Что нового:** • Диагностика ОС Windows и системных пакетов (VC++ 2015–2022 x64, DirectX, UCRT, SQLite, SCUM) прямо в установщике с автоматической загрузкой и установкой недостающих компонентов. · Расширенная система горячих клавиш тактической карты M (17+ команд: F1, F6–F9, Ctrl+F, F, V, G, B, N, O, L, H, T, X, Ctrl+Shift+C) и новый 3-вкладочный справочник клавиш и маршрутов. · Живой сквозной поиск по всем 7 разделам Настроек и ненавязчивые Toast-уведомления на карте. · Новый Fluent-дизайн Настроек, Руководства, Менеджера маршрутов, бокового меню, плавающей Dock-капсулы, центрированной нижней панели и компактного ПКМ-меню карты. · Улучшенный HUD под миникартой: компактные часы (HH:mm) без обрезки скорости, статусная акцент-линия, чистые цветовые чипы отряда и обновлённое меню трея. · Исправлена работа всех окон (карта M из трея, миникарта, Настройки, Руководство, диалоги) поверх всех окон Windows и SCUM без самопроизвольного скрытия. · Калибровка сетки секторов SCUM, точный расчёт скорости по реальной метке GPS, плавная интерполяция тиммейтов и проверка близости к рёбрам опасных зон.
+* **Дата сборки:** `2026-11-25 20:14`
+* **Что нового:** • Бесшовное фоновое обновление через GitHub Releases (как в Discord/Steam/Telegram): тихая предзагрузка и проверка SHA-256, мгновенная установка без UAC для ZIP и Setup.exe, автоприменение при выходе., [Улучшения], [Исправления] · Диагностика ОС Windows и системных пакетов (VC++ 2015–2022 x64, DirectX, UCRT, SQLite, SCUM) прямо в установщике с автоматической загрузкой и установкой недостающих компонентов. · Расширенная система горячих клавиш тактической карты M (17+ команд: F1, F6–F9, Ctrl+F, F, V, G, B, N, O, L, H, T, X, Ctrl+Shift+C) и новый 3-вкладочный справочник клавиш и маршрутов. · Живой сквозной поиск по всем 7 разделам Настроек и ненавязчивые Toast-уведомления на карте. · Новый Fluent-дизайн Настроек, Руководства, Менеджера маршрутов, бокового меню, плавающей Dock-капсулы, центрированной нижней панели и компактного ПКМ-меню карты. · Улучшенный HUD под миникартой: компактные часы (HH:mm) без обрезки скорости, статусная акцент-линия, чистые цветовые чипы отряда и обновлённое меню трея. · Исправлена работа всех окон (карта M из трея, миникарта, Настройки, Руководство, диалоги) поверх всех окон Windows и SCUM без самопроизвольного скрытия. · Калибровка сетки секторов SCUM, точный расчёт скорости по реальной метке GPS, плавная интерполяция тиммейтов и проверка близости к рёбрам опасных зон.
 
 | Файл релиза | Размер | Цифровая подпись | SHA-256 |
 | :--- | :---: | :---: | :--- |
-| `installer/ZiloreMiniMap-Setup-v0.0.2.exe` | 138.72 MB | Authenticode + TSA | `d847021d18733bcf89dc433f0282588455f9f16ba4d338f5d0dbaca5acd11d4d` |
-| `net10/ZiloreMiniMap.zip` | 139.11 MB | CMS .p7s + Inner PE | `45146422976fc7ce401cc8e09a494fdc7f4662ecd339a982adff5c39667716be` |
-| `net10/ZiloreMiniMap-v0.0.2-Release-build(24530).zip` | 139.11 MB | CMS .p7s + Inner PE | `0ad82d4d0ff1669903a8bff36ccf4bb64f6c437a49a9b8d1029399bf739e9a44` |
+| `installer/ZiloreMiniMap-Setup-v0.0.3.exe` | 138.73 MB | Authenticode + TSA | `8291efeccecb5aff4727ce307f249cd2deb10245080126e1477c019144fa5db7` |
+| `net10/ZiloreMiniMap.zip` | 139.12 MB | CMS .p7s + Inner PE | `db441e2e5a707af677a22f155258829e8a33bb6a9b0bf6cb42a844a64b3967df` |
+| `net10/ZiloreMiniMap-v0.0.3-Release-build(52803).zip` | 139.12 MB | CMS .p7s + Inner PE | `6d066e1edc3152f34cebfda2b7d2637f4128988a5ed5bedcfbbe8c175e74f672` |
 <!-- AUTO-RELEASE-INFO:END -->
 
 ---
