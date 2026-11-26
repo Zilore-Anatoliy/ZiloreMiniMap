@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Схема быстрого старта ZiloreMiniMap и настройки SCUM">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#080F1B"/><stop offset="100%" stop-color="#11223A"/></linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#132033"/><stop offset="100%" stop-color="#0C1524"/></linearGradient>
+    <linearGradient id="acc1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#38BDF8"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient>
+  </defs>
+  <rect x="8" y="8" width="784" height="404" rx="18" fill="url(#bg1)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Top Bar -->
+  <text x="32" y="42" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700">Быстрый старт за 3 шага — ZiloreMiniMap &amp; SCUM</text>
+  <rect x="650" y="23" width="120" height="24" rx="12" fill="#22C55E" fill-opacity="0.16" stroke="#4ADE80" stroke-opacity="0.5"/>
+  <text x="710" y="39" fill="#86EFAC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">100% EAC-SAFE</text>
+
+  <!-- Step 1 Card: SCUM Video -->
+  <rect x="28" y="64" width="234" height="322" rx="14" fill="url(#card1)" stroke="#38BDF8" stroke-opacity="0.3"/>
+  <circle cx="56" cy="94" r="14" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8"/>
+  <text x="56" y="99" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">1</text>
+  <text x="80" y="98" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="700">SCUM → Видео</text>
+  <rect x="44" y="124" width="202" height="148" rx="10" fill="#070C15" stroke="#94A3B8" stroke-opacity="0.2"/>
+  <text x="56" y="148" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Display Mode / Режим экрана</text>
+  <rect x="56" y="158" width="178" height="32" rx="7" fill="#0E1726" stroke="#64748B" stroke-opacity="0.35"/>
+  <text x="68" y="178" fill="#64748B" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">Fullscreen (Полный) ✕</text>
+  <rect x="56" y="198" width="178" height="36" rx="7" fill="#0EA5E9" fill-opacity="0.22" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="68" y="220" fill="#E0F2FE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700">✓ Windowed Fullscreen</text>
+  <text x="56" y="256" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">«Окно без рамки» (Borderless)</text>
+  <text x="44" y="298" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">Включает отображение HUD</text>
+  <text x="44" y="316" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">и карты поверх игры без</text>
+  <text x="44" y="334" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">потери FPS и без инъекций.</text>
+
+  <!-- Arrow 1->2 -->
+  <path d="M 266 225 L 280 225" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Step 2 Card: Copy Location -->
+  <rect x="284" y="64" width="234" height="322" rx="14" fill="url(#card1)" stroke="#38BDF8" stroke-opacity="0.3"/>
+  <circle cx="312" cy="94" r="14" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8"/>
+  <text x="312" y="99" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2</text>
+  <text x="336" y="98" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="700">SCUM → Управление</text>
+  <rect x="300" y="124" width="202" height="148" rx="10" fill="#070C15" stroke="#94A3B8" stroke-opacity="0.2"/>
+  <text x="312" y="148" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Привязка координат (GPS)</text>
+  <rect x="312" y="160" width="178" height="44" rx="8" fill="#152236" stroke="#38BDF8" stroke-opacity="0.45"/>
+  <text x="324" y="186" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Copy Location</text>
+  <rect x="424" y="169" width="56" height="26" rx="6" fill="#38BDF8" fill-opacity="0.22" stroke="#38BDF8"/>
+  <text x="452" y="186" fill="#E0F2FE" font-family="Cascadia Code, Consolas, monospace" font-size="11.5" font-weight="700" text-anchor="middle">Num /</text>
+  <text x="312" y="226" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Клавиатура без Numpad?</text>
+  <text x="312" y="244" fill="#FBBF24" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">Назначьте любую удобную</text>
+  <text x="312" y="260" fill="#FBBF24" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">клавишу в Мастере настройки</text>
+  <text x="300" y="298" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">Координаты читаются только</text>
+  <text x="300" y="316" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">через штатную клавишу SCUM</text>
+  <text x="300" y="334" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">— память игры не трогается.</text>
+
+  <!-- Arrow 2->3 -->
+  <path d="M 522 225 L 536 225" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Step 3 Card: Launch & EULA -->
+  <rect x="540" y="64" width="232" height="322" rx="14" fill="url(#card1)" stroke="#4ADE80" stroke-opacity="0.4"/>
+  <circle cx="568" cy="94" r="14" fill="#22C55E" fill-opacity="0.2" stroke="#4ADE80"/>
+  <text x="568" y="99" fill="#86EFAC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">3</text>
+  <text x="592" y="98" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="700">Запуск и клавиша M</text>
+  <rect x="556" y="124" width="200" height="148" rx="10" fill="#070C15" stroke="#4ADE80" stroke-opacity="0.28"/>
+  <text x="568" y="148" fill="#86EFAC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="700">✓ EULA принято</text>
+  <text x="568" y="170" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">• Круглый HUD в углу экрана</text>
+  <text x="568" y="190" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">• Нажмите M — полная карта</text>
+  <text x="568" y="210" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">• ПКМ по карте — маршрут</text>
+  <rect x="568" y="226" width="176" height="32" rx="8" fill="url(#acc1)"/>
+  <text x="656" y="246" fill="#031523" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">● GPS Live · Сектор C2</text>
+  <text x="556" y="298" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">Значок в трее меняет цвет:</text>
+  <text x="556" y="316" fill="#86EFAC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">● Зелёный — активный GPS</text>
+  <text x="556" y="334" fill="#FBBF24" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">● Жёлтый — пауза (чат/меню)</text>
+</svg>

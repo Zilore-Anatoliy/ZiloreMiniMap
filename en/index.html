@@ -107,6 +107,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#download">Download</a></li>
           <li><a href="#security">Security</a></li>
+          <li><a href="/en/guide/">Guide</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#support">Support</a></li>
         </ul>
@@ -132,6 +133,7 @@
       <a href="#changelog">What's New</a>
       <a href="#features">Features</a>
       <a href="#security">Security</a>
+      <a href="/en/guide/">Guide</a>
       <a href="#faq">FAQ</a>
       <a href="#support">Support</a>
     </nav>
@@ -186,7 +188,7 @@
         </div>
         <div class="metric-card">
           <span class="metric-value">SHA-256 + .p7s</span>
-          <span class="metric-label">Signed Setup, EXE &amp; ZIP binaries verified by 68 automated tests</span>
+          <span class="metric-label">Signed Setup, EXE &amp; ZIP binaries verified by 75 automated tests</span>
         </div>
         <div class="metric-card">
           <span class="metric-value">Day / Night</span>
@@ -215,11 +217,11 @@
             <h3 class="card-title">Highlights of the latest update</h3>
             <ul id="release-notes-en" class="changelog-list">
               <!-- RELEASE_NOTES_EN_START -->
-              <li>Unified native Windows 11 / 10 typography: Segoe UI Variable system font (with seamless fallback to Segoe UI on Windows 10) and enforced ClearType across all windows, transparent HUD and map overlays, dialogs, tooltips, event log (tabular numerals), system tray, and admin tools.</li>
-              <li>Modern Windows 11-style player profile window (Overview, Vehicles, Flags, Squad tabs, quick teleport, map markers, and clipboard import) plus clean Fluent notifications.</li>
-              <li>Faster cold startup, quicker minimap and tactical map rendering, smoother auto-zoom, faster long-distance route tracking, and more responsive voice guidance with lower CPU and RAM usage.</li>
-              <li>Shared screen-capture surface pool for passive HUD indicators reduces in-game micro-stutters; faster app exit when squad relay is offline and more reliable Steam profile lookups.</li>
-              <li>Fixed FPS drops during smooth auto-zoom on maps with thousands of POIs, startup cache prewarm race, overlapping map labels on 125–200% DPI screens, frozen squad ping countdowns, and sticky Steam lookup errors.</li>
+              <li>Built-in comprehensive User Guide (RU/EN) right inside the app with instant search across 10 chapters, plus an illustrated web manual (<a href="/en/guide/">minimap.zilore.app/en/guide/</a>).</li>
+              <li>Added bilingual End User License Agreement (EULA, RU/EN) in Windows Setup, on first launch of the portable edition, and anytime from the system tray and Settings.</li>
+              <li>Unified native Windows 11 / 10 typography (Segoe UI Variable ClearType) and a modern Windows 11-style player profile window.</li>
+              <li>Faster spatial POI lookups, hotkey handling, zone loading, and admin player search; live meter-by-meter road distance/ETA and asynchronous settings saves.</li>
+              <li>Enhanced privacy in local diagnostic ZIP reports (redacted Windows username, keys, and tokens); fixed 60 Hz idle HUD overhead, auto-zoom FPS, HiDPI labels, and squad ping countdowns.</li>
               <!-- RELEASE_NOTES_EN_END -->
             </ul>
           </article>
@@ -411,7 +413,7 @@
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/update.txt.p7s" target="_blank" rel="noopener noreferrer external">update.txt.p7s</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreCodeSigning.cer" target="_blank" rel="noopener noreferrer external">ZiloreCodeSigning.cer</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">CHANGELOG.md</a>
-            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-EN.md" target="_blank" rel="noopener noreferrer external">User Guide (EN)</a>
+            <a class="file-pill" href="/en/guide/">User Guide</a>
           </div>
         </div>
 
@@ -457,7 +459,7 @@
               <li>Zero memory reading/writing APIs (<code>ReadProcessMemory</code>, <code>WriteProcessMemory</code>) or debug hooks.</li>
               <li>Zero DLL injection and zero DirectX / Vulkan rendering hooks.</li>
               <li>Reads coordinates strictly through SCUM's built-in <strong>Copy Location</strong> hotkey.</li>
-              <li>Every release passes 68 automated tests and 10 pre-release security gates before shipping.</li>
+              <li>Every release passes 75 automated tests and 10 pre-release security gates before shipping.</li>
             </ul>
             <div class="btn-stack">
               <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">
@@ -633,7 +635,7 @@
         <div>
           <h4 class="footer-heading">Documentation</h4>
           <ul class="footer-links">
-            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-EN.md" target="_blank" rel="noopener noreferrer external">User Guide (EN)</a></li>
+            <li><a href="/en/guide/">User Guide</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/FAQ.md" target="_blank" rel="noopener noreferrer external">Full FAQ</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">Security Policy</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SUPPORT.md" target="_blank" rel="noopener noreferrer external">Support Guide</a></li>

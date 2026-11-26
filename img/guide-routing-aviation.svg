@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Офлайн-навигатор по дорогам, многоточечные маршруты и авиационный режим">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#08101C"/><stop offset="100%" stop-color="#11243E"/></linearGradient>
+    <linearGradient id="c3" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#132136"/><stop offset="100%" stop-color="#0C1524"/></linearGradient>
+  </defs>
+  <rect x="8" y="8" width="784" height="384" rx="18" fill="url(#bg3)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Left: Multi-stop road route panel -->
+  <rect x="28" y="28" width="366" height="344" rx="14" fill="url(#c3)" stroke="#38BDF8" stroke-opacity="0.35"/>
+  <text x="48" y="56" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="700">🛣 Офлайн-навигатор и маршруты (до 16 точек)</text>
+  <!-- Mode pills -->
+  <rect x="48" y="70" width="96" height="26" rx="7" fill="#F59E0B"/>
+  <text x="96" y="87" fill="#08101C" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Быстрый</text>
+  <rect x="152" y="70" width="96" height="26" rx="7" fill="#1E293B" stroke="#475569"/>
+  <text x="200" y="87" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Кратчайший</text>
+  <rect x="256" y="70" width="118" height="26" rx="7" fill="#1E293B" stroke="#475569"/>
+  <text x="315" y="87" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Только асфальт</text>
+
+  <!-- Stops list -->
+  <rect x="48" y="110" width="326" height="42" rx="9" fill="#0B1422" stroke="#38BDF8" stroke-opacity="0.45"/>
+  <circle cx="70" cy="131" r="10" fill="#38BDF8"/><text x="70" y="135" fill="#041320" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">1</text>
+  <text x="90" y="128" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700">Заправка C2</text>
+  <text x="90" y="143" fill="#22D3EE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">↱ Поворот через 85 м · 920 м (~1 мин)</text>
+
+  <rect x="48" y="160" width="326" height="42" rx="9" fill="#0B1422" stroke="#334155"/>
+  <circle cx="70" cy="181" r="10" fill="#1E293B" stroke="#38BDF8"/><text x="70" y="185" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">2</text>
+  <text x="90" y="178" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Торговец Z3 Outpost</text>
+  <text x="90" y="193" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">+2.8 км по асфальту · обход PvP-зоны</text>
+
+  <rect x="48" y="210" width="326" height="42" rx="9" fill="#0B1422" stroke="#334155"/>
+  <circle cx="70" cy="231" r="10" fill="#1E293B" stroke="#38BDF8"/><text x="70" y="235" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">3</text>
+  <text x="90" y="228" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">База отряда</text>
+  <text x="90" y="243" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">Итого: 5.4 км · ~6 мин · 🔊 Голос ВКЛ</text>
+
+  <!-- Share code box -->
+  <rect x="48" y="268" width="326" height="42" rx="9" fill="#060B14" stroke="#22D3EE" stroke-opacity="0.4"/>
+  <text x="60" y="285" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="9.5">КОД ОБМЕНА МАРШРУТОМ (CTRL+SHIFT+C):</text>
+  <text x="60" y="301" fill="#7DD3FC" font-family="Cascadia Code, Consolas, monospace" font-size="10.5">ZLR-ROUTE:QmFzaWMgUnVuCTEKMC4zNTIx…</text>
+
+  <text x="48" y="336" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Хоткеи: O — оптимизировать · N — пропустить</text>
+  <text x="48" y="354" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">G — режим дорог · B — объезд зон · V — голос</text>
+
+  <!-- Right: Aviation Mode -->
+  <rect x="412" y="28" width="360" height="344" rx="14" fill="url(#c3)" stroke="#22D3EE" stroke-opacity="0.4"/>
+  <text x="432" y="56" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="700">✈ Авиационный режим (&gt; 110 км/ч)</text>
+  <rect x="432" y="72" width="320" height="156" rx="10" fill="#070E1A" stroke="#22D3EE" stroke-opacity="0.3"/>
+  <!-- Flight vector & runway -->
+  <line x1="470" y1="196" x2="700" y2="104" stroke="#22D3EE" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <rect x="682" y="92" width="52" height="14" rx="3" transform="rotate(-22 708 99)" fill="#38BDF8" fill-opacity="0.25" stroke="#38BDF8"/>
+  <text x="698" y="132" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">ВПП B2</text>
+  <circle cx="470" cy="196" r="7" fill="#FBBF24"/>
+  <text x="486" y="200" fill="#FDE68A" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700">✈ 240 м · 162 км/ч</text>
+  <rect x="444" y="84" width="166" height="34" rx="7" fill="#0E192A" stroke="#38BDF8" stroke-opacity="0.45"/>
+  <text x="454" y="105" fill="#E0F2FE" font-family="Cascadia Code, Consolas, monospace" font-size="11" font-weight="700">→ 068° · ↑+2.5 м/с</text>
+
+  <!-- Telemetry tiles -->
+  <rect x="432" y="242" width="154" height="54" rx="9" fill="#0B1422" stroke="#334155"/>
+  <text x="444" y="262" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10">Снос ветром</text>
+  <text x="444" y="282" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">💨 → 4° (3.2 м/с)</text>
+
+  <rect x="598" y="242" width="154" height="54" rx="9" fill="#0B1422" stroke="#334155"/>
+  <text x="610" y="262" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10">Заход на посадку</text>
+  <text x="610" y="282" fill="#4ADE80" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">Снижение (TOD)</text>
+
+  <text x="432" y="324" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">• Автопереключение при взлёте (клавиша F)</text>
+  <text x="432" y="344" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">• Прямой курс, коридор ВПП и подсказка</text>
+  <text x="432" y="362" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5">  начала снижения до полосы</text>
+</svg>

@@ -107,6 +107,7 @@
           <li><a href="#features">Возможности</a></li>
           <li><a href="#download">Скачать</a></li>
           <li><a href="#security">Безопасность</a></li>
+          <li><a href="/guide/">Руководство</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#support">Поддержка</a></li>
         </ul>
@@ -132,6 +133,7 @@
       <a href="#changelog">Что нового</a>
       <a href="#features">Возможности</a>
       <a href="#security">Безопасность</a>
+      <a href="/guide/">Руководство</a>
       <a href="#faq">FAQ</a>
       <a href="#support">Поддержка</a>
     </nav>
@@ -186,7 +188,7 @@
         </div>
         <div class="metric-card">
           <span class="metric-value">SHA-256 + .p7s</span>
-          <span class="metric-label">Цифровая подпись установщика, EXE, ZIP и 68 автотестов перед выпуском</span>
+          <span class="metric-label">Цифровая подпись установщика, EXE, ZIP и 75 автотестов перед выпуском</span>
         </div>
         <div class="metric-card">
           <span class="metric-value">День / Ночь</span>
@@ -215,11 +217,11 @@
             <h3 class="card-title">Основные изменения последнего обновления</h3>
             <ul id="release-notes-ru" class="changelog-list">
               <!-- RELEASE_NOTES_RU_START -->
-              <li>Единая нативная типографика Windows 11 / 10: системный шрифт Segoe UI Variable (с бесшовным откатом на Segoe UI в Windows 10) и принудительный ClearType для всех окон, прозрачных оверлеев HUD и карты, диалогов, подсказок, журнала (табличные цифры), трея и админ-инструментов.</li>
-              <li>Современное окно профиля игрока в стиле Windows 11 (вкладки «Обзор», «Транспорт», «Флаги», «Отряд», телепорт, показ на карте и импорт из буфера обмена) и обновлённые уведомления в стиле Windows 11.</li>
-              <li>Ускорен холодный запуск, работа миникарты, тактической карты, ИИ-помощника, авто-зума, прокладки длинных маршрутов и голосовой навигации при меньшей нагрузке на процессор и память.</li>
-              <li>Объединён пул захвата экрана для фоновых индикаторов — меньше микрофризов в игре; ускорен выход при недоступной сети отряда и улучшена загрузка профилей Steam.</li>
-              <li>Исправлены: просад FPS при плавном авто-зуме на карте с большим количеством меток (POI), ошибка одновременного прогрева кэша при запуске, наложение подписей на экранах 125–200%, зависавший обратный отсчёт на пингах отряда и залипание ошибок профилей Steam.</li>
+              <li>Встроено подробное Руководство пользователя (RU/EN) прямо в программу с мгновенным поиском по 10 разделам + иллюстрированная версия на сайте (<a href="/guide/">minimap.zilore.app/guide/</a>).</li>
+              <li>Добавлено лицензионное соглашение (EULA) в установщике Setup, при первом запуске портативной версии, а также в меню трея и настройках.</li>
+              <li>Единая нативная типографика Windows 11 / 10 (Segoe UI Variable ClearType) и современное окно профиля игрока в стиле Windows 11.</li>
+              <li>Ускорен пространственный поиск POI, работа горячих клавиш, загрузка зон и фильтрация игроков; плавный пометровый отсчёт расстояния/ETA и фоновое сохранение настроек.</li>
+              <li>Усилена приватность локальных архивов диагностики (маскировка пути, ключей и токенов); исправлены 60 Гц пересчёт HUD без цели, авто-зум, HiDPI-подписи и таймер пингов.</li>
               <!-- RELEASE_NOTES_RU_END -->
             </ul>
           </article>
@@ -411,7 +413,7 @@
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/update.txt.p7s" target="_blank" rel="noopener noreferrer external">update.txt.p7s</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreCodeSigning.cer" target="_blank" rel="noopener noreferrer external">ZiloreCodeSigning.cer</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">CHANGELOG.md</a>
-            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-RU.md" target="_blank" rel="noopener noreferrer external">Руководство (RU)</a>
+            <a class="file-pill" href="/guide/">Руководство пользователя</a>
           </div>
         </div>
 
@@ -457,7 +459,7 @@
               <li>Отсутствуют вызовы чтения/записи памяти (<code>ReadProcessMemory</code>, <code>WriteProcessMemory</code>) и любые отладочные API.</li>
               <li>Отсутствуют DLL-инъекции и графические перехватчики DirectX / Vulkan.</li>
               <li>Координаты поступают только через штатную, разрешённую разработчиками кнопку <strong>Copy Location</strong>.</li>
-              <li>Каждая сборка проходит 68 автоматических тестов и 10 защитных проверок безопасности перед публикацией.</li>
+              <li>Каждая сборка проходит 75 автоматических тестов и 10 защитных проверок безопасности перед публикацией.</li>
             </ul>
             <div class="btn-stack">
               <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">
@@ -633,7 +635,7 @@
         <div>
           <h4 class="footer-heading">Документация</h4>
           <ul class="footer-links">
-            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-RU.md" target="_blank" rel="noopener noreferrer external">Руководство (RU)</a></li>
+            <li><a href="/guide/">Руководство пользователя</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/FAQ.md" target="_blank" rel="noopener noreferrer external">Полный FAQ</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">Безопасность</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SUPPORT.md" target="_blank" rel="noopener noreferrer external">Поддержка</a></li>

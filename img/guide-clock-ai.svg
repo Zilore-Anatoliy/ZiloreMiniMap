@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" role="img" aria-label="Серверные часы, климат, трекер выживания и ИИ-помощник Zilore AI">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#08101C"/><stop offset="100%" stop-color="#11243E"/></linearGradient>
+    <linearGradient id="c5" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#132136"/><stop offset="100%" stop-color="#0B1422"/></linearGradient>
+  </defs>
+  <rect x="8" y="8" width="784" height="364" rx="18" fill="url(#bg5)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Left: Server Clock & Survival -->
+  <rect x="28" y="28" width="360" height="324" rx="14" fill="url(#c5)" stroke="#38BDF8" stroke-opacity="0.35"/>
+  <text x="48" y="56" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="700">🕒 Часы сервера (F8) и выживание (F7)</text>
+  <rect x="48" y="72" width="320" height="84" rx="10" fill="#070E1A" stroke="#FBBF24" stroke-opacity="0.4"/>
+  <text x="64" y="106" fill="#FBBF24" font-family="Cascadia Code, Consolas, monospace" font-size="24" font-weight="800">☀ 14:32</text>
+  <text x="202" y="96" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="700">Закат через 1ч 12м</text>
+  <text x="202" y="114" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">Цикл: 3.84x Official</text>
+  <text x="64" y="138" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">🌡 +18°C · Ветер умеренный · Риск холода: низкий</text>
+
+  <!-- Survival bars -->
+  <text x="48" y="182" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700">Трекер выживания</text>
+  <text x="48" y="206" fill="#86EFAC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">Здоровье (HP) — 92%</text>
+  <rect x="48" y="214" width="320" height="10" rx="5" fill="#1E293B"/><rect x="48" y="214" width="294" height="10" rx="5" fill="#22C55E"/>
+
+  <text x="48" y="246" fill="#FDE68A" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">Энергия (Еда) — 64%</text>
+  <rect x="48" y="254" width="320" height="10" rx="5" fill="#1E293B"/><rect x="48" y="254" width="205" height="10" rx="5" fill="#F59E0B"/>
+
+  <text x="48" y="286" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">Вода (Гидратация) — 48%</text>
+  <rect x="48" y="294" width="320" height="10" rx="5" fill="#1E293B"/><rect x="48" y="294" width="154" height="10" rx="5" fill="#38BDF8"/>
+
+  <text x="48" y="332" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Подсказки по еде, воде и переохлаждению на HUD.</text>
+
+  <!-- Right: Zilore AI Route Planner -->
+  <rect x="406" y="28" width="366" height="324" rx="14" fill="url(#c5)" stroke="#22D3EE" stroke-opacity="0.45"/>
+  <text x="426" y="56" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="700">🤖 ИИ-помощник Zilore AI (F6)</text>
+  <rect x="426" y="72" width="326" height="38" rx="9" fill="#060B14" stroke="#38BDF8" stroke-width="1.4"/>
+  <text x="440" y="96" fill="#E0F2FE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12.5">заправка -&gt; трейдер 5 км</text>
+  <rect x="688" y="78" width="56" height="26" rx="6" fill="#38BDF8"/>
+  <text x="716" y="95" fill="#041320" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Найти</text>
+
+  <!-- AI Plan Output -->
+  <rect x="426" y="124" width="326" height="130" rx="10" fill="#0B1422" stroke="#22D3EE" stroke-opacity="0.35"/>
+  <text x="440" y="146" fill="#4ADE80" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="700">✓ Маршрут из 2 остановок построен:</text>
+  <text x="440" y="170" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12">1. Заправка C2 (1.1 км · ~1 мин)</text>
+  <text x="440" y="192" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12">2. Центральный торговец (3.4 км · ~4 мин)</text>
+  <text x="440" y="216" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Адаптивный ETA рассчитан по вашей средней</text>
+  <text x="440" y="232" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">скорости на транспорте (~58 км/ч).</text>
+
+  <!-- Examples -->
+  <text x="426" y="278" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700">Примеры запросов на русском и английском:</text>
+  <text x="426" y="298" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">• «ближайший бункер B3 без PvP»</text>
+  <text x="426" y="316" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">• «полиция + аптека -&gt; заправка кольцо»</text>
+  <text x="426" y="334" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">• «nearest trader within 4 km»</text>
+</svg>

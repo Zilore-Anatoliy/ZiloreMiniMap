@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" role="img" aria-label="Интерфейс круглой миникарты HUD и тактической карты ZiloreMiniMap">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#070E1A"/><stop offset="100%" stop-color="#122640"/></linearGradient>
+    <radialGradient id="rad2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22"/><stop offset="100%" stop-color="#070E1A" stop-opacity="0"/></radialGradient>
+    <clipPath id="rc2"><circle cx="152" cy="186" r="106"/></clipPath>
+  </defs>
+  <rect x="8" y="8" width="784" height="424" rx="18" fill="url(#bg2)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Left: Circular HUD Minimap -->
+  <text x="152" y="46" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">МИНИКАРТА (HUD)</text>
+  <circle cx="152" cy="186" r="112" fill="#08101C" stroke="#38BDF8" stroke-width="2.5" stroke-opacity="0.8"/>
+  <circle cx="152" cy="186" r="106" fill="url(#rad2)"/>
+  <g clip-path="url(#rc2)">
+    <g stroke="#38BDF8" stroke-opacity="0.16" stroke-width="1">
+      <circle cx="152" cy="186" r="36" fill="none"/><circle cx="152" cy="186" r="72" fill="none"/>
+      <line x1="46" y1="186" x2="258" y2="186"/><line x1="152" y1="80" x2="152" y2="292"/>
+    </g>
+    <!-- Road route line -->
+    <path d="M 152 186 Q 170 154 206 132" fill="none" stroke="#22D3EE" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Player cone + marker -->
+    <path d="M 152 186 L 136 142 A 46 46 0 0 1 168 142 Z" fill="#FBBF24" fill-opacity="0.28"/>
+    <circle cx="152" cy="186" r="6" fill="#FBBF24" stroke="#08101C" stroke-width="2"/>
+    <!-- Squadmate -->
+    <circle cx="110" cy="150" r="5" fill="#4ADE80" stroke="#08101C" stroke-width="1.5"/>
+    <text x="96" y="140" fill="#DCFCE7" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10" font-weight="700">Alex</text>
+  </g>
+  <text x="152" y="92" fill="#FB7185" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">N</text>
+  <text x="152" y="287" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">S</text>
+  <text x="55" y="190" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">W</text>
+  <text x="249" y="190" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">E</text>
+
+  <!-- HUD Status Bar -->
+  <rect x="34" y="310" width="236" height="94" rx="12" fill="#0B1320" stroke="#38BDF8" stroke-opacity="0.45"/>
+  <rect x="46" y="322" width="32" height="18" rx="5" fill="#38BDF8" fill-opacity="0.22" stroke="#38BDF8"/>
+  <text x="62" y="335" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">C2</text>
+  <text x="86" y="335" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="600">Около Самобора</text>
+  <text x="46" y="357" fill="#22D3EE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700">↱ 85 м · → Бункер B3 · 1.2 км</text>
+  <text x="46" y="376" fill="#FBBF24" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">☀ 14:32 · 18°C</text>
+  <text x="148" y="376" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">🚗 64 км/ч · 045°</text>
+  <!-- Survival bars -->
+  <rect x="46" y="388" width="66" height="6" rx="3" fill="#22C55E"/>
+  <rect x="118" y="388" width="54" height="6" rx="3" fill="#F59E0B"/>
+  <rect x="178" y="388" width="76" height="6" rx="3" fill="#38BDF8"/>
+
+  <!-- Right: Tactical Map (M) -->
+  <text x="536" y="46" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">ТАКТИЧЕСКАЯ КАРТА (КЛАВИША M)</text>
+  <rect x="304" y="62" width="466" height="342" rx="14" fill="#0B1422" stroke="#38BDF8" stroke-opacity="0.4"/>
+  <!-- Map area -->
+  <g stroke="#38BDF8" stroke-opacity="0.1" stroke-width="1">
+    <line x1="384" y1="62" x2="384" y2="404"/><line x1="464" y1="62" x2="464" y2="404"/><line x1="544" y1="62" x2="544" y2="404"/>
+    <line x1="304" y1="146" x2="612" y2="146"/><line x1="304" y1="230" x2="612" y2="230"/><line x1="304" y1="314" x2="612" y2="314"/>
+  </g>
+  <!-- Target card overlay -->
+  <rect x="318" y="76" width="194" height="66" rx="10" fill="#0E192A" fill-opacity="0.94" stroke="#38BDF8" stroke-opacity="0.5"/>
+  <text x="330" y="95" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="700">ЦЕЛЬ · B3</text>
+  <text x="330" y="114" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">Бункер B3</text>
+  <text x="330" y="131" fill="#22D3EE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">1.2 км по дорогам · ~2 мин</text>
+  <!-- Danger zone & route -->
+  <polygon points="396,216 446,198 468,244 414,256" fill="#FB7185" fill-opacity="0.18" stroke="#FB7185" stroke-dasharray="4 3"/>
+  <text x="412" y="232" fill="#FDA4AF" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="700">PVP ЗОНА</text>
+  <path d="M 352 332 C 370 280, 480 284, 492 210 C 500 175, 526 150, 548 134" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="352" cy="332" r="6" fill="#FBBF24" stroke="#0B1422" stroke-width="2"/>
+  <circle cx="548" cy="134" r="6" fill="#22D3EE" stroke="#0B1422" stroke-width="2"/>
+  <!-- Floating ruler badge -->
+  <rect x="320" y="364" width="276" height="28" rx="8" fill="#0E192A" stroke="#38BDF8" stroke-opacity="0.3"/>
+  <text x="332" y="382" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">🔍 Поиск (Ctrl+F)  ·  📏 Линейка (K)  ·  🎨 Тема (T)</text>
+
+  <!-- Right Sidebar inside Tactical Map -->
+  <rect x="614" y="62" width="156" height="342" rx="12" fill="#101B2D" stroke="#38BDF8" stroke-opacity="0.35"/>
+  <text x="628" y="86" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="700">Слои и POI</text>
+  <rect x="626" y="96" width="132" height="24" rx="6" fill="#080F1B" stroke="#475569"/>
+  <text x="634" y="112" fill="#64748B" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10">Поиск меток…</text>
+  <text x="628" y="140" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="700">☑ Бункеры (18)</text>
+  <text x="628" y="160" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">☑ Торговцы (4)</text>
+  <text x="628" y="180" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">☑ Заправки (24)</text>
+  <text x="628" y="200" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">☑ Полиция (32)</text>
+  <text x="628" y="220" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">☐ Охота / Рыбалка</text>
+  <line x1="626" y1="236" x2="758" y2="236" stroke="#334155"/>
+  <text x="628" y="256" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700">Прозрачность</text>
+  <rect x="626" y="266" width="132" height="6" rx="3" fill="#1E293B"/>
+  <rect x="626" y="266" width="98" height="6" rx="3" fill="#38BDF8"/>
+  <circle cx="724" cy="269" r="6" fill="#E0F2FE"/>
+  <rect x="626" y="294" width="132" height="26" rx="7" fill="#0EA5E9" fill-opacity="0.2" stroke="#38BDF8"/>
+  <text x="692" y="311" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">🛣 Маршруты (F9)</text>
+  <rect x="626" y="328" width="132" height="26" rx="7" fill="#1E293B" stroke="#475569"/>
+  <text x="692" y="345" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">⚙ Настройки</text>
+  <rect x="626" y="362" width="132" height="26" rx="7" fill="#1E293B" stroke="#475569"/>
+  <text x="692" y="379" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">📘 Справка (F1)</text>
+</svg>

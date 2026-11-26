@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" role="img" aria-label="Командный радар отряда, шифрованные группы и тактические пинги">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#08101C"/><stop offset="100%" stop-color="#10223A"/></linearGradient>
+    <linearGradient id="c4" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#132136"/><stop offset="100%" stop-color="#0B1422"/></linearGradient>
+  </defs>
+  <rect x="8" y="8" width="784" height="364" rx="18" fill="url(#bg4)" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Left: Encrypted Group & Roster -->
+  <rect x="28" y="28" width="380" height="324" rx="14" fill="url(#c4)" stroke="#38BDF8" stroke-opacity="0.35"/>
+  <text x="48" y="56" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="700">👥 Командный радар · Шифрованная группа</text>
+  <rect x="48" y="70" width="340" height="36" rx="8" fill="#060B14" stroke="#4ADE80" stroke-opacity="0.45"/>
+  <text x="60" y="92" fill="#86EFAC" font-family="Cascadia Code, Consolas, monospace" font-size="11">● TLS 1.3 · MM1-8a4f…92c1 (E2E)</text>
+
+  <!-- Member 1 (Leader) -->
+  <rect x="48" y="120" width="340" height="50" rx="10" fill="#0D1829" stroke="#FBBF24" stroke-opacity="0.45"/>
+  <circle cx="70" cy="145" r="7" fill="#4ADE80"/>
+  <text x="88" y="141" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="700">★ Alex (Лидер отряда)</text>
+  <text x="88" y="158" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">Сектор C2 · 310 м · Онлайн (1 с назад)</text>
+  <rect x="308" y="132" width="68" height="24" rx="6" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8"/>
+  <text x="342" y="148" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Следовать</text>
+
+  <!-- Member 2 -->
+  <rect x="48" y="180" width="340" height="50" rx="10" fill="#0D1829" stroke="#334155"/>
+  <circle cx="70" cy="205" r="7" fill="#4ADE80"/>
+  <text x="88" y="201" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="600">Dmitry</text>
+  <text x="88" y="218" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">Сектор B3 · 1.1 км · Онлайн (2 с назад)</text>
+  <rect x="308" y="192" width="68" height="24" rx="6" fill="#1E293B" stroke="#475569"/>
+  <text x="342" y="208" fill="#CBD5E1" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" text-anchor="middle">Фильтр</text>
+
+  <!-- Member 3 (Delayed) -->
+  <rect x="48" y="240" width="340" height="50" rx="10" fill="#0D1829" stroke="#334155"/>
+  <circle cx="70" cy="265" r="7" fill="#FBBF24"/>
+  <text x="88" y="261" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="600">Max</text>
+  <text x="88" y="278" fill="#FBBF24" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5">Сектор C3 · Задержка (18 с назад)</text>
+
+  <text x="48" y="320" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Координаты шифруются ключом группы —</text>
+  <text x="48" y="338" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">сервер ретрансляции не видит ваши позиции.</text>
+
+  <!-- Right: Tactical Pings & Rally -->
+  <rect x="426" y="28" width="346" height="324" rx="14" fill="url(#c4)" stroke="#38BDF8" stroke-opacity="0.35"/>
+  <text x="446" y="56" fill="#F8FAFC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="700">📍 Тактические пинги и точка сбора</text>
+  <rect x="446" y="72" width="306" height="176" rx="10" fill="#070E1A" stroke="#334155"/>
+  <!-- Ping 1: Danger -->
+  <circle cx="520" cy="134" r="22" fill="#FB7185" fill-opacity="0.16" stroke="#FB7185" stroke-width="1.5"/>
+  <circle cx="520" cy="134" r="6" fill="#FB7185"/>
+  <rect x="536" y="114" width="128" height="24" rx="6" fill="#1E1320" stroke="#FB7185"/>
+  <text x="600" y="130" fill="#FDA4AF" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">⚠ Враг · 42s</text>
+  <!-- Ping 2: Rally -->
+  <circle cx="662" cy="196" r="22" fill="#22D3EE" fill-opacity="0.18" stroke="#22D3EE" stroke-width="1.5"/>
+  <circle cx="662" cy="196" r="6" fill="#22D3EE"/>
+  <rect x="524" y="182" width="122" height="24" rx="6" fill="#0C2032" stroke="#22D3EE"/>
+  <text x="585" y="198" fill="#A5F3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">🚩 Сбор · 54s</text>
+
+  <!-- Ping Action Buttons -->
+  <rect x="446" y="264" width="148" height="32" rx="8" fill="#0EA5E9" fill-opacity="0.22" stroke="#38BDF8"/>
+  <text x="520" y="284" fill="#E0F2FE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">🚩 Сбор здесь</text>
+  <rect x="604" y="264" width="148" height="32" rx="8" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185"/>
+  <text x="678" y="284" fill="#FDA4AF" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">⚠ Пинг (ПКМ)</text>
+
+  <text x="446" y="320" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Живой обратный отсчёт 60 с на каждом пинге.</text>
+  <text x="446" y="338" fill="#B4C3D6" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11">Общие метки смерти, цели GPS и маршруты.</text>
+</svg>

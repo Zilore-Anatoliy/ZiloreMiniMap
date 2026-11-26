@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-version="v0.0.5" data-build="20598" data-release-date="2026-11-26">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; child-src 'none'; connect-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow, noai, noimageai">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <title>ZiloreMiniMap User Guide — SCUM Documentation</title>
+  <meta name="description" content="Complete illustrated user guide for ZiloreMiniMap in SCUM: setup, HUD & tactical map, offline routing, aviation, squad radar, server clock, zones, settings & hotkeys.">
+  <meta name="theme-color" content="#0B1322" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F3F6FA" media="(prefers-color-scheme: light)">
+
+  <link rel="canonical" href="https://minimap.zilore.app/en/guide/">
+  <link rel="alternate" hreflang="ru" href="https://minimap.zilore.app/guide/">
+  <link rel="alternate" hreflang="en" href="https://minimap.zilore.app/en/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://minimap.zilore.app/guide/">
+
+  <link rel="preload" href="/css/style.css?v=20598" as="style">
+  <link rel="icon" href="/favicon.ico?v=20598" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest?v=20598">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ZiloreMiniMap">
+  <meta property="og:title" content="ZiloreMiniMap User Guide — SCUM Documentation">
+  <meta property="og:description" content="Complete illustrated user guide for ZiloreMiniMap in SCUM: setup, HUD & tactical map, offline routing, aviation, squad radar, server clock, zones, settings & hotkeys.">
+  <meta property="og:url" content="https://minimap.zilore.app/en/guide/">
+  <meta property="og:image" content="https://minimap.zilore.app/img/og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZiloreMiniMap User Guide — SCUM Documentation">
+  <meta name="twitter:description" content="Complete illustrated user guide for ZiloreMiniMap in SCUM: setup, HUD & tactical map, offline routing, aviation, squad radar, server clock, zones, settings & hotkeys.">
+  <meta name="twitter:image" content="https://minimap.zilore.app/img/og-preview.png">
+
+  <link rel="stylesheet" href="/css/style.css?v=20598">
+</head>
+<body itemscope itemtype="https://schema.org/TechArticle">
+  <input type="radio" name="theme" id="theme-auto" class="sr-only-radio" checked aria-hidden="true">
+  <input type="radio" name="theme" id="theme-dark" class="sr-only-radio" aria-hidden="true">
+  <input type="radio" name="theme" id="theme-oled" class="sr-only-radio" aria-hidden="true">
+  <input type="radio" name="theme" id="theme-light" class="sr-only-radio" aria-hidden="true">
+
+  <a class="skip-link" href="#main">Skip to guide content</a>
+
+  <meta itemprop="headline" content="ZiloreMiniMap User Guide — SCUM Documentation">
+  <meta itemprop="dateModified" content="2026-11-26">
+  <meta itemprop="inLanguage" content="en">
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/en/">
+        <picture>
+          <source srcset="/img/icon-day.webp" type="image/webp" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-day.png" type="image/png" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-night.webp" type="image/webp">
+          <img class="brand-icon" src="/img/icon-night.png" alt="ZiloreMiniMap" width="34" height="34">
+        </picture>
+        <span>ZiloreMiniMap</span>
+        <span class="version-tag">v0.0.5</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-panel" aria-label="Navigation">
+        <ul class="nav-links">
+          <li><a href="/en/">Home</a></li>
+          <li><a href="#top" aria-current="page">User Guide</a></li>
+          <li><a href="/en/#download">Download</a></li>
+          <li><a href="/en/#security">Security</a></li>
+          <li><a href="/en/#support">Support</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="theme-switch" role="group" aria-label="Theme">
+            <label for="theme-auto" title="Auto">Auto</label>
+            <label for="theme-dark" title="Dark theme">🌙</label>
+            <label for="theme-oled" title="Pure OLED black">OLED</label>
+            <label for="theme-light" title="Light theme">☀</label>
+          </div>
+          <div class="lang-switch" aria-label="Language">
+            <a href="/guide/" hreflang="ru" lang="ru">RU</a>
+            <span class="is-active" aria-current="page">EN</span>
+          </div>
+          <a class="btn btn-primary btn-sm" href="/en/#download">Download v0.0.5</a>
+        </div>
+      </nav>
+    </div>
+
+    <nav class="mobile-quickbar" aria-label="Chapters">
+      <a class="is-primary" href="/en/">← Back to Home</a>
+      <a href="#ch-1">1. Start</a>
+      <a href="#ch-2">2. HUD &amp; M</a>
+      <a href="#ch-3">3. Routes</a>
+      <a href="#ch-5">5. Squad</a>
+      <a href="#ch-8">8. Settings</a>
+      <a href="#ch-10">10. Hotkeys</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="guide-hero" id="top">
+      <div class="container">
+        <span class="section-eyebrow">Complete User Manual · v0.0.5</span>
+        <h1 class="hero-title">User Guide for <span class="text-gradient">ZiloreMiniMap</span></h1>
+        <p class="hero-lead">A clear, illustrated step-by-step manual covering everything from 30-second SCUM Borderless setup to multi-stop offline routing, live squad radar, aviation mode, and 1-click backups.</p>
+        <div class="callout-tip"><strong>Tip:</strong> this complete guide with instant search is also built right into ZiloreMiniMap — open it anytime from the system tray (<strong>User Guide</strong>), <strong>Settings → General</strong>, or press <kbd>Shift+F1</kbd> on the map.</div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <aside class="guide-toc" aria-label="Table of Contents (10 Chapters)">
+        <p class="guide-toc-title">Table of Contents (10 Chapters)</p>
+        <ol>
+          <li><a href="#ch-1"><span>1.</span> Quick Start &amp; Installation</a></li>
+          <li><a href="#ch-2"><span>2.</span> Minimap (HUD) &amp; Tactical Map (M)</a></li>
+          <li><a href="#ch-3"><span>3.</span> Offline Road Navigator, Multi-Stop Routes &amp; Voice</a></li>
+          <li><a href="#ch-4"><span>4.</span> Aviation Mode &amp; Flight Navigation</a></li>
+          <li><a href="#ch-5"><span>5.</span> Live Squad Radar</a></li>
+          <li><a href="#ch-6"><span>6.</span> Server Clock, Climate, Survival &amp; Zilore AI</a></li>
+          <li><a href="#ch-7"><span>7.</span> Custom Zones, Quick Layers &amp; POI Search</a></li>
+          <li><a href="#ch-8"><span>8.</span> Settings, Themes, Backup &amp; Auto-Updates</a></li>
+          <li><a href="#ch-9"><span>9.</span> Server Admin Tools</a></li>
+          <li><a href="#ch-10"><span>10.</span> Hotkey Reference &amp; Troubleshooting</a></li>
+        </ol>
+      </aside>
+
+      <div class="guide-content" itemprop="articleBody">
+        <article class="guide-chapter" id="ch-1">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">1</span>
+            <h2>Quick Start &amp; Installation</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-setup.svg?v=20598" alt="3-step setup diagram: SCUM Borderless mode, Copy Location hotkey, and first launch" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>3-step setup diagram: SCUM Borderless mode, Copy Location hotkey, and first launch</figcaption>
+          </figure>
+          <h3>Choosing Your Download</h3>
+          <ul>
+            <li><strong>Windows Installer (<code>ZiloreMiniMap-Setup-v0.0.5.exe</code>) — Recommended.</strong> Installs cleanly per-user without administrator rights, creates shortcuts, and preserves all your waypoints, routes, zones, and settings across updates.</li>
+            <li><strong>Portable Archive (<code>ZiloreMiniMap-Portable-v0.0.5.zip</code>).</strong> Zero installation required: extract the entire archive into any folder (keep the <code>assets</code> folder beside the EXE) and run <code>ZiloreMiniMap.exe</code>.</li>
+            <li><strong>Install via <code>winget</code>:</strong> open Windows Terminal or PowerShell and run <code>winget install Zilore.ZiloreMiniMap</code>.</li>
+          </ul>
+          <h3>End User License Agreement (EULA)</h3>
+          <p>During Windows Setup or on first launch of the portable edition, the License Agreement window appears. Check the acceptance box and click <strong>Accept &amp; Continue</strong>. If you already accepted during Setup, you will not be asked again. You can review the agreement anytime from the system tray or <strong>Settings → General</strong>.</p>
+          <h3>Required SCUM Configuration (30 Seconds)</h3>
+          <ol>
+            <li><strong>Borderless Display Mode:</strong> in SCUM open <em>Settings → Video</em> and switch from Fullscreen to <strong>Windowed Fullscreen (Borderless)</strong>. Exclusive fullscreen prevents Windows from showing external overlays.</li>
+            <li><strong>Coordinate Copy Hotkey:</strong> in SCUM <em>Controls</em>, confirm <strong>Copy Location</strong> is bound to <kbd>Num /</kbd> (NumPad Divide).</li>
+            <li><strong>Tenkeyless (No Numpad) Keyboards:</strong> open the ZiloreMiniMap Setup Wizard, choose any comfortable key, and bind that same key to <strong>Copy Location</strong> in SCUM.</li>
+          </ol>
+          <h3>Status Dot Colors (HUD &amp; Tray)</h3>
+          <ul>
+            <li><strong>Green dot</strong> — live GPS coordinates are arriving smoothly.</li>
+            <li><strong>Amber dot</strong> — tracking is temporarily paused (in-game chat, inventory, menu, or settings open). Press <kbd>Esc</kbd> to close SCUM chat and tracking resumes automatically.</li>
+            <li><strong>Gray dot</strong> — waiting for SCUM or the first coordinate sample.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-2">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">2</span>
+            <h2>Minimap (HUD) &amp; Tactical Map (M)</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-hud-tactical.svg?v=20598" alt="Circular HUD minimap (left) and full tactical map opened via key M (right)" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Circular HUD minimap (left) and full tactical map opened via key M (right)</figcaption>
+          </figure>
+          <h3>In-Game Minimap HUD</h3>
+          <ul>
+            <li><strong>Shape &amp; Opacity:</strong> switch between a circular compass radar (N/S/E/W) or square minimap. Customize size, screen position, and glass opacity under <strong>Settings → Appearance</strong>.</li>
+            <li><strong>Moving the HUD:</strong> use the HUD placement control in Settings to drag the minimap to any corner — your placement is saved automatically.</li>
+            <li><strong>Smooth Auto-Zoom:</strong> zooms in automatically on foot and zooms out smoothly while driving or flying without FPS drops.</li>
+            <li><strong>Status Bar (Above or Below HUD):</strong> shows current sector (<code>C2</code>), nearest landmark, turn arrow with live distance, ETA, in-game &amp; real-world clock, temperature, speed, and survival bars.</li>
+            <li><strong>Danger Zone Alert:</strong> the HUD border turns red automatically when approaching a marked danger/PvP zone.</li>
+          </ul>
+          <h3>Full Tactical Map (Key M)</h3>
+          <p>Press <kbd>M</kbd> in game (or click the tray icon) to open the full tactical map:</p>
+          <ul>
+            <li><strong>Camera Controls:</strong> mouse wheel to zoom, left-drag to pan, <kbd>0</kbd> to reset zoom to 1.0×, <kbd>L</kbd> to lock/unlock zoom.</li>
+            <li><strong>Set Destination:</strong> right-click anywhere on the map (bunker, town, POI, or custom point) and pick <strong>Navigate Here</strong>.</li>
+            <li><strong>Distance &amp; Bearing Ruler (<kbd>K</kbd>):</strong> press <kbd>K</kbd> on the map and click points to measure exact distance and compass bearing. Press <kbd>Esc</kbd> to exit ruler mode.</li>
+            <li><strong>Automatic Death Markers:</strong> when SCUM shows the death screen, ZiloreMiniMap saves your last known coordinate with an elapsed timer. Markers clear automatically once you return to your body and move away (or remove them manually from the right rail).</li>
+            <li><strong>GPU Hardware Acceleration (DirectTerrain):</strong> for 2K / 4K 144Hz monitors, enable <em>Settings → Appearance → Hardware-accelerated M map (GPU)</em> and restart the app.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-3">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">3</span>
+            <h2>Offline Road Navigator, Multi-Stop Routes &amp; Voice</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-routing-aviation.svg?v=20598" alt="Multi-stop offline road navigator, ZLR-ROUTE share code, and Aviation Mode" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Multi-stop offline road navigator, ZLR-ROUTE share code, and Aviation Mode</figcaption>
+          </figure>
+          <h3>100% Offline Road Routing</h3>
+          <p>ZiloreMiniMap calculates routes across the entire SCUM road network offline. Remaining road distance and ETA count down smoothly meter-by-meter as you travel.</p>
+          <ul>
+            <li><strong>Road Modes (Key <kbd>G</kbd>):</strong> <em>Quickest</em> (prefers paved roads), <em>Shortest</em> (minimum distance), and <em>Paved Only</em>.</li>
+            <li><strong>Danger Zone Avoidance (Key <kbd>B</kbd>):</strong> Off / Avoid All Zones / Avoid Danger &amp; PvP Zones.</li>
+            <li><strong>Turn-by-Turn Cues:</strong> within 220 meters of a junction, the HUD displays a directional turn arrow (<code>↱</code>, <code>↰</code>, <code>↻</code>) and live distance.</li>
+          </ul>
+          <h3>Multi-Stop Routes &amp; Library (Key F9)</h3>
+          <ol>
+            <li>Open the <strong>Routes</strong> window (<kbd>F9</kbd> on the map or from the tray menu).</li>
+            <li>Add up to <strong>16 stops</strong> via map right-click, &quot;Add Target&quot;, or &quot;Add Current Position&quot;.</li>
+            <li>Click <strong>Optimize</strong> (<kbd>O</kbd>) to automatically reorder stops for the shortest trip, or use <strong>Reverse</strong> and <strong>Loop</strong>.</li>
+            <li>Save your favorite loot runs to the Route Library for 1-click recall.</li>
+          </ol>
+          <h3>Sharing Routes &amp; Waypoints on Discord</h3>
+          <ul>
+            <li><strong>Share Route (<kbd>Ctrl+Shift+C</kbd>):</strong> copies a compact <code>ZLR-ROUTE:...</code> code. Paste it in Discord so teammates can import the exact route.</li>
+            <li><strong>Share Waypoints:</strong> right-click the map to export or import custom waypoint packs via <code>ZLR-WP:...</code> codes.</li>
+          </ul>
+          <h3>Offline Voice Navigation (Key V)</h3>
+          <p>Enable voice guidance under <strong>Settings → Navigation</strong> or press <kbd>V</kbd> on the tactical map. Choose your voice pack, volume, and audio output device. Going off-route triggers an automatic reroute announcement.</p>
+        </article>
+
+        <article class="guide-chapter" id="ch-4">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">4</span>
+            <h2>Aviation Mode &amp; Flight Navigation</h2>
+          </div>
+          <p>Above <strong>110 km/h</strong> (taking off in an aircraft), ZiloreMiniMap switches to Aviation Mode automatically (or toggle manually with <kbd>F</kbd> on the map):</p>
+          <ul>
+            <li><strong>Direct Air Course:</strong> disables road snapping and draws a direct flight line with true bearing and bank cue (<code>←</code>, <code>●</code>, <code>→</code>).</li>
+            <li><strong>Flight HUD Telemetry:</strong> altitude (<code>m</code>), vertical climb/descent rate (<code>↑+</code> / <code>↓-</code> m/s), ground speed (<code>km/h</code>), and crosswind drift angle.</li>
+            <li><strong>Runways &amp; Top of Descent (TOD):</strong> displays island runways on the map and alerts you when to begin descending toward your destination.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-5">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">5</span>
+            <h2>Live Squad Radar</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-squad.svg?v=20598" alt="Encrypted squad relay group, live teammate status, countdown tactical pings, and rally point" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Encrypted squad relay group, live teammate status, countdown tactical pings, and rally point</figcaption>
+          </figure>
+          <h3>Encrypted Relay Groups (Recommended)</h3>
+          <ol>
+            <li>Open <strong>Squad</strong> in the tactical sidebar or Routes window.</li>
+            <li>Click <strong>Create Group</strong> and pick a name — the app generates a private <code>MM1-...</code> invite code.</li>
+            <li>Share the code with teammates in Discord; they click <strong>Join</strong> and paste it.</li>
+            <li>All positions, pings, and routes are end-to-end encrypted with your group key over TLS 1.3.</li>
+          </ol>
+          <h3>Direct P2P Links</h3>
+          <p>If you prefer direct peer-to-peer hosting without a relay, use Direct Host mode (includes optional automatic UPnP and Windows Firewall rule setup).</p>
+          <h3>Squad Features</h3>
+          <ul>
+            <li><strong>Live Connection Quality:</strong> green = online, amber = delayed, gray = offline.</li>
+            <li><strong>Tactical Pings with Countdown:</strong> right-click on the map → Ping (Enemy, Loot, Rally, Danger). Every ping shows a live 60-second countdown for the whole squad.</li>
+            <li><strong>Rally Point:</strong> &quot;Rally Here&quot; drops a squad rally ping on your position so teammates can route directly to you in one click.</li>
+            <li><strong>Squad Leader &amp; Follow Mode:</strong> assign a star badge to the squad leader, follow a moving teammate, and toggle visibility per player.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-6">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">6</span>
+            <h2>Server Clock, Climate, Survival &amp; Zilore AI</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-clock-ai.svg?v=20598" alt="SCUM server clock, climate forecast, survival vitals, and Zilore AI route planning" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>SCUM server clock, climate forecast, survival vitals, and Zilore AI route planning</figcaption>
+          </figure>
+          <h3>Server Clock &amp; Climate (Key F8)</h3>
+          <ul>
+            <li>Pick your server&#x27;s day/night cycle speed (<code>1x</code>, <code>3.84x Official</code>, <code>4x</code>, <code>6x</code>, <code>8x</code>, or custom) and set the current in-game time — the clock stays synced and tracks sunrise/sunset countdowns.</li>
+            <li><strong>Climate Model:</strong> estimates ambient temperature from map coordinates, elevation, and time of day, warning you about hypothermia risk.</li>
+          </ul>
+          <h3>Survival Tracker (Key F7)</h3>
+          <p>Tracks health, energy, and hydration with optional passive HUD bar scanning and displays concise survival recommendations when vitals drop.</p>
+          <h3>Zilore AI Route Assistant (Key F6)</h3>
+          <p>Plan multi-stop trips using natural language in English or Russian:</p>
+          <ul>
+            <li>Examples: <em>&quot;gas station -&gt; trader 5 km&quot;</em>, <em>&quot;nearest bunker B3&quot;</em>, <em>&quot;police + pharmacy -&gt; gas loop&quot;</em>.</li>
+            <li>Learns your real average foot, car, boat, and aircraft speeds for accurate ETA predictions.</li>
+            <li><em>The core suite is 100% free; extended POI database filters and Zilore AI unlock via optional personal offline access keys.</em></li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-7">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">7</span>
+            <h2>Custom Zones, Quick Layers &amp; POI Search</h2>
+          </div>
+          <h3>Instant POI Search &amp; Filtering</h3>
+          <ul>
+            <li>Use the <strong>Search POIs</strong> box in the right tactical sidebar to filter categories instantly.</li>
+            <li>Press <kbd>Ctrl+F</kbd> for global search across bunkers, towns, custom waypoints, and map grid sectors (such as <code>D4</code> or <code>Samobor</code>).</li>
+            <li>Smart clustering groups dense markers when zoomed out so the map always stays readable.</li>
+          </ul>
+          <h3>Custom Server Zones &amp; Layers (Alt+1–5)</h3>
+          <ul>
+            <li><strong>Importing Zones:</strong> open the Zone Wizard or double-click any <code>.tsv</code> zone pack in Windows to import it into its own layer (automatic import from server map screenshots is also supported).</li>
+            <li><strong>Quick Layers:</strong> toggle custom zone layers live in game using <kbd>Alt+1</kbd> through <kbd>Alt+5</kbd>.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-8">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">8</span>
+            <h2>Settings, Themes, Backup &amp; Auto-Updates</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-settings-admin.svg?v=20598" alt="Windows 11 Settings (4 live themes, GPU, auto-launch, ZIP backup) and Admin Player Profile window" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Windows 11 Settings (4 live themes, GPU, auto-launch, ZIP backup) and Admin Player Profile window</figcaption>
+          </figure>
+          <h3>Windows 11 Appearance &amp; Themes</h3>
+          <ul>
+            <li><strong>4 Instant Live Themes (Key <kbd>T</kbd>):</strong> System (matches Windows), Dark, pure black OLED, and Light — zero restarts required.</li>
+            <li><strong>Native Typography:</strong> uses Windows 11 <strong>Segoe UI Variable</strong> (falling back seamlessly to Segoe UI on Windows 10) with enforced ClearType across 100–200% DPI displays.</li>
+            <li><strong>Adaptive Day/Night Icons:</strong> tray and window icons adapt automatically to light or dark Windows taskbars.</li>
+          </ul>
+          <h3>Auto-Launch with SCUM</h3>
+          <p>Enable <strong>Launch with SCUM</strong> under <em>Settings → General</em> so ZiloreMiniMap starts automatically when you launch SCUM and exits cleanly when you close the game.</p>
+          <h3>Backup, Updates &amp; Privacy</h3>
+          <ul>
+            <li><strong>1-Click Profile Backup:</strong> open <em>About → Support</em> to export a complete ZIP backup of your settings, waypoints, routes, and zones to your Desktop and restore it anytime.</li>
+            <li><strong>Signed Auto-Updates:</strong> checks official channels (<code>minimap.zilore.app</code> and GitHub Releases) with cryptographic signature and SHA-256 verification while preserving all user data.</li>
+            <li><strong>Privacy-Safe Logs:</strong> diagnostic ZIP archives automatically redact Windows usernames, access keys, and tokens.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-9">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">9</span>
+            <h2>Server Admin Tools</h2>
+          </div>
+          <p>The Admin Suite is disabled by default and intended strictly for server administrators.</p>
+          <ul>
+            <li><strong>Admin Console:</strong> quick access to saved commands and relative teleport (forward/back/up/down by meters).</li>
+            <li><strong>Player Directory:</strong> import <code>#ListPlayers true</code> from clipboard, search by name or SteamID, show online players on the map, and teleport quickly.</li>
+            <li><strong>Windows 11 Player Profile Window:</strong> Overview, Vehicles, Flags, and Squad tabs with live Steam profile lookup, map markers for vehicles/flags, and 1-click clipboard report import.</li>
+            <li><strong>Spawn Cart:</strong> visual item browser, modifier editor (health, uses, weight, keycard sector), and saved kit database.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-10">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">10</span>
+            <h2>Hotkey Reference &amp; Troubleshooting</h2>
+          </div>
+          <h3>Tactical Map Hotkeys</h3>
+          <div class="hotkey-table-wrap"><table class="hotkey-table"><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody>
+            <tr><td><kbd>M</kbd></td><td>open / close tactical map (synced with SCUM)</td></tr>
+            <tr><td><kbd>Ctrl+F</kbd></td><td>global search for places, bunkers, or grid sectors</td></tr>
+            <tr><td><kbd>F1</kbd></td><td>quick hotkeys &amp; routes cheat sheet (<kbd>Shift+F1</kbd> — full User Guide)</td></tr>
+            <tr><td><kbd>F6</kbd></td><td>Zilore AI route assistant</td></tr>
+            <tr><td><kbd>F7</kbd></td><td>survival tracker</td></tr>
+            <tr><td><kbd>F8</kbd></td><td>server clock &amp; climate</td></tr>
+            <tr><td><kbd>F9</kbd></td><td>routes &amp; squad manager</td></tr>
+            <tr><td><kbd>K</kbd></td><td>distance &amp; bearing ruler (<kbd>Esc</kbd> to exit)</td></tr>
+            <tr><td><kbd>F</kbd></td><td>toggle aviation mode</td></tr>
+            <tr><td><kbd>V</kbd></td><td>toggle voice navigation</td></tr>
+            <tr><td><kbd>G</kbd></td><td>cycle road routing mode (Quickest / Shortest / Paved)</td></tr>
+            <tr><td><kbd>B</kbd></td><td>cycle danger zone avoidance</td></tr>
+            <tr><td><kbd>O</kbd></td><td>optimize multi-stop route order</td></tr>
+            <tr><td><kbd>N</kbd></td><td>skip active route stop</td></tr>
+            <tr><td><kbd>X</kbd></td><td>clear active route</td></tr>
+            <tr><td><kbd>L</kbd></td><td>lock / unlock tactical zoom</td></tr>
+            <tr><td><kbd>H</kbd></td><td>collapse / expand sidebar</td></tr>
+            <tr><td><kbd>T</kbd></td><td>cycle UI theme (Dark / OLED / Light / System)</td></tr>
+            <tr><td><kbd>Alt+1</kbd> … <kbd>Alt+5</kbd></td><td>toggle custom zone layers</td></tr>
+            <tr><td><kbd>+</kbd> / <kbd>-</kbd> / <kbd>0</kbd></td><td>zoom in / zoom out / reset zoom to 1.0×</td></tr>
+            <tr><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td><td>undo / redo route edit</td></tr>
+            <tr><td><kbd>Ctrl+Shift+C</kbd></td><td>copy <code>ZLR-ROUTE</code> share code</td></tr>
+              </tbody></table></div>
+          <h3>Quick Troubleshooting</h3>
+          <ul>
+            <li><strong>Minimap not visible over SCUM:</strong> switch SCUM <em>Settings → Video</em> to <strong>Windowed Fullscreen (Borderless)</strong>.</li>
+            <li><strong>Position stopped updating:</strong> confirm SCUM&#x27;s <code>Copy Location</code> (<kbd>Num /</kbd>) binding and press <kbd>Esc</kbd> to ensure SCUM chat is closed.</li>
+            <li><strong>Windows SmartScreen warning on Setup:</strong> download only from <code>minimap.zilore.app</code> or our official GitHub, verify SHA-256 against <code>SHA256SUMS.txt</code>, and click <em>More info → Run anyway</em>.</li>
+            <li><strong>Need help or found a bug?</strong> Open <em>About → Export Log</em> and contact <code>support@zilore.app</code> or join the <strong>SCUM GRAND</strong> Discord.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2025–2026 Zilore · Official User Guide · support@zilore.app</span>
+        <span>Zero-JS Static Security · No trackers, cookies, or AI scrapers</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
