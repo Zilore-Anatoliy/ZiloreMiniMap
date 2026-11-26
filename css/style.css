@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ZiloreMiniMap — Enterprise GitHub Pages Stylesheet (v2.0)
+   ZiloreMiniMap — Enterprise GitHub Pages Stylesheet (v2.1)
    Pure CSS3 · Zero-JS 4 Themes (Auto / Dark / OLED / Light) · Windows 11 Fluent
    Segoe UI Variable · 120Hz Mobile-Safe · WCAG 2.1 AA+ · 320px -> 4K
    ========================================================================== */
@@ -518,7 +518,7 @@ a:hover {
   color: var(--accent);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1120px) {
   .nav-toggle-btn,
   .mobile-quickbar {
     display: none;
@@ -548,6 +548,7 @@ a:hover {
     min-height: 36px;
     padding: 6px 10px;
     font-size: 0.9rem;
+    white-space: nowrap;
   }
 
   .nav-actions {
@@ -820,7 +821,7 @@ a:hover {
   scroll-margin-top: calc(var(--header-h) + 56px);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1120px) {
   .section {
     scroll-margin-top: calc(var(--header-h) + 18px);
   }
@@ -1049,7 +1050,8 @@ a:hover {
   border-radius: 12px;
   background: var(--bg-pill);
   border: 1px solid var(--border-strong);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  line-height: 1;
   flex-shrink: 0;
 }
 

@@ -8,8 +8,8 @@
   <meta name="robots" content="index, follow, noai, noimageai">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
 
-  <title>ZiloreMiniMap v0.0.5 — Тактическая миникарта, навигатор и командный радар для SCUM</title>
-  <meta name="description" content="ZiloreMiniMap v0.0.5 — тактическая миникарта, офлайн-навигатор по дорогам, командный радар, серверные часы и помощник выживания для SCUM под Windows 10/11 (Segoe UI Variable ClearType, 100% EAC-Safe, цифровая подпись SHA-256).">
+  <title>ZiloreMiniMap — Миникарта и навигатор для SCUM</title>
+  <meta name="description" content="ZiloreMiniMap для SCUM — тактическая миникарта 144 Гц, офлайн-навигатор по дорогам, радар отряда и часы сервера для Windows 10/11. 100% EAC-Safe, бесплатно.">
   <meta name="theme-color" content="#0B1322" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#F3F6FA" media="(prefers-color-scheme: light)">
 
@@ -19,32 +19,34 @@
   <link rel="alternate" hreflang="x-default" href="https://minimap.zilore.app/">
 
   <!-- Preload critical render assets -->
-  <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="/img/tactical-preview.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="/css/style.css?v=20598" as="style">
+  <link rel="preload" href="/img/tactical-preview.svg?v=20598" as="image" type="image/svg+xml">
 
   <!-- Icons & Manifest -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico?v=20598" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="/site.webmanifest?v=20598">
 
   <!-- Open Graph / Discord / Telegram -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ZiloreMiniMap">
-  <meta property="og:title" content="ZiloreMiniMap v0.0.5 — Тактическая миникарта и навигатор для SCUM">
+  <meta property="og:title" content="ZiloreMiniMap — Тактическая миникарта и навигатор для SCUM">
   <meta property="og:description" content="60–144+ Гц Windows 11 Fluent UI (Segoe UI Variable ClearType), офлайн-маршруты по дорогам, командный радар, серверные часы и 100% EAC-Safe.">
   <meta property="og:url" content="https://minimap.zilore.app/">
   <meta property="og:image" content="https://minimap.zilore.app/img/og-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Интерфейс тактической карты и круглой миникарты ZiloreMiniMap для SCUM">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ZiloreMiniMap v0.0.5 — Тактическая миникарта для SCUM">
+  <meta name="twitter:title" content="ZiloreMiniMap — Тактическая миникарта для SCUM">
   <meta name="twitter:description" content="Windows 10/11 Fluent UI, .NET 10, 100% EAC-Safe, цифровая подпись SHA-256 + CMS .p7s.">
   <meta name="twitter:image" content="https://minimap.zilore.app/img/og-preview.png">
+  <meta name="twitter:image:alt" content="Тактическая миникарта ZiloreMiniMap для SCUM">
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=20598">
 </head>
 <body itemscope itemtype="https://schema.org/SoftwareApplication">
   <!-- Zero-JS 4-Theme State Radios -->
@@ -56,10 +58,27 @@
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
   <meta itemprop="name" content="ZiloreMiniMap">
+  <meta itemprop="alternateName" content="Zilore MiniMap SCUM">
   <meta itemprop="softwareVersion" content="0.0.5">
+  <meta itemprop="dateModified" content="2026-11-26">
+  <meta itemprop="inLanguage" content="ru">
   <meta itemprop="operatingSystem" content="Windows 10, Windows 11 (x64)">
+  <meta itemprop="softwareRequirements" content="Windows 10 / 11 x64">
   <meta itemprop="applicationCategory" content="GameApplication">
+  <meta itemprop="applicationSubCategory" content="Tactical Minimap &amp; Offline Navigator">
   <meta itemprop="url" content="https://minimap.zilore.app/">
+  <meta itemprop="downloadUrl" content="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/ZiloreMiniMap-Setup-v0.0.5.exe">
+  <meta itemprop="image" content="https://minimap.zilore.app/img/og-preview.png">
+  <meta itemprop="screenshot" content="https://minimap.zilore.app/img/og-preview.png">
+  <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
+    <meta itemprop="name" content="Zilore">
+    <meta itemprop="url" content="https://minimap.zilore.app/">
+  </span>
+  <span itemprop="offers" itemscope itemtype="https://schema.org/Offer" hidden>
+    <meta itemprop="price" content="0">
+    <meta itemprop="priceCurrency" content="USD">
+    <meta itemprop="availability" content="https://schema.org/InStock">
+  </span>
 
   <!-- Sticky Translucent Fluent Header -->
   <header class="site-header">
@@ -149,7 +168,7 @@
         </div>
 
         <div class="hero-visual">
-          <img src="/img/tactical-preview.svg" alt="Интерфейс тактической карты и круглой миникарты ZiloreMiniMap поверх SCUM" width="640" height="460" fetchpriority="high" decoding="async">
+          <img src="/img/tactical-preview.svg?v=20598" alt="Интерфейс тактической карты и круглой миникарты ZiloreMiniMap поверх SCUM" width="640" height="460" fetchpriority="high" decoding="async">
         </div>
       </div>
     </section>
@@ -475,46 +494,46 @@
           </p>
         </div>
 
-        <div class="faq-list">
-          <details class="faq-item" open>
-            <summary>Можно ли получить бан Easy Anti-Cheat (EAC) за использование ZiloreMiniMap?</summary>
-            <div class="faq-body">
-              <p>Нет. Программа работает как обычное внешнее окно поверх SCUM, не читает память игры, не модифицирует файлы и не внедряет DLL. Координаты передаются через штатную игровую функцию Copy Location.</p>
+        <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="faq-item" open itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Можно ли получить бан Easy Anti-Cheat (EAC) за использование ZiloreMiniMap?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Нет. Программа работает как обычное внешнее окно поверх SCUM, не читает память игры, не модифицирует файлы и не внедряет DLL. Координаты передаются через штатную игровую функцию Copy Location.</p>
             </div>
           </details>
 
-          <details class="faq-item">
-            <summary>Почему миникарта не отображается поверх игры SCUM?</summary>
-            <div class="faq-body">
-              <p>Откройте в SCUM <strong>Настройки → Видео</strong> и переключите режим экрана с «Полный экран» на <strong>«Окно без рамки» (Borderless / Windowed Fullscreen)</strong>. В эксклюзивном полноэкранном режиме Windows скрывает любые внешние оверлеи.</p>
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Почему миникарта не отображается поверх игры SCUM?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Откройте в SCUM <strong>Настройки → Видео</strong> и переключите режим экрана с «Полный экран» на <strong>«Окно без рамки» (Borderless / Windowed Fullscreen)</strong>. В эксклюзивном полноэкранном режиме Windows скрывает любые внешние оверлеи.</p>
             </div>
           </details>
 
-          <details class="faq-item">
-            <summary>Windows SmartScreen показал предупреждение при запуске Setup — это безопасно?</summary>
-            <div class="faq-body">
-              <p>Да, если файл скачан с официального GitHub и его подпись/SHA-256 совпадают с <code>SHA256SUMS.txt</code>. SmartScreen показывает предупреждение новым сборкам независимых разработчиков до накопления репутации. Нажмите «Подробнее» → «Выполнить в любом случае».</p>
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Windows SmartScreen показал предупреждение при запуске Setup — это безопасно?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Да, если файл скачан с официального GitHub и его подпись/SHA-256 совпадают с <code>SHA256SUMS.txt</code>. SmartScreen показывает предупреждение новым сборкам независимых разработчиков до накопления репутации. Нажмите «Подробнее» → «Выполнить в любом случае».</p>
             </div>
           </details>
 
-          <details class="faq-item">
-            <summary>У меня монитор 2K / 4K 144 Гц — как включить максимальную плавность?</summary>
-            <div class="faq-body">
-              <p>Откройте <strong>Настройки → Внешний вид</strong> и включите пункт <strong>«Аппаратное ускорение карты M (GPU)»</strong>, после чего перезапустите программу. Это активирует прямой GPU-рендеринг DirectTerrain и чёткий вывод ClearType на масштабах 125–200%.</p>
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">У меня монитор 2K / 4K 144 Гц — как включить максимальную плавность?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Откройте <strong>Настройки → Внешний вид</strong> и включите пункт <strong>«Аппаратное ускорение карты M (GPU)»</strong>, после чего перезапустите программу. Это активирует прямой GPU-рендеринг DirectTerrain и чёткий вывод ClearType на масштабах 125–200%.</p>
             </div>
           </details>
 
-          <details class="faq-item">
-            <summary>Сохранятся ли мои точки, маршруты и зоны при обновлении?</summary>
-            <div class="faq-body">
-              <p>Да, все пользовательские данные хранятся отдельно в профиле Windows и сохраняются при любом обновлении. Также в разделе <strong>О программе → Поддержка</strong> доступен полный бэкап и восстановление профиля в 1 клик (ZIP).</p>
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Сохранятся ли мои точки, маршруты и зоны при обновлении?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Да, все пользовательские данные хранятся отдельно в профиле Windows и сохраняются при любом обновлении. Также в разделе <strong>О программе → Поддержка</strong> доступен полный бэкап и восстановление профиля в 1 клик (ZIP).</p>
             </div>
           </details>
 
-          <details class="faq-item">
-            <summary>Какие функции бесплатны, а для чего нужен ключ доступа POI / Zilore AI?</summary>
-            <div class="faq-body">
-              <p>Миникарта, тактическая карта, дорожные маршруты, отряд, серверные часы, климат, авиация, зоны, голос, бэкап и все 4 темы оформления <strong>полностью бесплатны</strong>. Расширенные фильтры базы POI и AI-модуль активируются офлайн-ключом (1–24 часа или 30/90/180/365 дней) за добровольную поддержку развития проекта.</p>
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">Какие функции бесплатны, а для чего нужен ключ доступа POI / Zilore AI?</summary>
+            <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Миникарта, тактическая карта, дорожные маршруты, отряд, серверные часы, климат, авиация, зоны, голос, бэкап и все 4 темы оформления <strong>полностью бесплатны</strong>. Расширенные фильтры базы POI и AI-модуль активируются офлайн-ключом (1–24 часа или 30/90/180/365 дней) за добровольную поддержку развития проекта.</p>
             </div>
           </details>
         </div>
