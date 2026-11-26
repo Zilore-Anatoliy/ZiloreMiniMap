@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; child-src 'none'; connect-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow, noai, noimageai">
   <title>404 — Страница не найдена | ZiloreMiniMap</title>
-  <link rel="icon" href="/img/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -15,10 +17,12 @@
       <a class="brand" href="/">
         <picture>
           <source srcset="/img/icon-day.webp" type="image/webp" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-day.png" type="image/png" media="(prefers-color-scheme: light)">
           <source srcset="/img/icon-night.webp" type="image/webp">
           <img class="brand-icon" src="/img/icon-night.png" alt="ZiloreMiniMap" width="34" height="34">
         </picture>
         <span>ZiloreMiniMap</span>
+        <span class="version-tag">v0.0.5</span>
       </a>
       <div class="lang-switch">
         <a href="/" hreflang="ru">RU</a>

@@ -1,0 +1,22 @@
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; child-src 'none'; connect-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noai, noimageai
+
+/css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/img/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=2592000, immutable
+
+/404.html
+  X-Robots-Tag: noindex, nofollow, noai, noimageai

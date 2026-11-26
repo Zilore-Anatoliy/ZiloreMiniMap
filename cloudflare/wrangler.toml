@@ -1,0 +1,8 @@
+name = "zilore-minimap-website-security"
+main = "edge-security-worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+routes = [
+  { pattern = "minimap.zilore.app/*", zone_name = "zilore.app" }
+]

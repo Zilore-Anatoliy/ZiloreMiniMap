@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-version="v0.0.5" data-build="20598" data-release-date="2026-11-26">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; child-src 'none'; connect-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow, noai, noimageai">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
 
-  <title>ZiloreMiniMap — Тактическая миникарта, навигатор и командный радар для SCUM</title>
-  <meta name="description" content="ZiloreMiniMap v0.0.1 — современная тактическая миникарта, офлайн-навигатор по дорогам, командный радар, серверные часы и помощник выживания для SCUM под Windows 10/11 (.NET 10 LTS, 100% EAC-Safe, цифровая подпись SHA-256).">
+  <title>ZiloreMiniMap v0.0.5 — Тактическая миникарта, навигатор и командный радар для SCUM</title>
+  <meta name="description" content="ZiloreMiniMap v0.0.5 — тактическая миникарта, офлайн-навигатор по дорогам, командный радар, серверные часы и помощник выживания для SCUM под Windows 10/11 (Segoe UI Variable ClearType, 100% EAC-Safe, цифровая подпись SHA-256).">
   <meta name="theme-color" content="#0B1322" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#F3F6FA" media="(prefers-color-scheme: light)">
 
   <link rel="canonical" href="https://minimap.zilore.app/">
   <link rel="alternate" hreflang="ru" href="https://minimap.zilore.app/">
   <link rel="alternate" hreflang="en" href="https://minimap.zilore.app/en/">
   <link rel="alternate" hreflang="x-default" href="https://minimap.zilore.app/">
 
+  <!-- Preload critical render assets -->
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="/img/tactical-preview.svg" as="image" type="image/svg+xml">
+
   <!-- Icons & Manifest -->
-  <link rel="icon" href="/img/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Open Graph / Discord / Telegram -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ZiloreMiniMap">
-  <meta property="og:title" content="ZiloreMiniMap — Тактическая миникарта и навигатор для SCUM">
-  <meta property="og:description" content="60–144+ Гц Fluent UI, офлайн-маршруты по дорогам, командный радар, серверные часы, климат и 100% EAC-Safe. Подписанные релизы для Windows 10/11.">
+  <meta property="og:title" content="ZiloreMiniMap v0.0.5 — Тактическая миникарта и навигатор для SCUM">
+  <meta property="og:description" content="60–144+ Гц Windows 11 Fluent UI (Segoe UI Variable ClearType), офлайн-маршруты по дорогам, командный радар, серверные часы и 100% EAC-Safe.">
   <meta property="og:url" content="https://minimap.zilore.app/">
   <meta property="og:image" content="https://minimap.zilore.app/img/og-preview.png">
   <meta property="og:image:width" content="1200">
@@ -33,17 +40,23 @@
   <meta property="og:locale" content="ru_RU">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ZiloreMiniMap — Тактическая миникарта для SCUM">
-  <meta name="twitter:description" content="Windows 10/11 Fluent UI, .NET 10 LTS, 100% EAC-Safe, цифровая подпись SHA-256 + CMS .p7s.">
+  <meta name="twitter:title" content="ZiloreMiniMap v0.0.5 — Тактическая миникарта для SCUM">
+  <meta name="twitter:description" content="Windows 10/11 Fluent UI, .NET 10, 100% EAC-Safe, цифровая подпись SHA-256 + CMS .p7s.">
   <meta name="twitter:image" content="https://minimap.zilore.app/img/og-preview.png">
 
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body itemscope itemtype="https://schema.org/SoftwareApplication">
+  <!-- Zero-JS 4-Theme State Radios -->
+  <input type="radio" name="theme" id="theme-auto" class="sr-only-radio" checked aria-hidden="true">
+  <input type="radio" name="theme" id="theme-dark" class="sr-only-radio" aria-hidden="true">
+  <input type="radio" name="theme" id="theme-oled" class="sr-only-radio" aria-hidden="true">
+  <input type="radio" name="theme" id="theme-light" class="sr-only-radio" aria-hidden="true">
+
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
   <meta itemprop="name" content="ZiloreMiniMap">
-  <meta itemprop="softwareVersion" content="0.0.1">
+  <meta itemprop="softwareVersion" content="0.0.5">
   <meta itemprop="operatingSystem" content="Windows 10, Windows 11 (x64)">
   <meta itemprop="applicationCategory" content="GameApplication">
   <meta itemprop="url" content="https://minimap.zilore.app/">
@@ -59,7 +72,7 @@
           <img class="brand-icon" src="/img/icon-night.png" alt="Логотип ZiloreMiniMap" width="34" height="34">
         </picture>
         <span>ZiloreMiniMap</span>
-        <span class="version-tag">v0.0.1</span>
+        <span class="version-tag">v0.0.5</span>
       </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Открыть меню навигации">
@@ -71,6 +84,7 @@
 
       <nav class="nav-panel" aria-label="Основная навигация">
         <ul class="nav-links">
+          <li><a href="#changelog">Что нового</a></li>
           <li><a href="#features">Возможности</a></li>
           <li><a href="#download">Скачать</a></li>
           <li><a href="#security">Безопасность</a></li>
@@ -78,6 +92,12 @@
           <li><a href="#support">Поддержка</a></li>
         </ul>
         <div class="nav-actions">
+          <div class="theme-switch" role="group" aria-label="Тема оформления">
+            <label for="theme-auto" title="Системная тема">Авто</label>
+            <label for="theme-dark" title="Тёмная тема">🌙</label>
+            <label for="theme-oled" title="OLED Чёрная">OLED</label>
+            <label for="theme-light" title="Светлая тема">☀</label>
+          </div>
           <div class="lang-switch" aria-label="Выбор языка">
             <span class="is-active" aria-current="page">RU</span>
             <a href="/en/" hreflang="en" lang="en">EN</a>
@@ -86,6 +106,16 @@
         </div>
       </nav>
     </div>
+
+    <!-- Mobile 1-Tap Quick-Jump Bar -->
+    <nav class="mobile-quickbar" aria-label="Быстрые переходы">
+      <a class="is-primary" href="#download">⬇ Скачать v0.0.5</a>
+      <a href="#changelog">Что нового</a>
+      <a href="#features">Возможности</a>
+      <a href="#security">Безопасность</a>
+      <a href="#faq">FAQ</a>
+      <a href="#support">Поддержка</a>
+    </nav>
   </header>
 
   <main id="main">
@@ -95,20 +125,20 @@
         <div>
           <div class="hero-badge">
             <span class="status-dot" aria-hidden="true"></span>
-            <span>100% EAC-Safe · Windows 10/11 x64 · .NET 10 LTS</span>
+            <span>v0.0.5 build (20598) · 100% EAC-Safe · Windows 10/11 x64</span>
           </div>
           <h1 class="hero-title">
             Тактическая миникарта и <span class="text-gradient">офлайн-навигатор</span> для SCUM
           </h1>
           <p class="hero-lead">
-            Плавный оверлей 60–144+ Гц в стиле Windows 11 Fluent Design: дорожные маршруты с обходом опасных зон, командный радар отряда, серверные часы, климат и адаптивные иконки День/Ночь — без чтения памяти игры и без инъекций DLL.
+            Плавный оверлей 60–144+ Гц в стиле Windows 11 с системным шрифтом Segoe UI Variable ClearType: дорожные маршруты с обходом опасных зон, командный радар отряда, серверные часы, климат и адаптивные иконки День/Ночь — без чтения памяти игры и без инъекций DLL.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap-Setup-v0.0.1.exe" target="_blank" rel="noopener noreferrer external">
-              Скачать установщик v0.0.1
+            <a class="btn btn-primary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/ZiloreMiniMap-Setup-v0.0.5.exe" target="_blank" rel="noopener noreferrer external">
+              Скачать установщик v0.0.5
             </a>
-            <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest" target="_blank" rel="noopener noreferrer external">
-              Все файлы на GitHub
+            <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/tag/v0.0.5" target="_blank" rel="noopener noreferrer external">
+              Все файлы релиза на GitHub
             </a>
           </div>
           <ul class="hero-trust">
@@ -119,7 +149,7 @@
         </div>
 
         <div class="hero-visual">
-          <img src="/img/tactical-preview.svg" alt="Интерфейс тактической карты и круглой миникарты ZiloreMiniMap поверх SCUM" width="640" height="460" decoding="async">
+          <img src="/img/tactical-preview.svg" alt="Интерфейс тактической карты и круглой миникарты ZiloreMiniMap поверх SCUM" width="640" height="460" fetchpriority="high" decoding="async">
         </div>
       </div>
     </section>
@@ -129,7 +159,7 @@
       <div class="container metrics-grid">
         <div class="metric-card">
           <span class="metric-value">60–144+ Гц</span>
-          <span class="metric-label">Zero-GC рендер карты и GPU-режим для 2K / 4K мониторов</span>
+          <span class="metric-label">Чистый WPF-рендер карты, плавный автозум и GPU-режим для 2K / 4K</span>
         </div>
         <div class="metric-card">
           <span class="metric-value">100% EAC-Safe</span>
@@ -137,11 +167,70 @@
         </div>
         <div class="metric-card">
           <span class="metric-value">SHA-256 + .p7s</span>
-          <span class="metric-label">Криптографическая подпись установщика, EXE и ZIP-архивов</span>
+          <span class="metric-label">Цифровая подпись установщика, EXE, ZIP и 68 автотестов перед выпуском</span>
         </div>
         <div class="metric-card">
           <span class="metric-value">День / Ночь</span>
-          <span class="metric-label">4 Fluent-темы и HD/4K иконки с автосинхронизацией Windows</span>
+          <span class="metric-label">4 темы Windows 11, Segoe UI Variable ClearType и HD/4K иконки</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's New & Release History Section -->
+    <section class="section" id="changelog">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Актуальный релиз · 26.11.2026</span>
+          <h2 class="section-title">Что нового в ZiloreMiniMap v0.0.5</h2>
+          <p class="section-desc">
+            Накопительное обновление с фокусом на плавность в игре, нативную типографику Windows 11 и стабильность на любых экранах.
+          </p>
+        </div>
+
+        <div class="changelog-grid">
+          <article class="card card-highlight">
+            <div class="release-meta-row">
+              <span class="pill-badge">Актуально · v0.0.5 build (20598)</span>
+              <span class="release-date">2026-11-26</span>
+            </div>
+            <h3 class="card-title">Основные изменения последнего обновления</h3>
+            <ul id="release-notes-ru" class="changelog-list">
+              <!-- RELEASE_NOTES_RU_START -->
+              <li>Единая нативная типографика Windows 11 / 10: системный шрифт Segoe UI Variable (с бесшовным откатом на Segoe UI в Windows 10) и принудительный ClearType для всех окон, прозрачных оверлеев HUD и карты, диалогов, подсказок, журнала (табличные цифры), трея и админ-инструментов.</li>
+              <li>Современное окно профиля игрока в стиле Windows 11 (вкладки «Обзор», «Транспорт», «Флаги», «Отряд», телепорт, показ на карте и импорт из буфера обмена) и обновлённые уведомления в стиле Windows 11.</li>
+              <li>Ускорен холодный запуск, работа миникарты, тактической карты, ИИ-помощника, авто-зума, прокладки длинных маршрутов и голосовой навигации при меньшей нагрузке на процессор и память.</li>
+              <li>Объединён пул захвата экрана для фоновых индикаторов — меньше микрофризов в игре; ускорен выход при недоступной сети отряда и улучшена загрузка профилей Steam.</li>
+              <li>Исправлены: просад FPS при плавном авто-зуме на карте с большим количеством меток (POI), ошибка одновременного прогрева кэша при запуске, наложение подписей на экранах 125–200%, зависавший обратный отсчёт на пингах отряда и залипание ошибок профилей Steam.</li>
+              <!-- RELEASE_NOTES_RU_END -->
+            </ul>
+          </article>
+
+          <aside class="card" aria-label="История версий">
+            <h3 class="card-title">История обновлений</h3>
+            <ul class="timeline-list">
+              <li class="timeline-item">
+                <div class="timeline-ver">v0.0.5 build (20598) <span>26.11.2026</span></div>
+                <p>Нативный шрифт Segoe UI Variable ClearType, окно профиля игрока Windows 11, исправление FPS авто-зума, HiDPI подписей, пул захвата экрана и ускоренный старт.</p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-ver">v0.0.4 <span>2026-11</span></div>
+                <p>Полный переход ядра на чистый WPF, ускоренный трекинг длинных маршрутов и голосового штурмана, поддержка winget и улучшенный установщик с мастером очистки.</p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-ver">v0.0.3 <span>2026-11</span></div>
+                <p>Умная телеметрия отряда, адаптивный ETA, бэкап профиля в 1 клик, шифрование настроек и защита обновлений цифровой подписью.</p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-ver">v0.0.1 <span>2026-10</span></div>
+                <p>Первый публичный релиз ZiloreMiniMap: круглый HUD-радар, офлайн-навигатор по дорогам, командный радар, серверные часы и климат.</p>
+              </li>
+            </ul>
+            <div class="btn-stack">
+              <a class="btn btn-secondary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">
+                Полная история (CHANGELOG.md)
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -150,10 +239,10 @@
     <section class="section section-alt" id="features">
       <div class="container">
         <div class="section-head">
-          <span class="section-eyebrow">Функциональность v0.0.1</span>
+          <span class="section-eyebrow">Функциональность v0.0.5</span>
           <h2 class="section-title">Всё необходимое для выживания на острове</h2>
           <p class="section-desc">
-            Продуманная модульная архитектура — лёгкая в работе, не перегружает экран и не снижает FPS в SCUM.
+            Продуманная архитектура — лёгкая в работе, не перегружает экран и не снижает FPS в SCUM.
           </p>
         </div>
 
@@ -163,8 +252,8 @@
             <h3 class="card-title">Миникарта (HUD) и тактическая карта</h3>
             <p class="card-text">Круглый радар с градуировкой компаса или квадратная миникарта с гибким размером, положением и прозрачностью.</p>
             <ul class="card-list">
-              <li>Умный автозум по скорости (пешком / авто / полёт)</li>
-              <li>Аппаратное ускорение GPU (DirectTerrain) для 2K / 4K</li>
+              <li>Плавный автозум по скорости (пешком / авто / полёт) без просадок FPS</li>
+              <li>Аппаратное ускорение GPU (DirectTerrain) для 2K / 4K мониторов</li>
               <li>Линейка расстояний + азимут, сетка, трек и метки смерти</li>
             </ul>
           </article>
@@ -176,17 +265,17 @@
             <ul class="card-list">
               <li>Многоточечные маршруты до 16 остановок + автооптимизация</li>
               <li>Мгновенный обмен маршрутом через код <code>ZLR-ROUTE</code> в Discord</li>
-              <li>Авиационный режим (&gt; 110 км/ч), ВПП и голосовой навигатор</li>
+              <li>Авиационный режим (&gt; 110 км/ч), ВПП и голосовой штурман</li>
             </ul>
           </article>
 
           <article class="card">
             <div class="feature-icon" aria-hidden="true">👥</div>
             <h3 class="card-title">Командный радар отряда</h3>
-            <p class="card-text">Координация группы в реальном времени через защищённые релей-группы по коду или прямое P2P-соединение.</p>
+            <p class="card-text">Координация группы в реальном времени через шифрованные релей-группы по коду или прямое P2P-соединение.</p>
             <ul class="card-list">
-              <li>Индикатор связи каждого бойца: онлайн / задержка / офлайн</li>
-              <li>Общие GPS-цели, метки смерти, маршруты и тактические пинги</li>
+              <li>Живой индикатор связи каждого бойца: онлайн / задержка / офлайн</li>
+              <li>Общие GPS-цели, метки смерти, маршруты и тактические пинги с таймером</li>
               <li>Назначение лидера, следование и индивидуальные фильтры</li>
             </ul>
           </article>
@@ -204,8 +293,8 @@
 
           <article class="card">
             <div class="feature-icon" aria-hidden="true">🎨</div>
-            <h3 class="card-title">Windows 11 Fluent UI и бэкап</h3>
-            <p class="card-text">Современный интерфейс, который выглядит как родное приложение Windows 11 на любом масштабе DPI.</p>
+            <h3 class="card-title">Windows 11 Fluent UI и типографика</h3>
+            <p class="card-text">Системный шрифт Segoe UI Variable с ClearType выглядит кристально чётко на любом масштабе 100–200% DPI.</p>
             <ul class="card-list">
               <li>4 живые темы (Системная, Тёмная, OLED, Светлая) без перезапуска</li>
               <li>Адаптивные HD/4K иконки День/Ночь в трее, окнах и панели задач</li>
@@ -216,11 +305,11 @@
           <article class="card">
             <div class="feature-icon" aria-hidden="true">🧩</div>
             <h3 class="card-title">Зоны и инструменты администратора</h3>
-            <p class="card-text">Удобная работа с пользовательскими картами зон серверов и опциональный модуль для админов SCUM.</p>
+            <p class="card-text">Удобная работа с пользовательскими картами зон серверов и современный модуль в стиле Windows 11 для админов SCUM.</p>
             <ul class="card-list">
               <li>Импорт зон из <code>.tsv</code> и скриншотов, быстрые слои <kbd>Alt+1–5</kbd></li>
               <li>Умная кластеризация POI и мгновенный поиск по карте</li>
-              <li>Защищённая паролем админ-консоль, база игроков и <code>Spawn Cart</code></li>
+              <li>Окно профиля игрока, админ-консоль, база игроков и <code>Spawn Cart</code></li>
             </ul>
           </article>
         </div>
@@ -232,7 +321,7 @@
       <div class="container">
         <div class="section-head">
           <span class="section-eyebrow">Официальная загрузка</span>
-          <h2 class="section-title">Скачать ZiloreMiniMap v0.0.1</h2>
+          <h2 class="section-title">Скачать ZiloreMiniMap v0.0.5</h2>
           <p class="section-desc">
             Все файлы распространяются исключительно через официальный репозиторий GitHub. Установка .NET не требуется.
           </p>
@@ -243,7 +332,7 @@
             <div class="download-header">
               <picture>
                 <source srcset="/img/icon-setup.webp" type="image/webp">
-                <img class="download-app-icon" src="/img/icon-setup.png" alt="Установщик ZiloreMiniMap Setup" width="58" height="58" loading="lazy">
+                <img class="download-app-icon" src="/img/icon-setup.png" alt="Установщик ZiloreMiniMap Setup" width="54" height="54" loading="lazy">
               </picture>
               <div>
                 <span class="pill-badge">Рекомендуется</span>
@@ -254,10 +343,10 @@
               Устанавливается в профиль пользователя без прав администратора. При обновлении поверх старой версии автоматически сохраняет все ваши точки, маршруты, зоны и настройки.
             </p>
             <div class="download-actions">
-              <a class="btn btn-primary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap-Setup-v0.0.1.exe" target="_blank" rel="noopener noreferrer external">
-                Скачать ZiloreMiniMap-Setup-v0.0.1.exe
+              <a class="btn btn-primary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/ZiloreMiniMap-Setup-v0.0.5.exe" target="_blank" rel="noopener noreferrer external">
+                Скачать ZiloreMiniMap-Setup-v0.0.5.exe
               </a>
-              <span class="download-meta">Windows 10/11 x64 · .NET 10 LTS Self-Contained · Подписан SHA-256 + TSA</span>
+              <span class="download-meta">Windows 10/11 x64 · .NET 10 Self-Contained · Подписан SHA-256 + TSA</span>
             </div>
           </div>
 
@@ -265,7 +354,7 @@
             <div class="download-header">
               <picture>
                 <source srcset="/img/icon-app.webp" type="image/webp">
-                <img class="download-app-icon" src="/img/icon-app.png" alt="Портативная версия ZiloreMiniMap" width="58" height="58" loading="lazy">
+                <img class="download-app-icon" src="/img/icon-app.png" alt="Портативная версия ZiloreMiniMap" width="54" height="54" loading="lazy">
               </picture>
               <div>
                 <span class="pill-badge pill-badge-neutral">Portable</span>
@@ -276,23 +365,32 @@
               Не требует установки в систему: распакуйте архив в любую удобную папку и запустите <code>ZiloreMiniMap.exe</code>. Сопровождается криптографической подписью <code>.p7s</code>.
             </p>
             <div class="download-actions">
-              <a class="btn btn-secondary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap.zip" target="_blank" rel="noopener noreferrer external">
-                Скачать ZiloreMiniMap.zip
+              <a class="btn btn-secondary btn-full" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/ZiloreMiniMap-Portable-v0.0.5.zip" target="_blank" rel="noopener noreferrer external">
+                Скачать ZiloreMiniMap-Portable-v0.0.5.zip
               </a>
               <span class="download-meta">Совместим со встроенным автообновлятором · Подпись внутри и .p7s</span>
             </div>
           </div>
         </div>
 
+        <!-- Winget Quick Install -->
+        <div class="winget-bar">
+          <div>
+            <h3 class="github-files-title">Быстрая установка через Windows Package Manager (winget)</h3>
+            <p class="card-text">Установите или обновите ZiloreMiniMap одной командой в PowerShell или Терминале Windows:</p>
+          </div>
+          <pre class="code-block"><code>winget install Zilore.ZiloreMiniMap</code></pre>
+        </div>
+
         <!-- Direct GitHub Files & Docs Bar -->
         <div class="github-files-bar">
           <h3 class="github-files-title">Прямые ссылки на файлы релиза и документацию GitHub</h3>
           <div class="file-pills">
-            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest" target="_blank" rel="noopener noreferrer external">GitHub Releases</a>
-            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/SHA256SUMS.txt" target="_blank" rel="noopener noreferrer external">SHA256SUMS.txt</a>
-            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreMiniMap.zip.p7s" target="_blank" rel="noopener noreferrer external">ZiloreMiniMap.zip.p7s</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/tag/v0.0.5" target="_blank" rel="noopener noreferrer external">GitHub Releases v0.0.5</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/SHA256SUMS.txt" target="_blank" rel="noopener noreferrer external">SHA256SUMS.txt</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/update.txt" target="_blank" rel="noopener noreferrer external">update.txt</a>
+            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/download/v0.0.5/update.txt.p7s" target="_blank" rel="noopener noreferrer external">update.txt.p7s</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/ZiloreCodeSigning.cer" target="_blank" rel="noopener noreferrer external">ZiloreCodeSigning.cer</a>
-            <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest/download/update.txt" target="_blank" rel="noopener noreferrer external">update.txt</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">CHANGELOG.md</a>
             <a class="file-pill" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/docs/USER-GUIDE-RU.md" target="_blank" rel="noopener noreferrer external">Руководство (RU)</a>
           </div>
@@ -326,7 +424,7 @@
           <span class="section-eyebrow">Защита и проверка подлинности</span>
           <h2 class="section-title">Безопасность EAC и защита от мошенников</h2>
           <p class="section-desc">
-            Проверяйте официальные источники и цифровую подпись перед запуском. Этот сайт не использует JavaScript, сторонние скрипты, трекеры и формы сбора паролей.
+            Проверяйте официальные источники и цифровую подпись перед запуском. Этот сайт работает без JavaScript, без сторонних скриптов, трекеров и cookies, с блокировкой AI-скраперов и вредоносных ботов.
           </p>
         </div>
 
@@ -340,7 +438,7 @@
               <li>Отсутствуют вызовы чтения/записи памяти (<code>ReadProcessMemory</code>, <code>WriteProcessMemory</code>) и любые отладочные API.</li>
               <li>Отсутствуют DLL-инъекции и графические перехватчики DirectX / Vulkan.</li>
               <li>Координаты поступают только через штатную, разрешённую разработчиками кнопку <strong>Copy Location</strong>.</li>
-              <li>Каждая сборка проходит 17 автоматических регрессионных гейтов безопасности перед публикацией.</li>
+              <li>Каждая сборка проходит 68 автоматических тестов и 10 защитных проверок безопасности перед публикацией.</li>
             </ul>
             <div class="btn-stack">
               <a class="btn btn-secondary" href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer external">
@@ -360,7 +458,7 @@
               SHA-1 Thumbprint: 4472F4A6AA98A20262C9D33E93E6CFBFCF25BE80
             </div>
             <p class="card-text">Проверка контрольной суммы файла в Windows PowerShell (сравните с <code>SHA256SUMS.txt</code> из релиза):</p>
-            <pre class="code-block"><code>Get-FileHash .\ZiloreMiniMap-Setup-v0.0.1.exe -Algorithm SHA256</code></pre>
+            <pre class="code-block"><code>Get-FileHash .\ZiloreMiniMap-Setup-v0.0.5.exe -Algorithm SHA256</code></pre>
           </div>
         </div>
       </div>
@@ -402,7 +500,7 @@
           <details class="faq-item">
             <summary>У меня монитор 2K / 4K 144 Гц — как включить максимальную плавность?</summary>
             <div class="faq-body">
-              <p>Откройте <strong>Настройки → Внешний вид</strong> и включите пункт <strong>«Аппаратное ускорение карты M (GPU)»</strong>, после чего перезапустите программу. Это активирует прямой GPU-рендеринг DirectTerrain.</p>
+              <p>Откройте <strong>Настройки → Внешний вид</strong> и включите пункт <strong>«Аппаратное ускорение карты M (GPU)»</strong>, после чего перезапустите программу. Это активирует прямой GPU-рендеринг DirectTerrain и чёткий вывод ClearType на масштабах 125–200%.</p>
             </div>
           </details>
 
@@ -452,7 +550,7 @@
             <div class="feature-icon" aria-hidden="true">🛠️</div>
             <h3 class="card-title">Обратная связь и баги</h3>
             <p class="card-text">
-              В программе откройте <em>О программе → Выгрузить лог</em> — создастся безопасный архив диагностики без личных ключей. Отправьте его на почту или в GitHub Issues.
+              В программе откройте <em>О программе → Выгрузить лог</em> — создастся безопасный архив диагностики без личных ключей и имени пользователя Windows. Отправьте его на почту или в GitHub Issues.
             </p>
             <div class="btn-stack">
               <a class="btn btn-secondary btn-full" href="mailto:support@zilore.app">
@@ -506,10 +604,10 @@
         <div>
           <h4 class="footer-heading">Продукт</h4>
           <ul class="footer-links">
+            <li><a href="#changelog">Что нового</a></li>
             <li><a href="#features">Возможности</a></li>
-            <li><a href="#download">Скачать v0.0.1</a></li>
+            <li><a href="#download">Скачать v0.0.5</a></li>
             <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases" target="_blank" rel="noopener noreferrer external">История релизов</a></li>
-            <li><a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer external">Changelog</a></li>
           </ul>
         </div>
 
@@ -536,7 +634,7 @@
 
       <div class="footer-bottom">
         <span>© 2025–2026 Zilore · Официальный домен: minimap.zilore.app</span>
-        <span>Zero-JS Static Security · Без трекеров и cookies</span>
+        <span>Zero-JS Static Security · Без трекеров, cookies и AI-скраперов</span>
       </div>
     </div>
   </footer>

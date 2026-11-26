@@ -1,21 +1,37 @@
 {
+  "id": "/",
   "name": "ZiloreMiniMap — Tactical Minimap for SCUM",
   "short_name": "ZiloreMiniMap",
-  "description": "Tactical minimap, offline road navigator & squad radar for SCUM (Windows 10/11 Fluent UI, 100% EAC-Safe).",
+  "description": "Tactical minimap, offline road navigator & squad radar for SCUM (Windows 10/11 Segoe UI Variable Fluent UI, 100% EAC-Safe).",
+  "lang": "ru",
   "start_url": "/",
+  "scope": "/",
   "display": "browser",
-  "background_color": "#090F1A",
+  "background_color": "#070C15",
   "theme_color": "#0B1322",
+  "categories": [
+    "games",
+    "utilities",
+    "navigation"
+  ],
   "icons": [
     {
       "src": "/img/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/img/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

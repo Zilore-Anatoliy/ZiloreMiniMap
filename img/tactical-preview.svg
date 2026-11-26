@@ -59,7 +59,7 @@
 
     <!-- Danger Zone Polygon (Avoided by Road Router) -->
     <polygon points="182,194 246,184 264,234 214,254 174,228" fill="#EF4444" fill-opacity="0.14" stroke="#F87171" stroke-opacity="0.65" stroke-width="1.5" stroke-dasharray="5 4"/>
-    <text x="195" y="222" fill="#FCA5A5" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">PVP ZONE</text>
+    <text x="195" y="222" fill="#FCA5A5" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">PVP ZONE</text>
 
     <!-- Offline Road Route Avoiding Danger Zone -->
     <path d="M 78 352 Q 126 305, 156 268 T 160 170 Q 178 140, 232 132 T 318 146" fill="none" stroke="#38BDF8" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
@@ -70,29 +70,29 @@
     <circle cx="160" cy="170" r="5" fill="#0B1017" stroke="#22D3EE" stroke-width="2"/>
     <circle cx="318" cy="146" r="7" fill="#22D3EE" stroke="#0B1017" stroke-width="2"/>
     <rect x="258" y="106" width="114" height="24" rx="7" fill="#0B1017" fill-opacity="0.88" stroke="#22D3EE" stroke-opacity="0.55" stroke-width="1"/>
-    <text x="270" y="122" fill="#E0F2FE" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">B3 Bunker · 1.4 km</text>
+    <text x="270" y="122" fill="#E0F2FE" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">B3 Bunker · 1.4 km</text>
 
     <!-- Squad Mate Marker -->
     <circle cx="122" cy="242" r="5.5" fill="#22C55E" stroke="#0B1017" stroke-width="2"/>
     <rect x="132" y="231" width="66" height="21" rx="6" fill="#0B1017" fill-opacity="0.86" stroke="#22C55E" stroke-opacity="0.5" stroke-width="1"/>
-    <text x="140" y="245" fill="#DCFCE7" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">Alex · 310m</text>
+    <text x="140" y="245" fill="#DCFCE7" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="10.5" font-weight="600">Alex · 310m</text>
 
     <!-- Sector Watermark Labels -->
-    <text x="32" y="96" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">C2</text>
-    <text x="262" y="96" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">B3</text>
-    <text x="32" y="340" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">C1</text>
+    <text x="32" y="96" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">C2</text>
+    <text x="262" y="96" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">B3</text>
+    <text x="32" y="340" fill="#64748B" fill-opacity="0.55" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700">C1</text>
 
     <!-- Fluent Window Title Bar -->
     <rect x="12" y="12" width="616" height="44" fill="#0B121E" fill-opacity="0.92"/>
     <line x1="12" y1="56" x2="628" y2="56" stroke="#29374A" stroke-width="1"/>
     <rect x="28" y="23" width="22" height="22" rx="6" fill="#132944" stroke="#38BDF8" stroke-width="1.2"/>
     <polygon points="44,29 33,34 38,36 40,41" fill="#38BDF8"/>
-    <text x="60" y="39" fill="#F1F5F9" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="600">ZiloreMiniMap — Tactical Map (M)</text>
+    <text x="60" y="39" fill="#F1F5F9" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="600">ZiloreMiniMap — Tactical Map (M)</text>
     <rect x="286" y="23" width="68" height="22" rx="11" fill="#0EA5E9" fill-opacity="0.16" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1"/>
-    <text x="301" y="38" fill="#7DD3FC" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">v0.0.1</text>
+    <text x="301" y="38" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">v0.0.5</text>
 
     <!-- Window Chrome Controls -->
-    <g fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <g fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="13">
       <text x="536" y="38">—</text>
       <text x="566" y="38">□</text>
       <text x="596" y="38" fill="#F87171">✕</text>
@@ -120,7 +120,7 @@
     </g>
 
     <!-- Compass Cardinals -->
-    <g font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+    <g font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
       <rect x="457" y="122" width="22" height="16" rx="4" fill="#0B1017" fill-opacity="0.9"/>
       <text x="468" y="134" fill="#FB7185">N</text>
       <text x="468" y="354" fill="#CBD5E1">S</text>
@@ -134,18 +134,18 @@
 
     <!-- Top-Right HUD Telemetry Pill (SCUM Clock + Weather + Squad) -->
     <rect x="336" y="72" width="272" height="36" rx="12" fill="url(#cardGrad)" stroke="#29374A" stroke-width="1"/>
-    <text x="352" y="95" fill="#38BDF8" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">☀ 14:32 · 18°C</text>
-    <text x="466" y="95" fill="#94A3B8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">|  23:05</text>
+    <text x="352" y="95" fill="#38BDF8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">☀ 14:32 · 18°C</text>
+    <text x="466" y="95" fill="#94A3B8" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12">|  23:05</text>
     <circle cx="546" cy="90" r="4" fill="#22C55E"/>
-    <text x="556" y="95" fill="#DCFCE7" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Squad 3</text>
+    <text x="556" y="95" fill="#DCFCE7" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Squad 3</text>
 
     <!-- Bottom Status Strip (Zero-GC Perf + AI Survival + Controls) -->
     <rect x="28" y="392" width="584" height="40" rx="12" fill="url(#cardGrad)" stroke="#29374A" stroke-width="1"/>
     <circle cx="48" cy="412" r="4.5" fill="#22C55E"/>
-    <text x="60" y="416" fill="#E2E8F0" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Sector C2 · Road ETA 01:42 · 64 km/h</text>
+    <text x="60" y="416" fill="#E2E8F0" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600">Sector C2 · Road ETA 01:42 · 64 km/h</text>
     <rect x="348" y="402" width="96" height="20" rx="6" fill="#22C55E" fill-opacity="0.14" stroke="#22C55E" stroke-opacity="0.4"/>
-    <text x="360" y="416" fill="#86EFAC" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">100% EAC-Safe</text>
+    <text x="360" y="416" fill="#86EFAC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">100% EAC-Safe</text>
     <rect x="454" y="402" width="144" height="20" rx="6" fill="#38BDF8" fill-opacity="0.14" stroke="#38BDF8" stroke-opacity="0.4"/>
-    <text x="466" y="416" fill="#7DD3FC" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">144 Hz · Zero-GC HUD</text>
+    <text x="466" y="416" fill="#7DD3FC" font-family="Segoe UI Variable, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600">144 Hz · Pure WPF HUD</text>
   </g>
 </svg>
