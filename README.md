@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.4-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.4" /></a>
+  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.5-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.5" /></a>
   <a href="https://minimap.zilore.app"><img src="https://img.shields.io/badge/Website-minimap.zilore.app-2DD4BF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
   <a href="https://discord.gg/xbWXKahvS"><img src="https://img.shields.io/badge/Discord-SCUM%20GRAND-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://boosty.to/minimap.zilore.app/purchase/4184863?ssource=DIRECT&share=subscription_link"><img src="https://img.shields.io/badge/Boosty-Подписка-F15F2C?style=for-the-badge&logo=boosty&logoColor=white" alt="Boosty" /></a>
@@ -84,16 +84,16 @@
 ---
 
 <!-- AUTO-RELEASE-INFO:START -->
-## 📦 Актуальный релиз: v0.0.4 (build 46715)
+## 📦 Актуальный релиз: v0.0.5 (build 15632)
 
-* **Дата сборки:** `2026-11-25 23:53`
-* **Что нового:** • Ускорен расчёт дорожных маршрутов A* в 5–12× (точное отсечение branch-and-bound, прямая индексация графа, zero-alloc расчёт дистанции до полилинии с одним Sqrt). · Ускорена прокрутка и масштабирование 8K-карты (M): 2 параллельных декодера тайлов, отмена устаревших закадровых тайлов при панорамировании и приоритет загрузки от центра экрана. · Умная вставка точек маршрута (Alt+ЛКМ / ПКМ): привязка к реальной кривой дороги вместо прямой хорды. · Снижена нагрузка на Gen0 GC и I/O: отдельный кэш динамических подписей тиммейтов, zero-LINQ обработка маршрутов/отряда/подписей, ротация automatic.log (1 МБ) и атомарная запись групп через уникальные .tmp. · Устранён лишний спам пересчётов маршрута при съезде с дороги (кулдаун 2.5 с) и очистка зависшей очереди цели при сбросе GPS. · Устранена трата CPU на форматирование строк 20 раз/сек в MapWindow.Tracking при скрытом окне настроек и обеспечена потокобезопасность коэффициента объезда зон.
+* **Дата сборки:** `2026-11-26 18:53`
+* **Что нового:** • Накопительный релиз: · – Единая нативная типографика Windows 11 / 10 (src\UI\SystemTypography.cs): системный шрифт Segoe UI Variable (с бесшовным откатом на Segoe UI в Windows 10) и принудительный ClearType для всех окон, прозрачных оверлеев HUD/карты, диалогов, подсказок, журнала (табличные цифры), трея и админ-инструментов. И многое другое.
 
 | Файл релиза | Размер | Цифровая подпись | SHA-256 |
 | :--- | :---: | :---: | :--- |
-| `installer/ZiloreMiniMap-Setup-v0.0.4.exe` | 138.75 MB | Authenticode + TSA | `33e982eb111877f42b3e47b23a5e376dfbd4167fb3dcdea0488d958592e65c54` |
-| `net10/ZiloreMiniMap.zip` | 139.14 MB | CMS .p7s + Inner PE | `d81de9a1f85ddac092c7e5d40e306eb75e95f2efdbcc8d47460bb82ee4225811` |
-| `net10/ZiloreMiniMap-v0.0.4-Release-build(46715).zip` | 139.13 MB | CMS .p7s + Inner PE | `a7039a17326ec8b5bd0c59c4742e8b4936434972ba2736f1bfe6a9ab47c2cd8e` |
+| `installer/ZiloreMiniMap-Setup-v0.0.5.exe` | 139.69 MB | Authenticode + TSA | `eadb78c0564960a4f399812ae51bde95959240419eafe3863eabbb8c6c181bc6` |
+| `net10/ZiloreMiniMap.zip` | 139.09 MB | CMS .p7s + Inner PE | `266e2aa5e7d4d7b919ecc2f24a74de5f596ca092560d0c8bb4b28b2dff1bd508` |
+| `net10/ZiloreMiniMap-v0.0.5-Release-build(15632).zip` | 139.09 MB | CMS .p7s + Inner PE | `cce5aad0619308a34c4b6835fecaa5bfb47e3b823d305f878620af2b93b4a62a` |
 <!-- AUTO-RELEASE-INFO:END -->
 
 ---
@@ -148,6 +148,7 @@
 
 * **Не трогает игру:** программа не читает память **SCUM**, не подменяет файлы игры и не внедряет сторонние библиотеки (`DLL`).
 * **Проверка подлинности сборок:** релизы проходят проверку целостности (`SHA-256` и цифровую подпись `Authenticode`) — скачивайте их только с официального сайта или GitHub Releases.
+* **Защита сайтов и сервисов от плохих ботов:** веб-ресурсы и API (`minimap.zilore.app`, `api.zilore.app`, `report.zilore.app`) защищены через **Cloudflare** (фильтрация вредоносного трафика, ограничение частоты запросов от автоматических скриптов и защита от массового парсинга/ботов).
 * **Ничего лишнего в логах:** архив диагностики создаётся только по вашему запросу и не содержит личных ключей доступа.
 
 ---
