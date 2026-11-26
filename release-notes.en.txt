@@ -1,0 +1,24 @@
+﻿# Release notes for the new ZiloreMiniMap version (English)
+# Lines starting with # are ignored. Sections: [New], [Improvements], [Fixes]
+
+[New]
+• Cumulative release.
+• Built-in comprehensive User Guide (RU/EN) right inside the app with instant search across all 10 chapters (system tray, Settings → General, and Shift+F1 on the map) plus an illustrated web edition with screen diagrams.
+• Added End User License Agreement (EULA) in Russian and English: shown during Windows Setup and on first launch of the portable edition, and accessible anytime from the system tray and Settings.
+• Unified native Windows 11 / 10 typography: Segoe UI Variable system font (with seamless fallback to Segoe UI on Windows 10) and enforced ClearType across all windows, transparent HUD and map overlays, dialogs, tooltips, event log (tabular numerals), system tray, and admin tools.
+• Modern Windows 11-style player profile window (Overview, Vehicles, Flags, Squad tabs, quick teleport, map markers, and clipboard report import).
+
+[Improvements]
+• Faster spatial viewport lookup for POI markers and a built-in pre-release performance benchmark gate.
+• Faster player list search, filtering, and validation in admin tools; disabling admin tools now cleanly closes all open player profile windows.
+• Lower memory overhead in hotkey monitoring, custom zone loading/saving, POI startup loading, and tactical sidebar filtering.
+• Road route distance and ETA now count down smoothly meter-by-meter in real time, with per-frame route summary caching.
+• Settings persistence now runs asynchronously off the UI thread, eliminating micro-freezes when adjusting options or moving the HUD in game.
+• Lower CPU usage when playing without an active destination or with stationary squadmates, plus instant shutdown when squad relay is offline.
+• Stronger privacy in local diagnostic ZIP reports (automatic redaction of Windows username, access keys, and tokens) and validated external link handling.
+
+[Fixes]
+• Fixed unnecessary 60 Hz HUD telemetry and AI copilot recomputation when no destination is set.
+• Fixed FPS drops during smooth auto-zoom on maps with thousands of POIs and startup cache prewarm race conditions.
+• Fixed overlapping map labels on 125–200% DPI screens, localized turn-arrow distance units (m/м), and frozen squad ping countdowns.
+• Fixed temporary Steam profile lookup errors getting stuck in cache and guarded admin player search against empty queries.

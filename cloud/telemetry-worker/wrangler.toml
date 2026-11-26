@@ -1,0 +1,16 @@
+name = "zilore-minimap-telemetry"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+routes = [
+  { pattern = "report.zilore.app/*", zone_name = "zilore.app" }
+]
+
+[[r2_buckets]]
+binding = "TELEMETRY_BUCKET"
+bucket_name = "zilore-telemetry-reports"
+
+# Secrets to configure via CLI (NEVER commit real tokens):
+#   wrangler secret put ZILORE_REPORT_TOKEN
+#   wrangler secret put ALERT_WEBHOOK_URL   (optional Discord webhook for ERROR alerts)

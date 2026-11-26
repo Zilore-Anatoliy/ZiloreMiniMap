@@ -1,0 +1,57 @@
+﻿END USER LICENSE AGREEMENT (EULA)
+Software: ZiloreMiniMap
+Licensor / Rights Holder: Zilore (Republic of Belarus)
+Official Website: https://minimap.zilore.app
+Contact Email: support@zilore.app
+Effective Date: November 26, 2026 (Edition 2026-11-26)
+
+PLEASE READ THIS AGREEMENT CAREFULLY BEFORE INSTALLING, COPYING, OR RUNNING THE SOFTWARE.
+By clicking "I Accept" / checking the acceptance box in the installer (Setup) or upon first launch of ZiloreMiniMap.exe (including the portable edition), you acknowledge that you have read, understood, and agree to be bound by this Agreement. If you do not agree to these terms, do not install or run the Software and delete all copies immediately.
+
+1. GRANT OF LICENSE
+1.1. The Licensor grants you ("User") a limited, non-exclusive, revocable, non-transferable, non-sublicensable license to install and use ZiloreMiniMap ("Software") solely for personal, non-commercial use on Windows 10 / Windows 11 (x64) devices.
+1.2. The Software is licensed, not sold. All rights not expressly granted herein are reserved by the Licensor.
+
+2. PROHIBITION OF MODIFICATION AND RESTRICTIONS
+You are strictly PROHIBITED from doing, or enabling any third party to do, any of the following:
+2.1. Modifying, altering, patching, translating, adapting, or creating derivative works based on the Software, its executables, libraries, databases, assets, or installer.
+2.2. Decompiling, disassembling, reverse engineering, removing obfuscation, or attempting to derive the source code or protected resources of the Software, except strictly to the extent expressly permitted by mandatory applicable law.
+2.3. Bypassing, disabling, tampering with, or circumventing digital signature verification, file integrity checks, or access key mechanisms (including POI and Zilore AI features).
+2.4. Removing, obscuring, or altering any copyright, trademark, digital signature, or proprietary notices.
+2.5. Repackaging, mirroring, re-uploading, or redistributing the Software (original or modified) on third-party websites, file hosts, forums, or torrent trackers without the Licensor's prior written consent.
+2.6. Renting, leasing, selling, or bundling the Software into paid packages, services, or third-party cheat distributions.
+
+3. INTELLECTUAL PROPERTY AND NON-AFFILIATION
+3.1. All right, title, and interest in and to the Software—including source code, architecture, UI design, artwork, databases, and documentation—remain the exclusive property of the Licensor (Zilore).
+3.2. ZiloreMiniMap is an independent third-party companion utility and is NOT affiliated with, endorsed by, or sponsored by the developers or publishers of SCUM™ (Gamepires / Jagex) or Easy Anti-Cheat™ (Epic Games). All trademarks belong to their respective owners.
+
+4. EXTERNAL OPERATION AND ANTI-CHEAT COMPLIANCE
+4.1. The Software is engineered as an external overlay window: it does not read or write game process memory, modify game files, or inject DLLs into the game process.
+4.2. Notwithstanding Section 4.1, you are solely responsible for verifying that external overlays comply with the applicable game EULA, anti-cheat policies, and individual server rules. The Licensor cannot guarantee third-party policies will remain unchanged.
+
+5. FREE CORE FEATURES, ACCESS KEYS, AND VOLUNTARY SUPPORT
+5.1. Core features of the Software are provided free of charge. Optional extended modules may be unlocked with personal offline access keys.
+5.2. Personal access keys are strictly for your own personal use. Sharing, publishing, or reselling access keys is prohibited and terminates your license to those modules.
+5.3. Voluntary donations support ongoing development and do not create additional warranty obligations unless required by mandatory law.
+
+6. OFFICIAL DISTRIBUTION AND UPDATES
+6.1. The only official distribution sources are https://minimap.zilore.app and https://github.com/Zilore-Anatoliy/ZiloreMiniMap. The Licensor assumes zero responsibility for copies obtained elsewhere.
+6.2. The Software may check for updates from official channels using cryptographic signature and SHA-256 verification. Updated releases are governed by this Agreement or its updated terms.
+
+7. PRIVACY AND DIAGNOSTICS
+7.1. User settings, waypoints, routes, and custom zones are stored locally on your device.
+7.2. Local diagnostic archives automatically redact sensitive data (Windows usernames, access keys, and tokens). Cloud error reporting is strictly opt-in and disabled by default.
+
+8. DISCLAIMER OF WARRANTIES ("AS IS") AND LIMITATION OF LIABILITY
+8.1. THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, UNINTERRUPTED OPERATION, OR COMPATIBILITY AFTER OS OR GAME UPDATES.
+8.2. To the maximum extent permitted by applicable law, the Licensor shall not be liable for any direct, indirect, incidental, consequential, or special damages—including loss of data, in-game progress, or game accounts—arising out of the use or inability to use the Software.
+
+9. TERMINATION AND GOVERNING LAW
+9.1. Your license terminates automatically without notice if you breach any provision of this Agreement (including Section 2). Upon termination, you must stop using the Software and destroy all copies.
+9.2. This Agreement is governed by the laws of the Republic of Belarus, without regard to conflict-of-law rules, subject to mandatory consumer protection laws applicable in your jurisdiction.
+9.3. If any clause is held unenforceable, the remaining clauses remain in full force and effect.
+
+10. CONTACT AND INQUIRIES
+For all licensing questions, technical support, bug or security vulnerability reports, copyright notices, or permission requests, contact the Licensor exclusively via official email:
+Email: support@zilore.app
+Official Website: https://minimap.zilore.app

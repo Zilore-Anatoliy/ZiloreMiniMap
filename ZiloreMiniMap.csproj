@@ -1,0 +1,125 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Configurations>Debug;Release;Test</Configurations>
+    <RootNamespace>ZiloreMiniMap</RootNamespace>
+    <AssemblyName>ZiloreMiniMap</AssemblyName>
+    <Version>0.0.5</Version>
+    <Product>ZiloreMiniMap</Product>
+    <ApplicationIcon>resources\app.ico</ApplicationIcon>
+    <ApplicationManifest>packaging\MiniMap.manifest</ApplicationManifest>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <!-- Required by .NET 10 [LibraryImport] source generator (SYSLIB1062); Gate #6 enforces 0 manual unsafe blocks in src\ -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>$(NoWarn);CA1416;WFO1000;CA1507;CA1510;CA1822;CA1845;CA1859;CA1861;CA1862;CA1865;CA1866;CA2249;CA2263</NoWarn>
+    <!-- Tier-1 Phase 3A: Treat dead variables, impossible type checks, unawaited async, and all Nullable warnings in #nullable enable modules as compile errors -->
+    <WarningsAsErrors>$(WarningsAsErrors);CS0168;CS0184;CS0219;CS0649;CS1998;CS4014;CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625</WarningsAsErrors>
+    <!-- Tier-1 Phase 4B: Built-in .NET 10 Roslyn security/correctness analyzers -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest-minimum</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Test'">
+    <AssemblyName>ZiloreMiniMap-Test</AssemblyName>
+    <DefineConstants>$(DefineConstants);MINIMAP_TEST</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <TieredCompilation>true</TieredCompilation>
+    <TieredPGO>true</TieredPGO>
+  </PropertyGroup>
+
+  <!-- Source files -->
+  <ItemGroup>
+    <Compile Include="src\**\*.cs" />
+  </ItemGroup>
+
+  <!-- Core embedded resources -->
+  <ItemGroup>
+    <EmbeddedResource Include="resources\zones.tsv" LogicalName="zones.tsv" />
+    <EmbeddedResource Include="resources\water-mask.bin" LogicalName="water-mask.bin" />
+    <EmbeddedResource Include="resources\scummap.bin" LogicalName="scummap.bin" />
+    <EmbeddedResource Include="resources\spawn-items.tsv" LogicalName="spawn-items.tsv" />
+    <EmbeddedResource Include="resources\spawn-compatibility.tsv" LogicalName="spawn-compatibility.tsv" />
+    <EmbeddedResource Include="resources\spawn-item-names-pl.tsv" LogicalName="spawn-item-names-pl.tsv" />
+    <EmbeddedResource Include="resources\keyboard-setup.png" LogicalName="keyboard-setup.png" />
+    <EmbeddedResource Include="resources\steam-logo.png" LogicalName="steam-logo.png" />
+    <EmbeddedResource Include="resources\grand-banner.png" LogicalName="grand-banner.png" />
+    <EmbeddedResource Include="resources\flag-by.png" LogicalName="flag-by.png" />
+    <EmbeddedResource Include="packaging\detect_zones.py" LogicalName="detect_zones.py" />
+    <EmbeddedResource Include="docs\EULA-RU.txt" LogicalName="EULA-RU.txt" />
+    <EmbeddedResource Include="docs\EULA-EN.txt" LogicalName="EULA-EN.txt" />
+    <EmbeddedResource Include="docs\USER-GUIDE-RU.md" LogicalName="USER-GUIDE-RU.md" />
+    <EmbeddedResource Include="docs\USER-GUIDE-EN.md" LogicalName="USER-GUIDE-EN.md" />
+
+    <!-- Localized spawn item, category and UI string catalogues -->
+    <EmbeddedResource Include="resources\spawn-item-names-*.tsv" Exclude="resources\spawn-item-names-pl.tsv">
+      <LogicalName>%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\spawn-category-names-*.tsv">
+      <LogicalName>%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\ui-strings-*.tsv">
+      <LogicalName>%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+
+    <!-- Bundled navigation voices -->
+    <EmbeddedResource Include="resources\voice-navigation\**\*.mp3">
+      <LogicalName>voice-navigation/$([System.String]::Copy('%(RecursiveDir)').Replace('\','/'))%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <!-- Copy external assets next to the executable -->
+  <ItemGroup>
+    <None Include="resources\map-tiles.bin" CopyToOutputDirectory="PreserveNewest" Link="assets\map-tiles.bin" />
+    <None Include="resources\roads.bin" CopyToOutputDirectory="PreserveNewest" Link="assets\roads.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="NLayer" Version="1.15.0" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="11.0.0" />
+  </ItemGroup>
+
+  <!-- Generate SHA-256 installation-assets.txt manifest before embedding resources -->
+  <Target Name="GenerateInstallationAssetsManifest" BeforeTargets="AssignTargetPaths;PrepareResourceNames">
+    <PropertyGroup>
+      <_AssetManifestPath>$(IntermediateOutputPath)installation-assets.txt</_AssetManifestPath>
+    </PropertyGroup>
+    <MakeDir Directories="$(IntermediateOutputPath)" />
+    <GetFileHash Files="resources\map-tiles.bin;resources\roads.bin" Algorithm="SHA256">
+      <Output TaskParameter="Items" ItemName="_AssetHashes" />
+    </GetFileHash>
+    <ItemGroup>
+      <_AssetManifestLines Include="@(_AssetHashes->'%(Filename)%(Extension)=%(FileHash)')" />
+    </ItemGroup>
+    <WriteLinesToFile File="$(_AssetManifestPath)" Lines="@(_AssetManifestLines-&gt;ToLowerInvariant())" Overwrite="true" Encoding="UTF-8" />
+    <ItemGroup>
+      <EmbeddedResource Include="$(_AssetManifestPath)" LogicalName="installation-assets.txt" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <EmbeddedResource Include="resources\icons\icon-day-256.png" LogicalName="icon-day-256.png" />
+    <EmbeddedResource Include="resources\icons\icon-night-256.png" LogicalName="icon-night-256.png" />
+    <EmbeddedResource Include="resources\icons\icon-day-64.png" LogicalName="icon-day-64.png" />
+    <EmbeddedResource Include="resources\icons\icon-night-64.png" LogicalName="icon-night-64.png" />
+  </ItemGroup>
+</Project>

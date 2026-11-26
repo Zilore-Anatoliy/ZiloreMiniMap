@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru" data-version="v0.0.5" data-build="20598" data-release-date="2026-11-26">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; object-src 'none'; media-src 'none'; worker-src 'none'; child-src 'none'; connect-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests;">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow, noai, noimageai">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <title>Руководство пользователя ZiloreMiniMap — SCUM</title>
+  <meta name="description" content="Подробное иллюстрированное руководство по ZiloreMiniMap для SCUM: установка, HUD, маршруты, авиация, радар отряда, часы сервера, зоны, настройки и клавиши.">
+  <meta name="theme-color" content="#0B1322" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F3F6FA" media="(prefers-color-scheme: light)">
+
+  <link rel="canonical" href="https://minimap.zilore.app/guide/">
+  <link rel="alternate" hreflang="ru" href="https://minimap.zilore.app/guide/">
+  <link rel="alternate" hreflang="en" href="https://minimap.zilore.app/en/guide/">
+  <link rel="alternate" hreflang="x-default" href="https://minimap.zilore.app/guide/">
+
+  <link rel="preload" href="/css/style.css?v=20598" as="style">
+  <link rel="icon" href="/favicon.ico?v=20598" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest?v=20598">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ZiloreMiniMap">
+  <meta property="og:title" content="Руководство пользователя ZiloreMiniMap — SCUM">
+  <meta property="og:description" content="Подробное иллюстрированное руководство по ZiloreMiniMap для SCUM: установка, HUD, маршруты, авиация, радар отряда, часы сервера, зоны, настройки и клавиши.">
+  <meta property="og:url" content="https://minimap.zilore.app/guide/">
+  <meta property="og:image" content="https://minimap.zilore.app/img/og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Руководство пользователя ZiloreMiniMap — SCUM">
+  <meta name="twitter:description" content="Подробное иллюстрированное руководство по ZiloreMiniMap для SCUM: установка, HUD, маршруты, авиация, радар отряда, часы сервера, зоны, настройки и клавиши.">
+  <meta name="twitter:image" content="https://minimap.zilore.app/img/og-preview.png">
+
+  <link rel="stylesheet" href="/css/style.css?v=20598">
+</head>
+<body itemscope itemtype="https://schema.org/TechArticle">
+  <input type="radio" name="theme" id="theme-auto" class="sr-only-radio" checked aria-hidden="true">
+  <input type="radio" name="theme" id="theme-dark" class="sr-only-radio" aria-hidden="true">
+  <input type="radio" name="theme" id="theme-oled" class="sr-only-radio" aria-hidden="true">
+  <input type="radio" name="theme" id="theme-light" class="sr-only-radio" aria-hidden="true">
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <meta itemprop="headline" content="Руководство пользователя ZiloreMiniMap — SCUM">
+  <meta itemprop="dateModified" content="2026-11-26">
+  <meta itemprop="inLanguage" content="ru">
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <picture>
+          <source srcset="/img/icon-day.webp" type="image/webp" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-day.png" type="image/png" media="(prefers-color-scheme: light)">
+          <source srcset="/img/icon-night.webp" type="image/webp">
+          <img class="brand-icon" src="/img/icon-night.png" alt="ZiloreMiniMap" width="34" height="34">
+        </picture>
+        <span>ZiloreMiniMap</span>
+        <span class="version-tag">v0.0.5</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-panel" aria-label="Navigation">
+        <ul class="nav-links">
+          <li><a href="/">Главная</a></li>
+          <li><a href="#top" aria-current="page">Руководство</a></li>
+          <li><a href="/#download">Скачать</a></li>
+          <li><a href="/#security">Безопасность</a></li>
+          <li><a href="/#support">Поддержка</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="theme-switch" role="group" aria-label="Theme">
+            <label for="theme-auto" title="Авто">Авто</label>
+            <label for="theme-dark" title="Тёмная тема">🌙</label>
+            <label for="theme-oled" title="OLED Чёрная">OLED</label>
+            <label for="theme-light" title="Светлая тема">☀</label>
+          </div>
+          <div class="lang-switch" aria-label="Language">
+            <span class="is-active" aria-current="page">RU</span>
+            <a href="/en/guide/" hreflang="en" lang="en">EN</a>
+          </div>
+          <a class="btn btn-primary btn-sm" href="/#download">Скачать v0.0.5</a>
+        </div>
+      </nav>
+    </div>
+
+    <nav class="mobile-quickbar" aria-label="Chapters">
+      <a class="is-primary" href="/">← На главную страницу</a>
+      <a href="#ch-1">1. Старт</a>
+      <a href="#ch-2">2. HUD &amp; M</a>
+      <a href="#ch-3">3. Маршруты</a>
+      <a href="#ch-5">5. Отряд</a>
+      <a href="#ch-8">8. Настройки</a>
+      <a href="#ch-10">10. Клавиши</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="guide-hero" id="top">
+      <div class="container">
+        <span class="section-eyebrow">Полная документация · v0.0.5</span>
+        <h1 class="hero-title">Руководство пользователя <span class="text-gradient">ZiloreMiniMap</span></h1>
+        <p class="hero-lead">Понятная пошаговая инструкция со схемами экранов: от первой настройки SCUM за 30 секунд до многоточечных маршрутов, командного радара отряда, авиации и резервного копирования.</p>
+        <div class="callout-tip"><strong>Совет:</strong> эта же документация с мгновенным поиском встроена прямо внутрь ZiloreMiniMap — открывается из меню трея (<strong>Руководство пользователя</strong>), в <strong>Настройки → Общие</strong> или клавишами <kbd>Shift+F1</kbd> на карте.</div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <aside class="guide-toc" aria-label="Содержание (10 разделов)">
+        <p class="guide-toc-title">Содержание (10 разделов)</p>
+        <ol>
+          <li><a href="#ch-1"><span>1.</span> Быстрый старт и установка</a></li>
+          <li><a href="#ch-2"><span>2.</span> Миникарта (HUD) и тактическая карта (M)</a></li>
+          <li><a href="#ch-3"><span>3.</span> Офлайн-навигатор, маршруты и голосовой штурман</a></li>
+          <li><a href="#ch-4"><span>4.</span> Авиационный режим и полёты</a></li>
+          <li><a href="#ch-5"><span>5.</span> Командный радар отряда</a></li>
+          <li><a href="#ch-6"><span>6.</span> Серверные часы, климат, выживание и Zilore AI</a></li>
+          <li><a href="#ch-7"><span>7.</span> Пользовательские зоны, слои и поиск POI</a></li>
+          <li><a href="#ch-8"><span>8.</span> Настройки, темы оформления, бэкап и обновления</a></li>
+          <li><a href="#ch-9"><span>9.</span> Инструменты администратора серверов SCUM</a></li>
+          <li><a href="#ch-10"><span>10.</span> Все горячие клавиши и решение проблем</a></li>
+        </ol>
+      </aside>
+
+      <div class="guide-content" itemprop="articleBody">
+        <article class="guide-chapter" id="ch-1">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">1</span>
+            <h2>Быстрый старт и установка</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-setup.svg?v=20598" alt="Пошаговая схема подключения: Borderless в SCUM, клавиша Copy Location и запуск ZiloreMiniMap" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Пошаговая схема подключения: Borderless в SCUM, клавиша Copy Location и запуск ZiloreMiniMap</figcaption>
+          </figure>
+          <h3>Выбор варианта загрузки</h3>
+          <ul>
+            <li><strong>Установщик Windows (<code>ZiloreMiniMap-Setup-v0.0.5.exe</code>) — рекомендуется.</strong> Устанавливается в профиль пользователя без прав администратора, создаёт ярлыки, при обновлении автоматически сохраняет все ваши метки, маршруты, зоны и настройки.</li>
+            <li><strong>Портативная версия (<code>ZiloreMiniMap-Portable-v0.0.5.zip</code>).</strong> Не требует установки: распакуйте весь архив в любую папку (рядом должна остаться папка <code>assets</code>) и запустите <code>ZiloreMiniMap.exe</code>.</li>
+            <li><strong>Установка через <code>winget</code>:</strong> откройте Терминал Windows или PowerShell и выполните <code>winget install Zilore.ZiloreMiniMap</code>.</li>
+          </ul>
+          <h3>Лицензионное соглашение (EULA)</h3>
+          <p>При установке через <code>Setup</code> или при первом запуске портативной версии откроется Лицензионное соглашение. Поставьте галочку согласия и нажмите <strong>«Принять и продолжить»</strong>. Если вы уже приняли соглашение в установщике, повторно оно не появится. В любой момент текст можно перечитать через меню трея или в <strong>Настройки → Общие</strong>.</p>
+          <h3>Обязательная настройка SCUM (занимает 30 секунд)</h3>
+          <ol>
+            <li><strong>Режим экрана «Окно без рамки»:</strong> в игре откройте <em>Настройки → Видео</em> и переключите режим с «Полный экран» на <strong>«Окно без рамки» (Windowed Fullscreen / Borderless)</strong>. В эксклюзивном полноэкранном режиме Windows скрывает любые внешние оверлеи.</li>
+            <li><strong>Клавиша копирования координат:</strong> откройте <em>Управление</em> в SCUM и убедитесь, что для действия <strong>Copy Location</strong> назначена клавиша <kbd>Num /</kbd> (клавиша деления на цифровом блоке).</li>
+            <li><strong>Если на клавиатуре нет Numpad:</strong> откройте Мастер настройки в ZiloreMiniMap и выберите любую свободную клавишу, затем назначьте её же на <strong>Copy Location</strong> в SCUM.</li>
+          </ol>
+          <h3>Индикатор состояния на миникарте и в трее</h3>
+          <ul>
+            <li><strong>Зелёный индикатор</strong> — координаты поступают стабильно, GPS активен.</li>
+            <li><strong>Жёлтый индикатор</strong> — временная пауза (открыт игровой чат, инвентарь, меню или окно настроек). Как только вы закроете чат клавишей <kbd>Esc</kbd>, отслеживание автоматически продолжится.</li>
+            <li><strong>Серый индикатор</strong> — программа ждёт запуска SCUM или первого получения координат.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-2">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">2</span>
+            <h2>Миникарта (HUD) и тактическая карта (M)</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-hud-tactical.svg?v=20598" alt="Круглая миникарта HUD (слева) и полноэкранная тактическая карта по клавише M (справа)" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Круглая миникарта HUD (слева) и полноэкранная тактическая карта по клавише M (справа)</figcaption>
+          </figure>
+          <h3>Миникарта поверх игры (HUD)</h3>
+          <ul>
+            <li><strong>Форма и прозрачность:</strong> выбирайте круглый радар с компасом (N/S/E/W) или квадратную миникарту. Размер, положение и прозрачность настраиваются в <strong>Настройки → Внешний вид</strong>.</li>
+            <li><strong>Перемещение HUD:</strong> перетащите миникарту мышью в любой удобный угол экрана через настройки положения — позиция сохранится автоматически.</li>
+            <li><strong>Плавный автозум:</strong> карта автоматически приближается, когда вы идёте пешком, и отдаляется при быстрой езде на машине или в полёте. Приближение работает плавно и без просадок FPS.</li>
+            <li><strong>Строка состояния под/над HUD:</strong> показывает текущий сектор (<code>C2</code>), ближайший ориентир, стрелку следующего поворота, расстояние и ETA до цели, игровое и реальное время, температуру, скорость и индикаторы выживания.</li>
+            <li><strong>Оповещение об опасной зоне:</strong> при приближении к отмеченной PvP/опасной зоне рамка HUD подсвечивается красным.</li>
+          </ul>
+          <h3>Полная тактическая карта (клавиша M)</h3>
+          <p>Нажмите <kbd>M</kbd> в игре (или кликните по значку в трее), чтобы открыть полноэкранную тактическую карту:</p>
+          <ul>
+            <li><strong>Управление камерой:</strong> колесо мыши — масштаб, зажатая левая кнопка — перемещение карты, <kbd>0</kbd> — сброс масштаба на 1.0×, <kbd>L</kbd> — фиксация масштаба.</li>
+            <li><strong>Поставить цель навигации:</strong> просто нажмите правой кнопкой мыши (ПКМ) на любую точку, бункер, город или метку и выберите <strong>«Проложить маршрут»</strong>.</li>
+            <li><strong>Линейка расстояний и азимута (<kbd>K</kbd>):</strong> нажмите <kbd>K</kbd> на открытой карте и кликайте по точкам, чтобы измерить точное расстояние в метрах/километрах и азимут в градусах. Нажмите <kbd>Esc</kbd> для выхода из режима линейки.</li>
+            <li><strong>Автоматические метки смерти:</strong> при появлении экрана смерти в SCUM программа автоматически запоминает последнюю координату и ставит метку смерти с таймером давности. Когда вы вернётесь к телу и отойдёте, метка очистится автоматически (или удалите вручную кнопкой на правой панели).</li>
+            <li><strong>Аппаратное ускорение GPU (DirectTerrain):</strong> для мониторов 2K / 4K 144 Гц включите <em>Настройки → Внешний вид → Аппаратное ускорение карты M (GPU)</em> и перезапустите программу.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-3">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">3</span>
+            <h2>Офлайн-навигатор, маршруты и голосовой штурман</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-routing-aviation.svg?v=20598" alt="Многоточечный офлайн-навигатор по дорогам, обмен кодом ZLR-ROUTE и авиационный режим" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Многоточечный офлайн-навигатор по дорогам, обмен кодом ZLR-ROUTE и авиационный режим</figcaption>
+          </figure>
+          <h3>Дорожная навигация без интернета</h3>
+          <p>ZiloreMiniMap строит маршруты по реальной дорожной сети острова полностью офлайн — интернет для навигации не требуется. Расстояние и примерное время прибытия (ETA) плавно уменьшаются метр за метром по мере движения.</p>
+          <ul>
+            <li><strong>Режимы маршрута (клавиша <kbd>G</kbd>):</strong> <em>Быстрый</em> (приоритет асфальта), <em>Кратчайший</em> (минимальный километраж) и <em>Только асфальт</em>.</li>
+            <li><strong>Объезд опасных зон (клавиша <kbd>B</kbd>):</strong> выключено / объезд всех зон / объезд только опасных и PvP-зон.</li>
+            <li><strong>Подсказки поворотов:</strong> за 220 метров до перекрёстка на HUD появляется стрелка (<code>↱</code>, <code>↰</code>, <code>↻</code>) и точное расстояние до поворота.</li>
+          </ul>
+          <h3>Многоточечные маршруты и библиотека (клавиша F9)</h3>
+          <ol>
+            <li>Откройте окно <strong>«Маршруты»</strong> (<kbd>F9</kbd> на карте или через меню трея).</li>
+            <li>Добавляйте до <strong>16 остановок</strong> подряд (через ПКМ на карте, кнопку «Добавить цель» или «Добавить текущую позицию»).</li>
+            <li>Нажмите <strong>«Оптимизировать»</strong> (<kbd>O</kbd>), чтобы программа сама выстроила кратчайший порядок объезда всех точек, либо используйте <strong>«Развернуть»</strong> и <strong>«Кольцевой маршрут»</strong>.</li>
+            <li>Сохраняйте любимые маршруты лута в библиотеку и загружайте их в один клик.</li>
+          </ol>
+          <h3>Обмен маршрутами и метками в Discord</h3>
+          <ul>
+            <li><strong>Поделиться маршрутом (<kbd>Ctrl+Shift+C</kbd>):</strong> копирует компактный код вида <code>ZLR-ROUTE:...</code>. Отправьте его другу в Discord — он нажмёт «Импорт кода» и получит точно такой же маршрут.</li>
+            <li><strong>Поделиться пользовательскими метками:</strong> через контекстное меню карты можно скопировать и передать набор своих меток кодом <code>ZLR-WP:...</code>.</li>
+          </ul>
+          <h3>Голосовая навигация (клавиша V)</h3>
+          <p>Включите голосовые подсказки в <strong>Настройки → Навигация</strong> или клавишей <kbd>V</kbd> на карте. Выберите нужный голосовой пакет, громкость и устройство вывода звука. Если вы свернёте с дороги, навигатор автоматически перестроит маршрут и озвучит новое направление.</p>
+        </article>
+
+        <article class="guide-chapter" id="ch-4">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">4</span>
+            <h2>Авиационный режим и полёты</h2>
+          </div>
+          <p>При разгоне выше <strong>110 км/ч</strong> (взлёт на самолёте) ZiloreMiniMap автоматически переходит в авиационный режим (также можно переключить вручную клавишей <kbd>F</kbd> на карте):</p>
+          <ul>
+            <li><strong>Прямой воздушный курс:</strong> дорожный роутинг отключается, строится прямая линия к цели с указанием пеленга в градусах и стрелкой доворота (<code>←</code>, <code>●</code>, <code>→</code>).</li>
+            <li><strong>Полётная телеметрия на HUD:</strong> высота над уровнем моря (<code>м</code>), вертикальная скорость набора/снижения (<code>↑+</code> / <code>↓-</code> м/с), путевая скорость (<code>км/ч</code>) и расчёт бокового сноса ветром.</li>
+            <li><strong>Полосы (ВПП) и точка снижения (TOD):</strong> на карте отображаются взлётно-посадочные полосы, а при подлёте к цели на высоте программа заранее подскажет момент начала снижения.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-5">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">5</span>
+            <h2>Командный радар отряда</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-squad.svg?v=20598" alt="Шифрованная группа отряда, статусы бойцов, тактические пинги с таймером и точка сбора" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Шифрованная группа отряда, статусы бойцов, тактические пинги с таймером и точка сбора</figcaption>
+          </figure>
+          <h3>Шифрованные релей-группы (рекомендуется)</h3>
+          <ol>
+            <li>Откройте раздел <strong>«Отряд»</strong> в боковой панели карты или через окно маршрутов.</li>
+            <li>Нажмите <strong>«Создать группу»</strong> и придумайте название — программа сгенерирует секретный код приглашения вида <code>MM1-...</code>.</li>
+            <li>Отправьте код друзьям в Discord. Им достаточно нажать <strong>«Присоединиться»</strong> и вставить код.</li>
+            <li>Все координаты, пинги и маршруты шифруются ключом вашей группы прямо на вашем ПК (TLS 1.3 + сквозное шифрование).</li>
+          </ol>
+          <h3>Прямое P2P-соединение</h3>
+          <p>Если вы предпочитаете соединяться напрямую без сервера ретрансляции, используйте режим прямого подключения (поддерживается автоматическая настройка UPnP и правила брандмауэра Windows).</p>
+          <h3>Возможности внутри отряда</h3>
+          <ul>
+            <li><strong>Статус каждого бойца:</strong> зелёный — онлайн, жёлтый — задержка сигнала, серый — офлайн.</li>
+            <li><strong>Тактические пинги с таймером:</strong> нажмите ПКМ на карте → «Пинг» (враг, лут, сбор, опасность). Пинг виден всему отряду и показывает живой обратный отсчёт 60 секунд.</li>
+            <li><strong>Точка сбора (Rally):</strong> кнопка «Сбор здесь» мгновенно ставит пинг на вашей позиции, а тиммейты могут проложить маршрут к последнему сбору в 1 клик.</li>
+            <li><strong>Лидер отряда и следование:</strong> можно отметить лидера значком звезды, включить режим следования за выбранным союзником и гибко скрывать/показывать метки отдельных игроков.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-6">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">6</span>
+            <h2>Серверные часы, климат, выживание и Zilore AI</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-clock-ai.svg?v=20598" alt="Серверные часы SCUM, климат, полоски выживания и текстовые запросы ИИ-помощника Zilore AI" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Серверные часы SCUM, климат, полоски выживания и текстовые запросы ИИ-помощника Zilore AI</figcaption>
+          </figure>
+          <h3>Серверные часы и климат (клавиша F8)</h3>
+          <ul>
+            <li>Выберите пресет скорости течения суток для вашего сервера (<code>1x</code>, <code>3.84x Official</code>, <code>4x</code>, <code>6x</code>, <code>8x</code> или свой коэффициент) и укажите текущее время в игре — часы запомнят синхронизацию и будут точно показывать время до рассвета и заката.</li>
+            <li><strong>Климат-модель:</strong> оценивает температуру с учётом координат (северные снега / южные пляжи), высоты над уровнем моря и времени суток, предупреждая о риске переохлаждения.</li>
+          </ul>
+          <h3>Трекер выживания (клавиша F7)</h3>
+          <p>Помогает следить за здоровьем, энергией и водой (цифровой двойник метаболизма с опциональным пассивным сканированием полосок HUD). При низких показателях выводит краткие рекомендации прямо на оверлей.</p>
+          <h3>ИИ-помощник Zilore AI (клавиша F6)</h3>
+          <p>Позволяет планировать сложные маршруты обычным текстом на русском или английском:</p>
+          <ul>
+            <li>Примеры запросов: <em>«заправка -&gt; трейдер 5 км»</em>, <em>«ближайший бункер B3»</em>, <em>«полиция + аптека -&gt; заправка кольцо»</em>, <em>«nearest trader within 4 km»</em>.</li>
+            <li>Запоминает вашу реальную среднюю скорость пешком, на авто, лодке и самолёте для точного расчёта времени прибытия.</li>
+            <li><em>Базовый функционал программы полностью бесплатен; расширенные фильтры базы POI и модуль Zilore AI открываются персональным офлайн-ключом доступа.</em></li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-7">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">7</span>
+            <h2>Пользовательские зоны, слои и поиск POI</h2>
+          </div>
+          <h3>Поиск и фильтрация меток (POI)</h3>
+          <ul>
+            <li>В правой боковой панели тактической карты используйте поле <strong>«Поиск меток»</strong> — категории фильтруются мгновенно.</li>
+            <li>Клавиша <kbd>Ctrl+F</kbd> открывает глобальный поиск по всем объектам, городам, бункерам, пользовательским меткам и квадратам сетки (например, введите <code>D4</code> или <code>Samobor</code>).</li>
+            <li>Умная кластеризация автоматически объединяет плотные скопления меток при отдалении, сохраняя карту чистой и читаемой.</li>
+          </ul>
+          <h3>Пользовательские зоны и быстрые слои (Alt+1–5)</h3>
+          <ul>
+            <li><strong>Импорт зон:</strong> откройте редактор зон из меню или просто дважды кликните по файлу <code>.tsv</code> в Windows — программа предложит импортировать пакет зон в отдельный слой (поддерживается также автоматическое распознавание зон со скриншотов карты сервера).</li>
+            <li><strong>Быстрые слои:</strong> включайте и отключайте группы зон прямо в игре комбинациями <kbd>Alt+1</kbd> … <kbd>Alt+5</kbd>.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-8">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">8</span>
+            <h2>Настройки, темы оформления, бэкап и обновления</h2>
+          </div>
+          <figure class="guide-figure">
+            <img src="/img/guide-settings-admin.svg?v=20598" alt="Настройки Windows 11 (4 живые темы, GPU, автозапуск, бэкап) и окно профиля игрока для админов" width="800" height="400" loading="lazy" decoding="async">
+            <figcaption>Настройки Windows 11 (4 живые темы, GPU, автозапуск, бэкап) и окно профиля игрока для админов</figcaption>
+          </figure>
+          <h3>Внешний вид и темы Windows 11</h3>
+          <ul>
+            <li><strong>4 темы без перезапуска (клавиша <kbd>T</kbd>):</strong> Системная (синхронизируется с Windows), Тёмная, чистая чёрная OLED и Светлая.</li>
+            <li><strong>Типографика:</strong> используется системный шрифт Windows 11 <strong>Segoe UI Variable</strong> (с откатом на Segoe UI в Windows 10) и принудительное сглаживание ClearType — текст чёткий на любом масштабе экрана (100–200% DPI).</li>
+            <li><strong>Адаптивные иконки День/Ночь:</strong> значок в трее и окнах автоматически подстраивается под светлую или тёмную панель задач Windows.</li>
+          </ul>
+          <h3>Автозапуск с SCUM</h3>
+          <p>В <strong>Настройки → Общие</strong> включите «Запускать вместе с SCUM» — ZiloreMiniMap будет автоматически открываться при старте игры и аккуратно закрываться после выхода из неё.</p>
+          <h3>Резервное копирование и автообновление</h3>
+          <ul>
+            <li><strong>Бэкап профиля в 1 клик:</strong> в разделе <strong>О программе → Поддержка</strong> можно сохранить полный ZIP-архив всех ваших настроек, точек, маршрутов и зон на Рабочий стол и так же легко восстановить его на другом ПК.</li>
+            <li><strong>Безопасное автообновление:</strong> программа проверяет новые версии на официальных каналах (<code>minimap.zilore.app</code> и GitHub Releases) и проверяет цифровую подпись + SHA-256 перед установкой. При обновлении все ваши данные сохраняются.</li>
+            <li><strong>Безопасная выгрузка логов:</strong> при создании отчёта об ошибке программа автоматически скрывает имя пользователя Windows, ключи доступа и токены.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-9">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">9</span>
+            <h2>Инструменты администратора серверов SCUM</h2>
+          </div>
+          <p>Админ-модуль отключён по умолчанию и предназначен исключительно для администраторов собственных серверов SCUM.</p>
+          <ul>
+            <li><strong>Админ-консоль:</strong> быстрый доступ к сохранённым админ-командам и относительному телепорту (вперёд/назад/вверх/вниз на заданное число метров).</li>
+            <li><strong>База игроков:</strong> импорт списка <code>#ListPlayers true</code> из буфера обмена, мгновенный поиск по имени или SteamID, показ онлайн-игроков на карте и быстрый телепорт.</li>
+            <li><strong>Окно профиля игрока (Windows 11):</strong> вкладки «Обзор», «Транспорт», «Флаги» и «Отряд», автоматическая подгрузка имени Steam, отображение техники и флагов игрока прямо на карте и импорт отчётов из буфера обмена.</li>
+            <li><strong>Корзина спавна (<code>Spawn Cart</code>):</strong> визуальный подбор предметов, модификаторов (здоровье, заряды, вес, сектор ключ-карты) и сохранение готовых наборов (китов) в локальную базу.</li>
+          </ul>
+        </article>
+
+        <article class="guide-chapter" id="ch-10">
+          <div class="guide-chapter-head">
+            <span class="guide-chapter-num">10</span>
+            <h2>Все горячие клавиши и решение проблем</h2>
+          </div>
+          <h3>Основные горячие клавиши на тактической карте</h3>
+          <div class="hotkey-table-wrap"><table class="hotkey-table"><thead><tr><th>Клавиша</th><th>Действие</th></tr></thead><tbody>
+            <tr><td><kbd>M</kbd></td><td>открыть / закрыть тактическую карту (синхронизировано с SCUM)</td></tr>
+            <tr><td><kbd>Ctrl+F</kbd></td><td>быстрый поиск места, бункера или квадрата сетки</td></tr>
+            <tr><td><kbd>F1</kbd></td><td>быстрая шпаргалка по клавишам и маршрутам (<kbd>Shift+F1</kbd> — полное Руководство пользователя)</td></tr>
+            <tr><td><kbd>F6</kbd></td><td>ИИ-помощник Zilore AI</td></tr>
+            <tr><td><kbd>F7</kbd></td><td>трекер выживания</td></tr>
+            <tr><td><kbd>F8</kbd></td><td>серверные часы и климат</td></tr>
+            <tr><td><kbd>F9</kbd></td><td>менеджер маршрутов и отряда</td></tr>
+            <tr><td><kbd>K</kbd></td><td>линейка расстояний и азимута (<kbd>Esc</kbd> — выключить)</td></tr>
+            <tr><td><kbd>F</kbd></td><td>переключить авиационный режим</td></tr>
+            <tr><td><kbd>V</kbd></td><td>включить / выключить голосовую навигацию</td></tr>
+            <tr><td><kbd>G</kbd></td><td>переключить режим дорог (Быстрый / Кратчайший / Асфальт)</td></tr>
+            <tr><td><kbd>B</kbd></td><td>переключить объезд опасных зон</td></tr>
+            <tr><td><kbd>O</kbd></td><td>оптимизировать порядок остановок маршрута</td></tr>
+            <tr><td><kbd>N</kbd></td><td>пропустить текущую остановку</td></tr>
+            <tr><td><kbd>X</kbd></td><td>очистить активный маршрут</td></tr>
+            <tr><td><kbd>L</kbd></td><td>заблокировать / разблокировать масштаб карты</td></tr>
+            <tr><td><kbd>H</kbd></td><td>свернуть / развернуть боковую панель</td></tr>
+            <tr><td><kbd>T</kbd></td><td>переключить тему оформления (Тёмная / OLED / Светлая / Системная)</td></tr>
+            <tr><td><kbd>Alt+1</kbd> … <kbd>Alt+5</kbd></td><td>быстрое переключение пользовательских слоёв зон</td></tr>
+            <tr><td><kbd>+</kbd> / <kbd>-</kbd> / <kbd>0</kbd></td><td>приблизить / отдалить / сбросить масштаб на 1.0×</td></tr>
+            <tr><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td><td>отменить / повторить правку маршрута</td></tr>
+            <tr><td><kbd>Ctrl+Shift+C</kbd></td><td>скопировать код обмена маршрутом <code>ZLR-ROUTE</code></td></tr>
+              </tbody></table></div>
+          <h3>Частые проблемы и быстрые решения</h3>
+          <ul>
+            <li><strong>Миникарта не видна поверх SCUM:</strong> переключите в SCUM <em>Настройки → Видео → Окно без рамки (Borderless)</em>.</li>
+            <li><strong>Позиция не обновляется:</strong> проверьте, что в SCUM назначена клавиша <code>Copy Location</code> (<kbd>Num /</kbd>), а игровой чат закрыт (нажмите <kbd>Esc</kbd>).</li>
+            <li><strong>Предупреждение Windows SmartScreen при запуске Setup:</strong> скачивайте файлы только с <code>minimap.zilore.app</code> или официального GitHub, проверьте хэш по <code>SHA256SUMS.txt</code> и нажмите «Подробнее → Выполнить в любом случае».</li>
+            <li><strong>Нужна помощь или нашли ошибку?</strong> Откройте <em>О программе → Выгрузить лог</em> и напишите нам на <code>support@zilore.app</code> или в сообщество Discord <strong>SCUM GRAND</strong>.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2025–2026 Zilore · Официальное руководство · support@zilore.app</span>
+        <span>Zero-JS Static Security · Без трекеров, cookies и AI-скраперов</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
