@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.5-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.5" /></a>
+  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.6-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.6" /></a>
   <a href="https://minimap.zilore.app"><img src="https://img.shields.io/badge/Website-minimap.zilore.app-2DD4BF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
   <a href="https://discord.gg/xbWXKahvS"><img src="https://img.shields.io/badge/Discord-SCUM%20GRAND-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://boosty.to/minimap.zilore.app/purchase/4184863?ssource=DIRECT&share=subscription_link"><img src="https://img.shields.io/badge/Boosty-Подписка-F15F2C?style=for-the-badge&logo=boosty&logoColor=white" alt="Boosty" /></a>
@@ -84,16 +84,16 @@
 ---
 
 <!-- AUTO-RELEASE-INFO:START -->
-## 📦 Актуальный релиз: v0.0.5
+## 📦 Актуальный релиз: v0.0.6
 
-* **Дата сборки:** `2026-11-26 19:16`
-* **Что нового:** • Накопительный релиз. · Единая нативная типографика Windows 11 / 10: системный шрифт Segoe UI Variable (с бесшовным откатом на Segoe UI в Windows 10) и принудительный ClearType для всех окон, прозрачных оверлеев HUD и карты, диалогов, подсказок, журнала (табличные цифры), трея и админ-инструментов. · Ускорена работа миникарты и тактической карты, снижена нагрузка на процессор и оперативную память во время игры. · Плавнее работают авто-зум, прокладка длинных маршрутов и голосовая навигация. · Усилена защита локальных настроек, лицензий и диагностических отчётов. · Устранён просад FPS при плавном авто-зуме на карте с большим количеством меток (POI). · Устранена ошибка одновременного прогрева кэша карты при запуске. · Исправлено наложение подписей на экранах с масштабом 125–200%. · Исправлен зависавший обратный отсчёт таймера на пингах отряда.
+* **Дата сборки:** `2026-11-27 00:22`
+* **Что нового:** • Обновлены скрипты сборки, проверки и подписи релиза.
 
 | Файл релиза | Размер | Цифровая подпись | SHA-256 |
 | :--- | :---: | :---: | :--- |
-| `installer/ZiloreMiniMap-Setup-v0.0.5.exe` | 139.69 MB | Authenticode + TSA | `42fdfca13e72c1b65e864697f4ddd9bafa6d89f9de36444b570579229e6c31f3` |
-| `net10/ZiloreMiniMap.zip` | 139.09 MB | CMS .p7s + Inner PE | `c9741321d6c3288b39b3b99517fad306f607fc45f9f37cb45a138546dd64de90` |
-| `net10/ZiloreMiniMap-v0.0.5-Release-build(74692).zip` | 139.09 MB | CMS .p7s + Inner PE | `a37ac327f760ce7f9806e378aff2fddc8ecdd9f21339410f7d6e207c9a4b688e` |
+| `installer/ZiloreMiniMap-Setup-v0.0.6.exe` | 139.78 MB | Authenticode + TSA | `2fca97442e25073cc65b75bac4512716fc687fa77efd73f947cd7e13ed9ee42e` |
+| `net10/ZiloreMiniMap.zip` | 139.15 MB | CMS .p7s + Inner PE | `d8cfc282f8812e93f65c487a30b02f7e48a62eb40e0d0ee83509802bff75eef2` |
+| `net10/ZiloreMiniMap-v0.0.6-Release-build(20139).zip` | 139.15 MB | CMS .p7s + Inner PE | `e2cb47a7e07c0ec0694835e199acf4bf02057e8d58fff0f8cead691ff3d28792` |
 <!-- AUTO-RELEASE-INFO:END -->
 
 ---
