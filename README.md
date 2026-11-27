@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.6-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.6" /></a>
+  <a href="https://github.com/Zilore-Anatoliy/ZiloreMiniMap/releases/latest"><img src="https://img.shields.io/badge/Release-v0.0.7-FFB547?style=for-the-badge&logo=github&logoColor=111" alt="Version v0.0.7" /></a>
   <a href="https://minimap.zilore.app"><img src="https://img.shields.io/badge/Website-minimap.zilore.app-2DD4BF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
   <a href="https://discord.gg/xbWXKahvS"><img src="https://img.shields.io/badge/Discord-SCUM%20GRAND-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://boosty.to/minimap.zilore.app/purchase/4184863?ssource=DIRECT&share=subscription_link"><img src="https://img.shields.io/badge/Boosty-Подписка-F15F2C?style=for-the-badge&logo=boosty&logoColor=white" alt="Boosty" /></a>
@@ -84,16 +84,16 @@
 ---
 
 <!-- AUTO-RELEASE-INFO:START -->
-## 📦 Актуальный релиз: v0.0.6
+## 📦 Актуальный релиз: v0.0.7 (build 72951)
 
-* **Дата сборки:** `2026-11-27 00:22`
-* **Что нового:** • Обновлены скрипты сборки, проверки и подписи релиза.
+* **Дата сборки:** `2026-11-27 14:14`
+* **Что нового:** • Накопительный релиз. · Плавный движок перемещения и зума полной тактической карты (60+ FPS даже при всех 8 000+ POI): аппаратно-дружелюбный снимок RenderTargetBitmap на время перетаскивания/зума, мгновенная матричная трансформация слоя маршрутов без перерисовки и строгое удержание точки под курсором на каждом кадре анимации зума. · Единая модульная система обновлений (.zip Portable / Setup .exe / .exe) с кнопкой «Обновить из файла…», проверкой setup-sha256 и сокращением дискового I/O на ~950 МБ за цикл. · Ускорено построение маршрутов: предварительная сортировка пар кандидатов сократила до 75% лишних проходов A*, добавлен 16-позиционный кэш маршрутов (<0.1 мс при повторных кликах/смене режима) и автоматическое определение резких поворотов (>=45°) на дорогах без перекрёстков. · Оптимизирована кластеризация POI на полной карте (квантование по 1/6 октавы) и динамическое переключение BitmapCache (выключается на время панорамирования/зума и включается в покое для мгновенной прокрутки сайдбара). · Расширены голосовые рубежи дистанции на прямых, водных и авиамаршрутах (50 / 100 / 250 / 500 / 1000 / 2000 м). · Окончательно устранён эффект ускоренной речи (1.5×) и последующего замолкания нейроголоса: анализ скорости переведён на активную речь без учёта тишины SAPI5, включена автокоррекция и для WAV, и для MP3 нейро-клипов (включая все повороты, сектора и ориентиры), зафиксирован нативный 16 кГц формат OneCore, добавлен автоперезапуск зависшего COM-потока TTS и 60-секундный сброс временных сбоев голосов. · Исправлены задержка первого кадра зума (45 мс → 16 мс), боковой дрейф карты при многократной прокрутке колеса мыши и сброс таймера озвучки поворотов при получении свежей GPS-координаты. · Исправлены ошибки обновления из распакованных Portable-папок, блокировка файлов Defender и остаточные временные папки в %TEMP%.
 
 | Файл релиза | Размер | Цифровая подпись | SHA-256 |
 | :--- | :---: | :---: | :--- |
-| `installer/ZiloreMiniMap-Setup-v0.0.6.exe` | 139.78 MB | Authenticode + TSA | `2fca97442e25073cc65b75bac4512716fc687fa77efd73f947cd7e13ed9ee42e` |
-| `net10/ZiloreMiniMap.zip` | 139.15 MB | CMS .p7s + Inner PE | `d8cfc282f8812e93f65c487a30b02f7e48a62eb40e0d0ee83509802bff75eef2` |
-| `net10/ZiloreMiniMap-v0.0.6-Release-build(20139).zip` | 139.15 MB | CMS .p7s + Inner PE | `e2cb47a7e07c0ec0694835e199acf4bf02057e8d58fff0f8cead691ff3d28792` |
+| `installer/ZiloreMiniMap-Setup-v0.0.7.exe` | 141.4 MB | Authenticode + TSA | `af7a074ae9802bb420eb765989dfccc916a9f28c479abef8b0e183f2a7a20c4f` |
+| `net10/ZiloreMiniMap.zip` | 140.77 MB | CMS .p7s + Inner PE | `92935a81e80ce9860b567bfdfec6ff19b4a3384d2e726f21b827a38f9582d0dc` |
+| `net10/ZiloreMiniMap-v0.0.7-Release-build(72951).zip` | 140.77 MB | CMS .p7s + Inner PE | `004d9975d6b2ce791034df4be24e3fd50b8f5bf85972bd317f34e506873de514` |
 <!-- AUTO-RELEASE-INFO:END -->
 
 ---
